@@ -1,0 +1,88 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+:root {
+  --cor-tag-navigation: #ffffff;
+  --cor-names-navigation: #080808;
+  --cor-text-navigatio-hover: #ffffff;
+  --cor-text-navigation-span: #d60000;
+  --cor-text-navigation: #181717;
+  --cor-background-about: #0e0149;
+  --cor-text-about: #ffffff;
+}
+
+body {
+  background-image: url(images/Imagem-de-fundo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  background-color: var(--cor-tag-navigation);
+}
+
+#icone-navergaçao {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 4px;
+}
+
+ul,
+il,
+a {
+  margin-left: 500px;
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  gap: 5rem;
+  font-size: 25px;
+  font-family: "Comic Neue", cursive;
+  font-weight: bolder;
+  color: var(--cor-icons-navigation);
+}
+
+span {
+  height: 80px;
+  width: 100px;
+  position: relative;
+  z-index: 0;
+  left: 82px;
+  border-radius: 0px 0px 10px 10px;
+  background-color: var(--cor-text-navigation-span);
+  animation: infinite;
+}
+
+@keyframes Spananition {
+  0% {
+    left: 82px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.phone-file {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
