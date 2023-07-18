@@ -6,11 +6,10 @@
 :root {
   --cor-tag-navigation: #ffffff;
   --cor-names-navigation: #080808;
-  --cor-text-navigatio-hover: #ffffff;
-  --cor-text-navigation-span: #d60000;
+  --cor-text-h1: #ffffff;
+  --cor-text-navigation-animetion: #d60000;
   --cor-text-navigation: #181717;
   --cor-background-about: #0e0149;
-  --cor-text-about: #ffffff;
 }
 
 body {
@@ -28,61 +27,70 @@ header {
 }
 
 nav {
+  height: 70px;
+  background-color: var(--cor-tag-navigation);
+  gap: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
-  width: 100%;
-  background-color: var(--cor-tag-navigation);
+  text-decoration: none;
+  position: relative;
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: "Comic Neue", cursive;
+  font-weight: bold;
+  color: var(--cor-names-navigation);
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  gap: 1rem;
+  width: 0%;
+  height: 7px;
+  background-color: var(--cor-text-navigation-animetion);
+  transition: 0.4s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 90px;
+}
+
+nav a:hover {
+  color: var(--cor-text-navigation-animetion);
 }
 
 #icone-navergaçao {
-  width: 70px;
-  height: 70px;
+  background-image: url(images/Icone-navergaçao.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90px;
+  height: 75px;
+  top: -4px;
   position: absolute;
-  top: 4px;
+  transition: 0.3s ease-out;
 }
 
-ul,
-il,
-a {
-  margin-left: 500px;
-  display: flex;
-  z-index: 1;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  text-decoration: none;
-  margin: 0;
-  gap: 5rem;
-  font-size: 25px;
-  font-family: "Comic Neue", cursive;
-  font-weight: bolder;
-  color: var(--cor-icons-navigation);
+#icone-navergaçao:hover {
+  background-image: url(images/fundo-page-about.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 85px;
+  height: 75px;
+  transition: 0.3s;
 }
 
-span {
-  height: 80px;
-  width: 100px;
-  position: relative;
-  z-index: 0;
-  left: 82px;
-  border-radius: 0px 0px 10px 10px;
-  background-color: var(--cor-text-navigation-span);
-  animation: infinite;
-}
-
-@keyframes Spananition {
-  0% {
-    left: 82px;
-  }
-  100% {
-    left: 0px;
-  }
-}
-
-.phone-file {
-  height: 100%;
-  width: 100%;
-  display: flex;
+#Texto-name {
+  position: absolute;
+  top: 30%;
+  left: 4%;
+  color: var(--cor-text-h1);
+  font-size: 90px;
+  font-weight: 900;
+  font-family: "Roboto", sans-serif;
 }
