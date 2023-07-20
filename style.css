@@ -15,6 +15,8 @@ html {
   --cor-text-navigation-animetion: #d60000;
   --cor-text-navigation: #181717;
   --cor-background-about: #0e0149;
+  --cor-card-about: #fff;
+  --cor-text-Card-music: #c00000;
 }
 
 header {
@@ -46,9 +48,9 @@ li {
 li::after {
   content: "";
   position: absolute;
-  bottom: 90%;
+  bottom: 89%;
   width: 0;
-  height: 6px;
+  height: 9px;
   background-color: var(--cor-text-navigation-animetion);
   transition: 0.3s;
 }
@@ -56,29 +58,6 @@ li::after {
 li:hover::after {
   width: 100px;
   transition: 0.3s;
-}
-
-@media (max-width: 999px) {
-  ul,
-  li {
-    position: absolute;
-    top: 8vh;
-    right: 0;
-    width: 50vw;
-    height: 92vh;
-    background-color: var(--cor-tag-navigation);
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  li {
-    margin: 0;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
 }
 
 a {
@@ -132,8 +111,57 @@ a:hover {
   font-family: "Roboto", sans-serif;
 }
 
-main {
-  height: 100vh;
+main.About {
   width: 100%;
-  background-color: var(--cor-tag-main);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: baseline;
+  background-image: url(fundo-page-about.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.About-texto {
+  height: 600px;
+  margin: 20px;
+  padding: 10px;
+  width: 600px;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.About-texto h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  border-bottom: 0.4rem solid var(--cor-text-navigation-animetion);
+}
+
+.About-texto p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+}
+
+.Card-music {
+  width: 550px;
+  height: 250px;
+  position: relative;
+  display: flex;
+  border-radius: 2rem;
+  bottom: -25%;
+  left: 4%;
+  margin: 30px;
+  background-color: var(--cor-text-Card-music);
+  transition: 0.5s;
+  animation: ease;
+}
+
+.Card-music:hover {
+  background-color: #000000;
+  animation: ease;
+  transform: scale(1.02 );
+  transition: 0.5s;
 }
