@@ -16,7 +16,8 @@ html {
   --cor-text-navigation: #181717;
   --cor-background-about: #0e0149;
   --cor-card-about: #fff;
-  --cor-text-Card-music: #c00000;
+  --cor-text-Card-music: #9c0000;
+  --cor-text-Card-music-hover: #000000;
 }
 
 header {
@@ -25,6 +26,9 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-attachment: fixed;
 }
 
 nav {
@@ -84,20 +88,20 @@ a:hover {
   background-image: url(images/Icone-navergaçao.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 90px;
-  height: 75px;
+  width: 80px;
+  height: 87px;
   top: -5px;
   left: -1px;
   position: absolute;
-  transition: 0.3s ease-out;
+  transition: 0.3s;
 }
 
 #icone-navergaçao:hover {
-  background-image: url(images/fundo-page-about.png);
+  background-image: url(images/icone-vermelho.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 85px;
-  height: 75px;
+  width: 80px;
+  height: 87px;
   transition: 0.3s;
 }
 
@@ -106,7 +110,7 @@ a:hover {
   top: 30%;
   left: 4%;
   color: var(--cor-text-h1);
-  font-size: 90px;
+  font-size: 100px;
   font-weight: 900;
   font-family: "Roboto", sans-serif;
 }
@@ -117,9 +121,11 @@ main.About {
   display: flex;
   align-items: center;
   justify-content: baseline;
-  background-image: url(fundo-page-about.png);
+  background-image: url(images/fundo-page-about.png);
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
 }
 
 div.About-texto {
@@ -150,6 +156,9 @@ div.About-texto h1 {
   height: 250px;
   position: relative;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
   border-radius: 2rem;
   bottom: -25%;
   left: 4%;
@@ -160,8 +169,79 @@ div.About-texto h1 {
 }
 
 .Card-music:hover {
-  background-color: #000000;
+  background-color: var(--cor-text-Card-music-hover);
   animation: ease;
-  transform: scale(1.02 );
+  transform: scale(1.02);
   transition: 0.5s;
+}
+
+.display {
+  width: 200px;
+  height: 180px;
+  position: relative;
+  display: block;
+  margin-left: 1rem;
+  background-image: url(music/images/2e4fdc3038025eb5b15ee4da2250d503.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.text-music {
+  height: auto;
+  width: 50%;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.music-name,
+.artist-name {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+.music-name {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.song-slider {
+  width: 95%;
+  position: relative;
+}
+
+.seek-bar {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: #ffffff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.seek-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 1px;
+  box-shadow: -400px 0 0 400px #db0202;
+}
+
+.current-time,
+.song-duration {
+  font-size: 15px;
+  font-weight: 800;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #ffffff;
+}
+
+.song-duration {
+  position: absolute;
+  right: 0;
 }
