@@ -120,7 +120,6 @@ main.About {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: baseline;
   background-image: url(images/fundo-page-about.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -244,4 +243,33 @@ div.About-texto h1 {
 .song-duration {
   position: absolute;
   right: 0;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  margin-top: 10px;
+}
+
+.playbtn {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: none;
+}
+
+.playbtnpause {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: none;
 }
