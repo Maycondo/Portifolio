@@ -40,22 +40,27 @@
         </div>
        <div class="Card-music">
         <div class="display"></div>
-        <div class="text-music">
-          <h1 class="music-name">song one</h1>
-          <p class="artist-name">artist</p>
-          <div class="song-slider">
-            <input type="range" value="0" class="seek-bar">
-            <span class="current-time">00:00</span>
-            <span class="song-duration">00:00</span>
+        <div class="itemsMusic">
+        <span id="musicName"></span>
+        <span id="authorName"></span>
+        <audio id="player" src=""></audio>
+          <div class="footer">
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
           </div>
-          <div class="controls">
-             <button class="play-btn" onclick="PauseMusic()">
-              <div></div>
-              <div></div>
-             </button>
+          <div class="time">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
           </div>
+        <div class="controls">
+          <button id="prevButton"><ion-icon name="play-back"></ion-icon></button>
+          <button id="playPauseBtn"><ion-icon name="play"></ion-icon></button>
+          <button id="nextButton"><ion-icon name="play-forward"></ion-icon></button>
+        </div>
         </div>
        </div>
+
     </main>
     <main class="PROJECS">
 
@@ -64,7 +69,8 @@
 
     </footer>
   </body>
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
+  
   <script
     type="module"
     src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

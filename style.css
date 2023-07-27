@@ -18,6 +18,7 @@ html {
   --cor-card-about: #fff;
   --cor-text-Card-music: #9c0000;
   --cor-text-Card-music-hover: #000000;
+  --car-projecs-page: #ffff;
 }
 
 header {
@@ -188,78 +189,93 @@ div.About-texto h1 {
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.text-music {
-  height: auto;
+.itemsMusic {
+  height: 100%;
   width: 50%;
-  margin: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-.music-name,
-.artist-name {
-  text-align: center;
-  text-transform: capitalize;
-  font-family: "Roboto", sans-serif;
+#musicName {
+  white-space: pre-wrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 30px;
   color: #fff;
 }
 
-.music-name {
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.song-slider {
-  width: 95%;
-  position: relative;
-}
-
-.seek-bar {
-  -webkit-appearance: none;
+#authorName {
+  white-space: pre-wrap;
   width: 100%;
-  height: 5px;
-  border-radius: 5px;
-  background: #ffffff;
   overflow: hidden;
-  cursor: pointer;
-}
-
-.seek-bar::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 20px;
-  width: 1px;
-  box-shadow: -400px 0 0 400px #db0202;
-}
-
-.current-time,
-.song-duration {
-  font-size: 15px;
-  font-weight: 800;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-overflow: ellipsis;
+  font-size: 20px;
   color: #ffffff;
 }
 
-.song-duration {
-  position: absolute;
-  right: 0;
+.controls button {
+  margin: 0px 10px;
+  height: 50px;
+  width: 50px;
+  border: none;
+  position: relative;
+  bottom: -100%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0.3rem;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s;
 }
 
-.controls {
+.controls button:hover {
+  background-color: #8a0000;
+}
+
+.controls ion-icon {
+  font-size: 25px;
+  padding: 5px;
+  transition: all 0.2s;
+}
+
+.time {
+  width: 100%;
+  position: relative;
+  bottom: -15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+}
+
+.footer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0.5rem;
-  margin-top: 10px;
 }
 
-.play-btn {
-  width: 40px;
-  height: 40px;
+.progress-bar {
+  height: 8px;
+  width: 90%;
   position: relative;
-  border-radius: 50%;
+  bottom: -95%;
   background-color: #ffffff;
   cursor: pointer;
-  border: none;
+  margin: 0px 4px;
+  border-radius: 5px;
+}
+
+.progress {
+  height: 8px;
+  background-color: #c20202;
+  border-radius: 5px;
 }
