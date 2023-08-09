@@ -8,7 +8,7 @@ const currentTime = document.querySelector("#currentTime");
 const progressBar = document.querySelector("#progress-bar");
 const progress = document.querySelector(".progress");
 
-import songs from "./songs.js";
+import songs from "songs";
 
 const textButtonPlay = '<ion-icon name="play"></ion-icon>';
 const textButtonPause = '<ion-icon name="pause"></ion-icon>';
@@ -18,7 +18,7 @@ let index = 0;
 prevButton.onclick = () => prevNextMusic("prev");
 nextButton.onclick = () => prevNextMusic();
 
-playerPausebtn.onclick = () => playerPause();
+playerPausebtn.onclick = () => playerPausebtn();
 
 const prevNextMusic = (type = "next") => {
   if ((type == "next" && index + 1 === songs.length) || type === "init") {
@@ -32,7 +32,7 @@ const prevNextMusic = (type = "next") => {
   player.src = songs[index].src;
   musicName.innerHTML = songs[index].name;
   authorName.innerHTML = songs[index].author;
-  if (type !== "init") playerPause();
+  if (type !== "init") playerPausebtn();
 };
 
 prevNextMusic("init");
