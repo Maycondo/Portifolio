@@ -3,6 +3,7 @@ export default [
     src: "/music/Annihilate-_Spider-man_-Across-the-spider-verse_1.mp3",
     name: "Annihilate-_Spider-man_-Across-the-spider-verse_1",
     author: "Metro Boomin, Swae Lee, Lil Wayne, Offset",
+    display: "/music/images/imagen-1.jpg",
   },
 
   {

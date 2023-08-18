@@ -181,7 +181,7 @@ div.About-texto h1 {
   position: relative;
   display: block;
   margin-left: 1rem;
-  background-image: url(music/images/2e4fdc3038025eb5b15ee4da2250d503.jpg);
+  background-image: url(music/images/imagen-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 1rem;
@@ -293,8 +293,10 @@ div.About-texto h1 {
   font-family: "Roboto", sans-serif;
   font-size: 35px;
   font-weight: 900;
-  margin: 4rem;
-  height: 6%;
+  position: relative;
+  left: 42%;
+  margin: 2rem;
+  width: 160px;
   border-bottom: solid 0.4rem #d60000;
 }
 
@@ -305,9 +307,46 @@ div.About-texto h1 {
 }
 
 #Cards {
-  height: 500px;
+  height: 485px;
   width: 450px;
   margin: 1rem;
   background-color: #080808;
   border-radius: 40px;
+  transition: 0.6s;
+}
+
+#Cards:hover {
+  height: 490px;
+  width: 490px;
+  background-color: #0c0c0c;
+  transition: 0.6s;
+}
+
+footer {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  background-color: #000000;
+}
+
+footer img {
+  position: relative;
+  margin-top: 0.2rem;
+  left: 33rem;
+  height: 270px;
+  width: 290px;
+}
+
+footer h2 {
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+footer p {
+  color: #fff;
+}
+
+#Tecnologias {
+  color: #2e2c2c;
 }

@@ -1,7 +1,8 @@
 const player = document.querySelector("#player");
+const display = document.querySelector("#display");
 const authorName = document.querySelector("#authorName");
 const musicName = document.querySelector("#musicName");
-const playerPausebtn = document.querySelector("#plaerPausebtn");
+const playerPausebtn = document.querySelector("#playerPausebtn");
 const prevButton = document.querySelector("#prevButton");
 const nextButton = document.querySelector("#naxtButton");
 const currentTime = document.querySelector("#currentTime");
@@ -10,8 +11,8 @@ const progress = document.querySelector(".progress");
 
 import songs from "songs";
 
-const textButtonPlay = '<ion-icon name="play"></ion-icon>';
-const textButtonPause = '<ion-icon name="pause"></ion-icon>';
+const textButtonPlay = `<ion-icon name="play"></ion-icon>`;
+const textButtonPause = `<ion-icon name="pause"></ion-icon>`;
 
 let index = 0;
 
@@ -32,6 +33,7 @@ const prevNextMusic = (type = "next") => {
   player.src = songs[index].src;
   musicName.innerHTML = songs[index].name;
   authorName.innerHTML = songs[index].author;
+  display.display = songs[index].display;
   if (type !== "init") playerPausebtn();
 };
 
