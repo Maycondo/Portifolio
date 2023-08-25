@@ -3,10 +3,6 @@
   padding: 0%;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 :root {
   --cor-tag-navigation: #ffffff;
   --cor-names-navigation: #080808;
@@ -106,7 +102,7 @@ a:hover {
   transition: 0.3s;
 }
 
-#Texto-name {
+#Home {
   position: absolute;
   top: 30%;
   left: 4%;
@@ -116,7 +112,7 @@ a:hover {
   font-family: "Roboto", sans-serif;
 }
 
-main.About {
+main#About {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -289,12 +285,12 @@ div.About-texto h1 {
   flex-direction: column;
 }
 
-#Projecs {
+#projecs {
   font-family: "Roboto", sans-serif;
   font-size: 35px;
   font-weight: 900;
   position: relative;
-  left: 42%;
+  left: 41%;
   margin: 2rem;
   width: 160px;
   border-bottom: solid 0.4rem #d60000;
@@ -342,24 +338,27 @@ footer img {
   gap: 1rem;
   height: 80%;
   position: relative;
-  right: 20%;
+  right: 22%;
   margin: 0;
   z-index: 2;
 }
 
 #Tex-tecno {
-  width: 160px;
+  width: 135px;
   margin: 0.2rem;
-  margin-left: 5rem;
+  margin-left: 6rem;
   color: #ffffff;
   border-bottom: solid 4px #9c0000;
-  font-size: 28px;
+  font-size: 24px;
   font-family: "Roboto", sans-serif;
   font-weight: 9 00;
 }
 
 footer p {
-  margin-top: 10px;
+  position: relative;
+  left: 8%;
+  margin-top: 20px;
+  font-size: 14px;
   color: #fff;
   font-family: "Roboto", sans-serif;
 }
@@ -376,23 +375,23 @@ footer p {
 #Tecnologias {
   font-size: 35px;
   color: #313030;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 #Typescript {
   font-size: 30px;
   color: #272626;
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 #Tecnologias:hover {
   color: #9c0000;
   font-size: 40px;
-  transition: 0.4s;
+  transition: 0.6s;
 }
 
 #Typescript:hover {
   color: #9c0000;
   font-size: 40px;
-  transition: 0.4s;
+  transition: 0.6s;
 }
