@@ -9,7 +9,7 @@ const currentTime = document.querySelector("#currentTime");
 const progressBar = document.querySelector("#progress-bar");
 const progress = document.querySelector(".progress");
 
-import songs from "songs";
+import songs from "songs.js";
 
 const textButtonPlay = `<ion-icon name="play"></ion-icon>`;
 const textButtonPause = `<ion-icon name="pause"></ion-icon>`;
