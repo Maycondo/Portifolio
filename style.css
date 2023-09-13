@@ -326,6 +326,7 @@ footer {
   height: 40vh;
   width: 100%;
   display: flex;
+  justify-items: center;
   align-items: center;
   background-color: #000000;
 }
@@ -365,36 +366,70 @@ footer img {
 }
 
 #Midias:hover {
-  color: #8e0202;
+  color: #ffff;
   border-radius: 30px;
   transition: 55ms;
 }
 
 .Contato {
-  height: 80%;
-  width: 400px;
+  margin-top: 1.5rem;
+  height: 100%;
+  width: 280px;
   position: relative;
-  left: 25%;
-  display: flex;
-  justify-items: center;
+  left: 50%;
   align-items: center;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .Contato form {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.4rem;
 }
 
 .Contato form label {
   color: #ffff;
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 
+#Email {
+  width: 270px;
+  height: 23px;
+  overflow: hidden;
+  border: none;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 100;
+  background-color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
 
+#Messagem {
+  width: 270px;
+  height: 115px;
+  border: none;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 100;
+  background-color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+#submit {
+  height: 45px;
+  font-size: 40px;
+  color: #ffffff;
+  background: none;
+  border: none;
+  transition: 55ms;
+}
+
+#submit:hover {
+  font-size: 45px;
+  color: #9c0000;
+  transition: 55ms;
+}
 
 .Ano2023 {
   height: 20%;
