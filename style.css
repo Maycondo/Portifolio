@@ -102,7 +102,7 @@ a:hover {
   transition: 0.3s;
 }
 
-#Home {
+.Home {
   position: absolute;
   top: 30%;
   left: 4%;
@@ -110,6 +110,26 @@ a:hover {
   font-size: 140px;
   font-weight: 900;
   font-family: "Roboto", sans-serif;
+}
+
+.Imagem-de-Perfil {
+  position: absolute;
+  border-radius: 50%;
+  top: 8rem;
+  left: 56rem;
+  height: 400px;
+  width: 400px;
+}
+
+.name{
+  width: 230px;
+  border-bottom: solid 5px var(--cor-text-Card-music);
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 30px;
+  position: absolute;
+  top: 33rem;
+  left: 61.5rem;
 }
 
 .About {
@@ -146,8 +166,8 @@ div.About-texto h1 {
 
 .About-texto p {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
+  font-weight: 100;
+  font-size: 20px;
 }
 
 .Card-music {
