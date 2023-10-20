@@ -121,7 +121,7 @@ a:hover {
   width: 400px;
 }
 
-.name{
+.name {
   width: 230px;
   border-bottom: solid 5px var(--cor-text-Card-music);
   font-family: "Roboto", sans-serif;
@@ -170,9 +170,23 @@ div.About-texto h1 {
   font-size: 20px;
 }
 
+.Tecnologia ul {
+  width: 100%;
+  margin: 4rem 0rem;
+  gap: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#Icone-ter {
+  font-size: 45px;
+}
+
 .Card-music {
   width: 550px;
   height: 250px;
+  box-sizing: border-box;
   position: relative;
   display: flex;
   align-items: center;
@@ -327,11 +341,12 @@ div.About-texto h1 {
 }
 
 #Cards {
+  box-sizing: border-box;
   height: 485px;
   width: 450px;
   margin: 1rem;
   background-color: #000000;
-  border-radius: 40px;
+  border-radius: 1.5rem;
   transition: 0.6s;
 }
 
