@@ -430,8 +430,6 @@ footer{
     margin: 2.5rem 1rem;
     font-size: 40px;
     font-weight: 900;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Roboto", sans-serif;
   }
 
   nav,.Narve {
@@ -453,6 +451,7 @@ footer{
   
   .Discrição-Perso {
     margin: 0%;
+    margin-top: 4rem;
     gap: 2rem;
     display: block;
     flex-direction: column;
@@ -478,10 +477,6 @@ footer{
   
   .Social-Midias ul {
     margin: 0.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: start;
     gap: 1rem;
   }
   
@@ -537,17 +532,11 @@ footer{
   
   main{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   .ABOUT {
     height: 100%;
     flex-direction: column;
-    display: flex;
-    align-items: center;
-    text-align: center;
   }
   
   #TEXTO-ABOUT {
@@ -575,27 +564,18 @@ footer{
     height: 40px;
     width: 40px;
     font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
  
   #Sql {
     height: 40px;
     width: 40px;
     font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
  
   #TypeScript {
     height: 40px;
     width: 40px;
     font-size: 37px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
    }
 
   #PROJECTS{
@@ -609,7 +589,6 @@ footer{
     height: auto;
     width: 100%;
     margin: 0rem 0rem;
-    box-sizing: border-box;
     gap: 1rem ;
     display: flex;
     flex-wrap: wrap;
@@ -625,7 +604,6 @@ footer{
    height: 350px;
    width: 250px;
    border-radius: 15px;
-   background-color: black;
  }
 
 
@@ -633,47 +611,34 @@ footer{
    height: 5%;
    margin: 2rem 1rem;
    gap: 1rem;
-   display: flex;
-   justify-content: center;
-   align-items: center;
  }
 
  #TopButton{
   background-color: rgb(204, 202, 202);
   position: relative;
-  bottom: 0.5rem;
-  right: 23em;
+  bottom: -1.5rem;
+  left: -15rem;
   border-radius: 10px;
   padding: 1.5rem;
-  height: 40px;
-  width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 30px;
+  width: 30px;
   transform: rotate(270deg);
   font-size: 25px;
   font-weight: 900;
-  border: none;
-  cursor: pointer;
 }
 
 footer{
   height: 300px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(255, 255, 255);
+  margin-top: 5rem;
 }
 
 .Linha-1{
   height: 70px;
   width: 70%;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  border-bottom: solid 3px #c8c8c8;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem;
 }
 
 .Linha-1 h1{
@@ -684,19 +649,12 @@ footer{
 .Informaçoes-Footer{
   height: 200px;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgb(235, 235, 235);
 }
 
 .Follow{
   height: 200px;
   width: 40%;
   margin: 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   gap: 1rem;
 }
 
@@ -704,15 +662,10 @@ footer{
   margin-top: 2rem;
   font-size: 25px;
   font-weight: 100;
-  font-family: "Open Sans", sans-serif;
-  font-family: "Roboto", sans-serif;
 }
 
 .Midias-Social{
   height: 200px;  
-  display: flex;
-  justify-content: start;
-  align-items: center;
   gap: 1rem;
 }
 
@@ -721,23 +674,14 @@ footer{
 #Linkedin {
   height: 30px;
   width: 30px;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
   font-size: 15px;
-  align-items: center;
   border-radius: 30px;
-  background-color: black;
-  color: aliceblue;
 }
 
 .Linha-2{
   margin: 0rem 1rem;
   height: 220px;
   width: 20%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
 }
 
 #Linha-2{
@@ -749,9 +693,6 @@ footer{
 .Email{
   height: 220px;
   width: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
   gap: 1rem;
 }
 
@@ -759,33 +700,23 @@ footer{
   margin-top: 2rem;
   font-size: 25px;
   font-weight: 100;
-  font-family: "Open Sans", sans-serif;
-  font-family: "Roboto", sans-serif;
 }
 
 .Input.Email{
   height: 15px;
   width: 150px;
-  justify-content: center;
-  align-items: center;
 }
 
 #Caixa-Email{
   width: 230px;
   height: 30px;
   font-size: 15px;
-  background: none;
-  border: none;
   border-bottom: solid 2px rgba(139, 139, 139, 0.984);
-  outline: 0;
-  box-shadow: 0 0 0 ;
 }
 
 #Subit-mite{
-  border: none;
   font-size: 18px;
   font-weight: 700;
-  cursor: pointer;
   margin: 0.5rem 0.5rem;
 }
 
@@ -797,21 +728,19 @@ footer{
 .Top-cima{
   height: 80px;
   width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
   border-bottom: solid 3px #c8c8c8;
 }
 
 #Top-Back{
-  text-decoration: none;
   font-size: 18px;
   font-weight: 800;
-  color: black;
+}
+
 }
 
 
+@media screen and (max-width:  525px) {
 
-
-  }
-  
+}
