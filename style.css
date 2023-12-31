@@ -744,7 +744,7 @@ footer{
 */
 
 
-@media screen and (max-width:  480px) {
+@media screen and (max-width:  400px) {
 
 
 header {
@@ -826,7 +826,7 @@ li {
 
 .Social-Midias li {
   height: 1.5rem;
-  width: 25rem; 
+  width: 21rem; 
   padding: 1rem;
   display: flex;
   justify-content: start;
@@ -837,6 +837,7 @@ li {
 
 #Pequeno-Texto {
   margin: 2rem 1.5rem;
+  font-size: 14px;
   font-weight: 400;
   font-style: italic;
 }
