@@ -5,6 +5,7 @@
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
 }
+/*
 
 header {
   height: 100%;
@@ -740,7 +741,148 @@ footer{
 
 }
 
+*/
 
-@media screen and (max-width:  525px) {
+
+@media screen and (max-width:  480px) {
+
+
+header {
+  height: 100%;
+  width: 100%;
+}
+
+#Porfissao {
+  margin: 0.5rem 1rem;
+  font-size: 30px;
+  font-weight: 900;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+nav,
+.Narve {
+  height: 3rem;
+  background-color: rgb(235, 235, 235);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Name-barra {
+  color: rgb(67, 67, 68);
+  font-size: 20px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.Discrição-Perso {
+  gap: 2rem;
+  display: block;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#Name-User {
+  margin: 0rem 1rem;
+  white-space: nowrap;
+  font-size: 28px;
+  font-weight: 900;
+  border-right: 3px solid;
+  width: 325px;
+}
+
+#Email {
+  width: 13rem;
+  margin: 1rem 1rem;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(157, 157, 160);
+  border-bottom: solid 1px rgb(186, 186, 187);
+}
+
+#Founder {
+  margin: 1rem 1rem;
+  font-weight: 600;
+  color: rgb(33, 33, 34);
+}
+
+.Social-Midias ul {
+  margin: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: start;
+  gap: 1rem;
+}
+
+.Social-Midias li {
+  height: 1.5rem;
+  width: 25rem; 
+  padding: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 3px;
+  background-color: rgb(202, 202, 204);
+}
+
+#Pequeno-Texto {
+  margin: 2rem 1.5rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+#Traço {
+  height: 100px;
+  width: 3.5px;
+  position: absolute;
+  background-color: rgb(54, 54, 54);
+}
+
+.Social-Midias a {
+  margin: 0 0.5rem;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  color: rgb(43, 42, 42);
+}
+
+#LowButton {
+  background-color: rgb(204, 202, 202);
+  margin: 3rem 1rem;
+  border-radius: 10px;
+  padding: 1.5rem;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(90deg);
+  font-size: 25px;
+  font-weight: 900;
+  border: none;
+  cursor: pointer;
+}
+
+.Imagem-Perso{
+  height: 100%;
+  width: 100%;
+}
+
+#Imagem-User {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: 0 6rem;
+}
 
 }
