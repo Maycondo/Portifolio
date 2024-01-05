@@ -268,7 +268,7 @@ main {
   border: none;
   cursor: pointer;
 }
-/*
+
 footer{
   height: 500px;
   width: 100%;
@@ -342,8 +342,8 @@ footer{
 }
 
 .Linha-2{
-  margin: 0rem 1rem;
-  height: 220px;
+  margin: 0rem 0.5rem;
+  height: 180px;
   width: 20%;
   display: flex;
   justify-content: end;
@@ -389,8 +389,6 @@ footer{
   outline: 0;
   box-shadow: 0 0 0 ;
 }
-
-
   
 #Subit-mite{
   border: none;
@@ -421,7 +419,7 @@ footer{
   color: black;
 }
 
-*/
+
 
 @media screen and (max-width:  768px) {
   
