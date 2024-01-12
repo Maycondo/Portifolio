@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="Pt-br">
   <head>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Table.css">
@@ -17,35 +18,37 @@
   <body>
 
     <header id="HOME">
-<!-- 
-  Div de button da barra de navegaçao do Mode Mobile celular
--->
-      <div class="button-nav">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
 
-      <h1 id="Porfissao">Portfólio</h1> 
-<!--
-  Barra de naregaçao do Portifolio
--->
-      <nav>
-        <ul class="Narve">
-          <li><a id="Name-barra" href="#HOME">HOME</a></li>
-          <li><a id="Name-barra" href="#ABOUT">ABOUT</a></li>
-          <li><a id="Name-barra" href="#PROJECTS">PROJECTS</a></li>
-          <li><a id="Name-barra" href="#CONTAC">CONTAC</a></li>
-        </ul>
+       <section class="Top-barra">
+
+        <h1 id="Portifolio">Portfólio</h1> 
+        <div class="button-nav">
+          <div id="Traço-1"></div>
+          <div id="Traço-2"></div>
+          <div id="Traço-3"></div>
+        </div>
+
+      </section>
+
+      <nav class="Narve">  
+
+         <a id="Name-home" href="#HOME">HOME</a>
+         <a id="Name-about" href="#ABOUT">ABOUT</a>
+         <a id="Name-projects" href="#PROJECTS">PROJECTS</a>
+         <a id="Name-contac" href="#CONTAC">CONTAC</a>
+
+         <div>
+           <button></button>
+         </div>
+         <div>
+
+         </div>
       </nav>
-<!--
-  Discriçao do da minha pessoa
--->
+
       <section class="Discrição-Perso">
 
         <div>
-          <h1 id="Name-User"></h1>
+          <h1 id="Text-user"></h1>
           <h5 id="Email">maycondouglasniculau@gmail.com</h5>
           <h1 id="Founder">Founder</h1>
           <div id="Traço"></div>
@@ -55,9 +58,7 @@
             uma abordagem coesa e eficiente em todas as camadas de uma
             aplicação.
           </p> 
-<!--
-  Div com as redes mais utilizada pelo usuario
--->
+
           <div class="Social-Midias">
             <ul> 
                <li><i class="fa-brands fa-linkedin-in"></i><a href="">Linkedin</a></li>
@@ -67,13 +68,9 @@
                <li><i class="fa-brands fa-square-instagram"></i><a href="">Instagram</a></li>
             </ul> 
           </div>
-<!--
-  Uma tag butto que direncionar o usuario para final da pagina
--->
+
           <button id="LowButton"><i class="fa-solid fa-angles-right"></i></button>
-<!--
-  Imagem da foto do usuário
--->
+
         </div>
           <div class="Imagem-Perso">
           <img id="Imagem-User" src="Perfil-perso.jpg" alt="Imagem-Perso" />
@@ -83,19 +80,15 @@
 
     </header>
 
- <!-- MAIN -->
 
     <main id="ABOUT">
 
-      <h1 id="ABOU">ABOUT</h1>
+      <h1 id="About">ABOUT</h1>
 
-<!--
-  Div com uma peueno texto sobre mim
--->
       <div class="ABOUT">
-        <p id="TEXTO-ABOUT">
+        <p id="Text-About">
           Olá 👋🏼 seja bem-vindo! Meu nome é maycon, Entrei no mercado de
-          tecnologia a 1 ano e meio, atualmente trabalho como freelancer você
+          tecnologia a 2 anos, atualmente trabalho como freelancer você
           pode ver alguns desses meus projetos Minha paixão pela programação e
           minha busca contínua por aprender e crescer me impulsionam a criar
           soluções que fazem a diferença. Dê uma olhada em meu portfólio e
@@ -105,9 +98,7 @@
           aprimorar minhas habilidades, estou determinado a elevar o padrão e
           entregar resultados que façam a diferença.
         </p>
-<!--
-  Div com as principais tecnologia que eu trabalho é utilizor.
--->
+
         <div class="Tecnologias">
 
           <article id="Html">
@@ -148,37 +139,33 @@
 
       </div>
 
-      <h1 id="PROJECTS">PROJECTS</h1>
-<!--
-  Div do meus projects
--->
-      <div class="Projetos"> 
+      <h1 id="Projecto">PROJECTS</h1>
+       <section class="Projectos"> 
 
-        <section id="Projecto-1"></section>
-        <section id="Projecto-2"></section>
-        <section id="Projecto-3"></section>
-        <section id="Projecto-4"></section>
+          <nav class="Narve-2">
+            <a href="">Projeto Recentes</a> 
+            <a href="">JavaScript</a>
+            <a href="">React js</a>
+            <a href="">Python</a>
+          </nav>
 
-      </div>
-<!--
-  Botão para topo do site .
--->
-      <button id="TopButton"><i class="fa-solid fa-angles-right"></i></button>  
+          <div id="Card-1"></div>
+          <div id="Card-2"></div>
+          <div id="Card-3"></div>
+          <div id="Card-4"></div>
+
+      </section>
+         <button id="TopButton"><i class="fa-solid fa-angles-right"></i></button>  
 
     </main>
 
-    <!-- FOOTER -->
 
     <footer id="CONTAC">
-<!--
-  Parti superio do footer
--->
+
       <section class="Linha-1">
         <h1>ALL AROUND THE WORLD</h1>
       </section>
-<!--
-  Informaçoes de redes social de contato.
--->
+
      <div class="Informaçoes-Footer">
        <div class="Follow">
          <h1>FOLLOW  <strong> #MICHAEL</strong></h1>
@@ -188,22 +175,22 @@
           <a id="Instagram" href=""><i class="fa-solid fa-envelope"></i></a>
        </div>
      </div> 
-<!--
-  Tar borde de 4px
--->
+
         <section class="Linha-2">
           <div id="Linha-2"></div>
         </section>
-<!--
-  Enviar gmail para dono do prtifolio
--->
+
       <div class="Email"> 
         <h1>NEWSLETTER</h1> 
-      <div class="Input.Email">
-        <input type="text"placeholder="PLEASE ENTER YOU EMAIL ADDRESS" id="Caixa-Email">
-        <button id="Subit-mite">OK</button>
+      <div class="Input.Email"> 
+
+         <form action="">
+           <input type="text"placeholder="PLEASE ENTER YOU EMAIL ADDRESS" id="Caixa-Email">
+           <button id="Subit-mite">OK</button>
+        </form>
+
       </div>
-      <a id="Terms" href="">Read legal Terms</a>
+        <a id="Terms" href="">Read legal Terms</a>
       </div>
 
      </div>
