@@ -1,1414 +1,264 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Roboto", sans-serif;
+}
 
-@media screen and (max-width: 378px) {
-  
-  *{
-    margin: 0%;
-    padding: 0%;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  header {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .Top-barra{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .button-nav{
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 0.3rem;
-    align-items: center;
-    border-radius: 50%;
-    margin: 1rem;
-    z-index: 2;
-    background-color: black;
-    cursor: pointer;
-  }
-  
-  #Traço-1, 
-  #Traço-2, 
-  #Traço-3{
-    height: 20px;
-    width: 3px;
-    border-radius: 2px;
-    background-color: white;
-  }
-  
-  #Portifolio {
-    margin: 1.5rem 1rem;
-    font-size: 30px;
-    font-weight: 900;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .Narve {
-    position: absolute;
-    margin: 3rem;
-    top: 0.5rem;
-    left: -2.5rem;
-    height: 100vh;
-    width: 85%;
-    z-index: 1;
-    background-color: rgb(0, 0, 0);
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    box-sizing: border-box;
-  }
-  
-  #Name-home, 
-  #Name-about,
-  #Name-projects,
-  #Name-contac {
-    color: rgb(67, 67, 68);
-    font-size: 20px;
-    font-weight: 900;
-    text-decoration: none;
-  }
-  
-  .Discrição-Perso {
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-  }
-  
-  #Text-user {
-    margin-left:  1rem; 
-    white-space: nowrap;
-    font-size: 25px;
-    font-weight: 900;
-    border-right: 4px solid;
-    width: 300px;
-  }
-  
-  #Email {
-    width: 15rem;
-    margin: 1rem 1rem;
-    font-size: 15px;
-    font-weight: 600;
-    color: rgb(157, 157, 160);
-    border-bottom: solid 1px rgb(186, 186, 187);
-  }
-  
-  #Founder {
-    margin: 1rem 1rem;
-    font-weight: 600;
-    color: rgb(33, 33, 34);
-  }
-  
-  .Social-Midias ul {
-    margin: 0.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: start;
-    gap: 1rem;
-  }
-  
-  .Social-Midias li {
-    height: 1rem;
-    width: 19.5rem;
-    padding: 1rem;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    border-radius: 3px;
-    background-color: rgb(202, 202, 204);
-  }
-  
-  #Pequeno-Texto {
-    margin: 2rem 1.5rem;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 14px;
-  }
-  
-  #Traço {
-    height: 110px;
-    width: 3.5px;
-    position: absolute;
-    background-color: rgb(54, 54, 54);
-  }
-  
-  .Social-Midias a {
-    margin: 0 0.5rem;
-    font-size: 17px;
-    font-weight: 700;
-    text-decoration: none;
-    color: rgb(43, 42, 42);
-  }
-  
-  #LowButton {
-    background-color: rgb(204, 202, 202);
-    margin: 3rem 1rem;
-    border-radius: 10px;
-    padding: 1.2rem;
-    height: 25px;
-    width: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(90deg);
-    font-size: 20px;
-    font-weight: 900;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .Imagem-Perso{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Imagem-User {
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-  }
-  
-  
-  main {
-    height: 88rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .ABOUT {
-    height: 100%;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-  
-  #Text-About {
-    height: 370px;
-    width: 340px;
-    margin: 0.5rem 0rem;
-    text-align: center;
-    font-size: 17px;
-    font-weight: 400;
-  }
-  
-  #About {
-    margin: 2rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-weight: 900;
-    font-size: 25px;
-  }
-  
-  .Tecnologias {
-    height: 2%;
-    gap: 0.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Html,
-  #Css,
-  #JavaScript,
-  #React,
-  #NodeJs,
-  #Python,
-  #NexJs {
-    height: 20px;
-    width: 20px;
-    font-size: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Sql {
-    height: 20px;
-    width: 20px;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #TypeScript {
-    height: 20px;
-    width: 20px;  
-    font-size: 23px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Projecto{
-    margin: 2rem 0rem;
-    font-weight: 900;
-    font-size: 25px;
-  }
-  
-  
-  .Projectos{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .Narve-2{
-    margin: 1rem;
-    gap: 1rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;  
-  
-  }
-  
-  .Narve-2 a{
-    font-weight: 500;
-    font-size: 15px;
-    text-decoration: none;
-    color: #616161;
-  }
-  
-  .Narve-2 a:hover{
-    color: #2d2d2d;
-  }
-  
-  #Card-1, 
-  #Card-2, 
-  #Card-3, 
-  #Card-4 {
-    height: 150px;
-    width: 365px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Card-1, 
-  #Card-2, 
-  #Card-3,
-  #Card-4:hover{
-    background-color: #a1a1a128;
-  }
-  
-  
-  footer{
-    height: 600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-  }
-  
-  .Linha-1{
-    margin: 1rem;
-    height: 70px;
-    width: 70%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    border-bottom: solid 3px #c8c8c8;
-  }
-  
-  .Linha-1 h1{
-    font-weight: 100;
-    font-size: 20px;
-  }
-  
-  .Informaçoes-Footer{
-    height: 450px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(235, 235, 235);
-  }
-  
-  .Follow{
-    height: 200px;
-    width: 70%;
-    margin: 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 1rem;
-  }
-  
-  .Follow h1{
-    margin-top: 2rem;
-    font-size: 30px;
-    font-weight: 100;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .Midias-Social{
-    height: 200px;  
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  #Facebook, 
-  #Instagram, 
-  #Linkedin {
-    height: 35px;
-    width: 35px;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 16px;
-    align-items: center;
-    border-radius: 50px;
-    background-color: black;
-    color: aliceblue;
-  }
-  
-  .Linha-2{
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Linha-2{
-    height: 4px;
-    width: 250px;
-    background-color: rgb(151, 151, 151);
-  }
-  
-  .Email{
-    height: 220px;
-    margin: 1rem;
-    width: 85%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .Email h1{
-    font-size: 25px;
-    font-weight: 100;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .Input.Email{
-    height: 30px;
-    width: 600px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Caixa-Email{
-    width: 330px;
-    height: 30px;
-    font-size: 18px;
-    background: none;
-    border: none;
-    border-bottom: solid 2px rgba(139, 139, 139, 0.984);
-    outline: 0;
-    box-shadow: 0 0 0 ;
-  }
-    
-  #Subit-mite{
-    border: none;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    margin: 0.5rem 0.5rem;
-  }
-  
-  #Terms{
-    text-decoration: none;
-    color: #a1a1a1;
-  }
-  
-  .Top-cima{
-    margin: 1rem;
-    height: 80px;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: solid 3px #c8c8c8;
-  }
-  
-  #Top-Back{
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 800;
-    color: black;
-  }
-  
-  }
-  
-  @media screen and  (max-width: 468px) {
-    
-    *{
-      margin: 0%;
-      padding: 0%;
-      font-family: "Open Sans", sans-serif;
-      font-family: "Roboto", sans-serif;
-    }
-  
-    header {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .Top-barra{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .button-nav{
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 0.3rem;
-    align-items: center;
-    border-radius: 50%;
-    margin: 1rem;
-    z-index: 2;
-    background-color: black;
-    cursor: pointer;
-  }
-  
-  #Traço-1, 
-  #Traço-2, 
-  #Traço-3{
-    height: 20px;
-    width: 3px;
-    border-radius: 2px;
-    background-color: white;
-  }
-  
-  #Portifolio {
-    margin: 1.5rem 1rem;
-    font-size: 34px;
-    font-weight: 900;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .Narve {
-    position: absolute;
-    margin: 3rem;
-    top: 0.5rem;
-    left: -2.5rem;
-    height: 100vh;
-    width: 85%;
-    z-index: 1;
-    background-color: rgb(0, 0, 0);
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    box-sizing: border-box;
-  }
-  
-  #Name-home, 
-  #Name-about,
-  #Name-projects,
-  #Name-contac {
-    color: rgb(67, 67, 68);
-    font-size: 20px;
-    font-weight: 900;
-    text-decoration: none;
-  }
-  
-  .Discrição-Perso {
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-  }
-  
-  #Text-user {
-    margin-left:  1rem; 
-    white-space: nowrap;
-    font-size: 28px;
-    font-weight: 900;
-    border-right: 4px solid;
-    width: 340px;
-  }
-  
-  #Email {
-    width: 15rem;
-    margin: 1rem 1rem;
-    font-size: 15px;
-    font-weight: 600;
-    color: rgb(157, 157, 160);
-    border-bottom: solid 1px rgb(186, 186, 187);
-  }
-  
-  #Founder {
-    margin: 1rem 1rem;
-    font-weight: 600;
-    color: rgb(33, 33, 34);
-  }
-  
-  .Social-Midias ul {
-    margin: 0.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: start;
-    gap: 1rem;
-  }
-  
-  .Social-Midias li {
-    height: 1rem;
-    width: 25.5rem;
-    padding: 1rem;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    border-radius: 3px;
-    background-color: rgb(202, 202, 204);
-  }
-  
-  #Pequeno-Texto {
-    margin: 2rem 1.5rem;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 14px;
-  }
-  
-  #Traço {
-    height: 110px;
-    width: 3.5px;
-    position: absolute;
-    background-color: rgb(54, 54, 54);
-  }
-  
-  .Social-Midias a {
-    margin: 0 0.5rem;
-    font-size: 17px;
-    font-weight: 700;
-    text-decoration: none;
-    color: rgb(43, 42, 42);
-  }
-  
-  #LowButton {
-    background-color: rgb(204, 202, 202);
-    margin: 3rem 1rem;
-    border-radius: 10px;
-    padding: 1.2rem;
-    height: 25px;
-    width: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(90deg);
-    font-size: 20px;
-    font-weight: 900;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .Imagem-Perso{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Imagem-User {
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
-  }
-  
-  
-  main {
-    height: 88rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .ABOUT {
-    height: 100%;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-  
-  #Text-About {
-    height: 370px;
-    width: 380px;
-    margin: 0.5rem 0rem;
-    text-align: center;
-    font-size: 17px;
-    font-weight: 400;
-  }
-  
-  #About {
-    margin: 2rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-weight: 900;
-    font-size: 25px;
-  }
-  
-  .Tecnologias {
-    height: 2%;
-    gap: 0.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Html,
-  #Css,
-  #JavaScript,
-  #React,
-  #NodeJs,
-  #Python,
-  #NexJs {
-    height: 20px;
-    width: 20px;
-    font-size: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Sql {
-    height: 20px;
-    width: 20px;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #TypeScript {
-    height: 20px;
-    width: 20px;  
-    font-size: 23px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Projecto{
-    margin: 2rem 0rem;
-    font-weight: 900;
-    font-size: 25px;
-  }
-  
-  .Projectos{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .Narve-2{
-    margin: 1rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;  
-  
-  }
-  
-  .Narve-2 a{
-    font-weight: 500;
-    font-style: 15px;
-    text-decoration: none;
-    color: #616161;
-  }
-  
-  .Narve-2 a:hover{
-    color: #2d2d2d;
-  }
-  
-  #Card-1, 
-  #Card-2, 
-  #Card-3, 
-  #Card-4 {
-    height: 150px;
-    width: 450px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Card-1, 
-  #Card-2, 
-  #Card-3,
-  #Card-4:hover{
-    background-color: #a1a1a128;
-  }
-  
-  
-  footer{
-    height: 600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-  }
-  
-  .Linha-1{
-    margin: 1rem;
-    height: 70px;
-    width: 70%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    border-bottom: solid 3px #c8c8c8;
-  }
-  
-  .Linha-1 h1{
-    font-weight: 100;
-    font-size: 20px;
-  }
-  
-  .Informaçoes-Footer{
-    height: 450px;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(235, 235, 235);
-  }
-  
-  .Follow{
-    height: 200px;
-    width: 70%;
-    margin: 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 1rem;
-  }
-  
-  .Follow h1{
-    margin-top: 2rem;
-    font-size: 30px;
-    font-weight: 100;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .Midias-Social{
-    height: 200px;  
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  #Facebook, 
-  #Instagram, 
-  #Linkedin {
-    height: 35px;
-    width: 35px;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 16px;
-    align-items: center;
-    border-radius: 50px;
-    background-color: black;
-    color: aliceblue;
-  }
-  
-  .Linha-2{
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Linha-2{
-    height: 4px;
-    width: 250px;
-    background-color: rgb(151, 151, 151);
-  }
-  
-  .Email{
-    height: 220px;
-    margin: 1rem;
-    width: 85%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .Email h1{
-    font-size: 25px;
-    font-weight: 100;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .Input.Email{
-    height: 30px;
-    width: 600px;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Caixa-Email{
-    width: 330px;
-    height: 30px;
-    font-size: 18px;
-    background: none;
-    border: none;
-    border-bottom: solid 2px rgba(139, 139, 139, 0.984);
-    outline: 0;
-    box-shadow: 0 0 0 ;
-  }
-    
-  #Subit-mite{
-    border: none;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-    margin: 0.5rem 0.5rem;
-  }
-  
-  #Terms{
-    text-decoration: none;
-    color: #a1a1a1;
-  }
-  
-  .Top-cima{
-    margin: 1rem;
-    height: 80px;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: solid 3px #c8c8c8;
-  }
-  
-  #Top-Back{
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 800;
-    color: black;
-  }
-  
-  }
-  
-  /*
-  
-  @media screen and  (max-width: 768px) {
-    
-    *{
-      margin: 0%;
-      padding: 0%;
-      font-family: "Open Sans", sans-serif;
-      font-family: "Roboto", sans-serif;
-    }
-  
-    header {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .Top-barra{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .button-nav{
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 0.3rem;
-    align-items: center;
-    border-radius: 50%;
-    margin: 1rem;
-    z-index: 2;
-    background-color: black;
-    cursor: pointer;
-  }
-  
-  #Traço-1, 
-  #Traço-2, 
-  #Traço-3{
-    height: 20px;
-    width: 3px;
-    border-radius: 2px;
-    background-color: white;
-  }
-  
-  #Portifolio {
-    margin: 1.5rem 1rem;
-    font-size: 39px;
-    font-weight: 900;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .Narve {
-    position: absolute;
-    margin: 3rem;
-    top: 0.5rem;
-    right: -1rem;
-    height: 100vh;
-    width: 85%;
-    z-index: 1;
-    background-color: rgb(0, 0, 0);
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    box-sizing: border-box;
-  }
-  
-  #Name-home, 
-  #Name-about,
-  #Name-projects,
-  #Name-contac {
-    color: rgb(67, 67, 68);
-    font-size: 20px;
-    font-weight: 900;
-    text-decoration: none;
-  }
-  
-  .Discrição-Perso {
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-  }
-  
-  #Text-user {
-    margin-left:  1rem; 
-    white-space: nowrap;
-    font-size: 38px;
-    font-weight: 900;
-    border-right: 4px solid;
-    width: 440px;
-  }
-  
-  #Email {
-    width: 15rem;
-    margin: 1rem 1rem;
-    font-size: 15px;
-    font-weight: 600;
-    color: rgb(157, 157, 160);
-    border-bottom: solid 1px rgb(186, 186, 187);
-  }
-  
-  #Founder {
-    margin: 1rem 1rem;
-    font-weight: 600;
-    color: rgb(33, 33, 34);
-  }
-  
-  .Social-Midias ul {
-    margin: 0.5rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: start;
-    gap: 1rem;
-  }
-  
-  .Social-Midias li {
-    height: 1rem;
-    width: 44rem;
-    padding: 1.2rem;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    border-radius: 3px;
-    background-color: rgb(202, 202, 204);
-  }
-  
-  #Pequeno-Texto {
-    margin: 2rem 1.5rem;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 17px;
-  }
-  
-  #Traço {
-    height: 110px;
-    width: 3.5px;
-    position: absolute;
-    background-color: rgb(54, 54, 54);
-  }
-  
-  .Social-Midias a {
-    margin: 0 0.5rem;
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none;
-    color: rgb(43, 42, 42);
-  }
-  
-  #LowButton {
-    background-color: rgb(204, 202, 202);
-    margin: 3rem 1rem;
-    border-radius: 10px;
-    padding: 1.2rem;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotate(90deg);
-    font-size: 22px;
-    font-weight: 900;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .Imagem-Perso{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Imagem-User {
-    height: 350px;
-    width: 350px;
-    border-radius: 50%;
-  }
-  
-  
-  main {
-    height: 100rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .ABOUT {
-    height: 100%;
-    width: 100%;
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    text-align: center;
-  }
-  
-  #Text-About {
-    height: 370px;
-    width: 500px;
-    margin: 0.5rem 0rem;
-    text-align: center;
-    font-size: 20px;
-    font-weight: 400;
-  }
-  
-  #About {
-    margin: 2rem;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-weight: 900;
-    font-size: 25px;
-  }
-  
-  .Tecnologias {
-    height: 4%;
-    margin: 1rem;
-    gap: 1.3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Html,
-  #Css,
-  #JavaScript,
-  #React,
-  #NodeJs,
-  #Python,
-  #NexJs {
-    height: 40px;
-    width: 40px;
-    font-size: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Sql {
-    height: 40px;
-    width: 40px;
-    font-size: 33px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #TypeScript {
-    height: 40px;
-    width: 40px;  
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Projecto{
-    margin: 2rem 0rem;
-    font-weight: 900;
-    font-size: 25px;
-  }
-  
-  .Projectos{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .Narve-2{
-    width: 100%;
-    margin: 1rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;  
-  
-  }
-  
-  .Narve-2 a{
-    font-weight: 500;
-    font-size: 20px;
-    text-decoration: none;
-    color: #616161;
-  }
-  
-  .Narve-2 a:hover{
-    color: #2d2d2d;
-  }
-  
-  #Card-1, 
-  #Card-2, 
-  #Card-3, 
-  #Card-4 {
-    height: 210px;
-    width: 750px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Card-1, 
-  #Card-2, 
-  #Card-3,
-  #Card-4:hover{
-    background-color: #a1a1a128;
-  }
-  
-  
-  footer{
-    height: 600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-  }
-  
-  .Linha-1{
-    margin: 2rem;
-    height: 70px;
-    width: 70%;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    border-bottom: solid 3px #c8c8c8;
-  }
-  
-  .Linha-1 h1{
-    font-weight: 100;
-    font-size: 23px;
-  }
-  
-  .Informaçoes-Footer{
-    height: 450px;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(235, 235, 235);
-  }
-  
-  .Follow{
-    height: 200px;
-    width: 80%;
-    margin: 1rem 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 1rem;
-  }
-  
-  .Follow h1{
-    margin-top: 2rem;
-    font-size: 37px;
-    font-weight: 100;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .Midias-Social{
-    height: 200px;  
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  #Facebook, 
-  #Instagram, 
-  #Linkedin {
-    height: 45px;
-    width: 45px;
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 23px;
-    align-items: center;
-    border-radius: 50px;
-    background-color: black;
-    color: aliceblue;
-  }
-  
-  .Linha-2{
-    height: 80px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Linha-2{
-    height: 4px;
-    width: 250px;
-    background-color: rgb(151, 151, 151);
-  }
-  
-  .Email{
-    height: 220px;
-    margin: 1rem;
-    width: 85%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-  }
-  
-  .Email h1{
-    font-size: 35px;
-    font-weight: 100;
-    font-family: "Open Sans", sans-serif;
-    font-family: "Roboto", sans-serif;
-  }
-  
-  .Input.Email{
-    height: 30px;
-    width: 80%;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #Caixa-Email{
-    width: 330px;
-    height: 50px;
-    font-size: 20px;
-    background: none;
-    border: none;
-    border-bottom: solid 2px rgba(139, 139, 139, 0.984);
-    outline: 0;
-    box-shadow: 0 0 0 ;
-  }
-    
-  #Subit-mite{
-    border: none;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    margin: 0.5rem 0.5rem;
-  }
-  
-  #Terms{
-    text-decoration: none;
-    color: #a1a1a1;
-  }
-  
-  .Top-cima{
-    margin: 2rem;
-    height: 80px;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: solid 3px #c8c8c8;
-  }
-  
-  #Top-Back{
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 800;
-    color: black;
-  }
-  
-  }
+header{
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Top-barra{
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#Portifolio {
+  margin: 2rem;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.Narve{
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(239, 239, 239);
+}
+
+.Narve a{
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+  color: rgb(142, 142, 142);
+}
+
+.Narve a:hover {
+  color: rgb(70, 70, 70);
+}
+
+.Painel-1 { 
+  height: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.Discrição-Perso {
+  height: auto;
+  max-width: 45%;
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#Text-user {
+  margin: 1rem 0rem;
+  font-size: 40px;
+  font-weight: 900;
+  border-right: solid 4px #000000;
+}
+
+#Email {
+  font-size: 15px;
+  color : rgb(122, 122, 122);
+}
+
+#Founder{
+  font-weight: 800;
+  font-size: 30px;
+  color: rgb(89, 89, 89);
+}
+
+#Pequeno-Texto {
+  margin: 1rem 0rem;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.Social-Midias {
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Social-Midias ul {
+  height: 100%;
+  width: 100%;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.Social-Midias li {
+  height: 3rem;
+  border-radius: 5px;
+  background-color: #b1b1b1;
+  display: flex;
+  align-items: center;
+}
+
+.Social-Midias a,  i {
+  margin: 0rem 0.5rem;
+  display: flex;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
+  color: #1a1919;
+}
+
+.Imagem-Perso{
+  height: auto;
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Imagem-User{
+  max-height: 35vw;
+  max-width: 35vw;
+  border-radius: 50%;
+}
+
+main{
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#About{
+  margin: 1rem;
+  font-size: 35px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.ABOUT {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Text-About {
+  font-size: 24px;
+  text-align: center;
+  margin: 1rem 6rem;
+  padding: 1rem 4rem;
+}
+
+.Tecnologias {
+  height: 15rem;
+  margin: 1rem; 
+  width: 100%;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Skills {
+  width: 10rem;
+  padding: 0.5rem;
+  max-height: 5rem;
+  background-color: #cecece;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  display: flex;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+}
+
+#Skills-Icones {
+  margin: 1rem;
+  height: 5rem;
+  width: 100%;
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#html, 
+#css, 
+#JavaScript,
+#Python, 
+#react, 
+#node, 
+#git, 
+#github {
+  font-size: 40px;
+  color: #151515;
+}
+
+#typescript{
+  font-size: 35px;
+  color: #151515;
+}
+
+#nextjs{
+  font-size: 40px;
+  color: #151515;
+}
+
+#Projecto {
+  padding: 0.5rem;
+  margin: 1.5rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+.Projectos {
+  width: 100%;
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.Narve-2 {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Narve-2 a {  
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+  color: #6b6b6b;
+}
+
+.Narve-2 a:hover {  
+  color: #141414;
+}
+
+#Card-1, 
+#Card-2, 
+#Card-3, 
+#Card-4 {
+  min-width: 400px;
+  margin: 0rem 4rem;
+  height: 20rem;
+  border-radius: 20px;
+  border: 2px solid rgb(233, 233, 233);
+  width: 90%;
+  background-color: #ededed;
+  backdrop-filter: blur(10px);
+}
+
