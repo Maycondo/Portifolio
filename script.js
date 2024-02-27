@@ -1,7 +1,12 @@
 
 
 
+const Header = () => {
+
 const TituloPrincipal = document.getElementById("Name-User");
+
+
+
 
 const Messegens = [
   "Welcome to my portfolio",
@@ -23,3 +28,8 @@ setTimeout(function () {
   clearInterval(intervaloTroca);
   TituloPrincipal.innerHTML = "Welcome to my portfolio";
 }, 10000);
+
+}
+
+
+Header()
