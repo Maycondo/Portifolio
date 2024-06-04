@@ -5,9 +5,6 @@ const Header = () => {
 
 const TituloPrincipal = document.getElementById("Name-User");
 
-
-
-
 const Messegens = [
   "Welcome to my portfolio",
   "My name is Michael",

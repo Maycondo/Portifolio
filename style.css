@@ -41,7 +41,7 @@ header{
 }
 
 .Narve a:hover {
-  color: rgb(70, 70, 70);
+  color: #141414;
 }
 
 .Painel-1 { 
@@ -102,7 +102,7 @@ header{
 .Social-Midias li {
   height: 3rem;
   border-radius: 5px;
-  background-color: #b1b1b1;
+  background-color: #dfdede;
   display: flex;
   align-items: center;
 }
