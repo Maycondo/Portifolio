@@ -1,4 +1,5 @@
-import Cards from "./Cards/Cards"
+import Cards from "../Cards/Cards"
+import './style.css'
 
 export default function Main (){
     return (

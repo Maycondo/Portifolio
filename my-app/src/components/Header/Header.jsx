@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import ButtonLingua from './Buttons/Linguabutton'
-import Modebutton from './Buttons/Modebutton';
-import Navbutton from './Buttons/Navbutton';
+import ButtonLingua from '../Buttons/Linguabutton'
+import Modebutton from '../Buttons/Modebutton';
+import Navbutton from '../Buttons/Navbutton';
+import './style.css'
 
 export default function Header() {
 
@@ -13,6 +14,7 @@ export default function Header() {
         "My name is Michael",
         "I'm a full stack developer",
     ];
+    
     
     useEffect(() => {
         const intervalId = setInterval(() => {

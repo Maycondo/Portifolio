@@ -1,17 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+
+export default function BotaoModo() {
+
+        const [tema, setogleTheme] = useState(0);
+        const [time , setTime ] = useState(new Date());
+
+        const ModeLight = <i className="bi bi-sun-fill"></i>;
+        const ModeDark = <i className="bi bi-moon-fill"></i>;
 
 
-export default function ButtonMode(){
+        const alternarModo = () => {
+            setogleTheme((prevState) => {
+                const NewState = prevState === 'ModeLight' ? 'ModeDark' : 'ModeLight' ;
+                    document.body.classList.remove(prevState);
+                    document.body.classList.add(NewState);
+                return NewState;
+            });
 
+        }
 
-    const Mode_light = '<i class="bi bi-sun-fill"></i>'
-    const Mode_dark = <i class="bi bi-moon-fill"></i>
-
-    const [theme, setTheme] = useState('light')
-
-    return (
-        <div className="Butto_Mode">
-            <button type='button'>{Mode_dark}</button>
-        </div>
-    )
-}
+        return (    
+            <div className="Botao_Modo">
+                <button type='button' onClick={alternarModo}>
+                    {tema === 'ModeLight' ? ModeDark : ModeLight}
+                </button>
+            </div>
+        );
+    }

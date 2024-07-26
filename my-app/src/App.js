@@ -1,7 +1,6 @@
 
-import './App.css';
-import Header from './components/Header';
-import Main from './components/Main'
+import Header from './components/Header/Header';
+import Main from './components/Main/Main'
 
 export default function App() {
 

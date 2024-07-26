@@ -1,0 +1,81 @@
+main{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--backgtound-Color);
+  }
+  
+  #About{
+    margin: 1rem;
+    font-size: 35px;
+    text-align: center;
+    font-weight: 900;
+  }
+  
+  .ABOUT {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #Text-About {
+    font-size: 24px;
+    text-align: center;
+    margin: 1rem 6rem;
+    padding: 1rem 4rem;
+  }
+  
+  .Tecnologias {
+    height: 15rem;
+    margin: 1rem; 
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #Skills {
+    width: 10rem;
+    padding: 0.5rem;
+    max-height: 5rem;
+    background-color: var(--backgtound-Nav-color);
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  #Skills-Icones {
+    margin: 1rem;
+    height: 5rem;
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #Projecto {
+    padding: 0.5rem;
+    margin: 1.5rem;
+    text-align: center;
+    font-weight: 900;
+  }
+  
+  .Projectos {
+    margin: 0rem 1rem;
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
