@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function BotaoModo() {
 
-        const [tema, setogleTheme] = useState(0);
-        const [time , setTime ] = useState(new Date());
+        const [tema, setogleTheme] = useState('ModeLight');
 
         const ModeLight = <i className="bi bi-sun-fill"></i>;
         const ModeDark = <i className="bi bi-moon-fill"></i>;
