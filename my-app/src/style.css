@@ -1,7 +1,7 @@
 * {
     margin: 0%;
     padding: 0%;
-    font-family: "Roboto", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
   }
 
   .ModeLight {
@@ -10,7 +10,7 @@
       --Backgtound-color-nav: #e0e0e0;
       --Color-nav-a: #a3a3a3;
       --Color-nav-a-houve: #181818;
-      --Color-buttom-br-eb: #e0e0e0;
+      --Color-buttom-br-en: #e0e0e0;
       --Color-texto: #141414;
       --Color-Texto-pequeno: #242323;
       --Backgtound-cards-icons: #e0e0e0;
@@ -19,6 +19,7 @@
       --Backgtound-a-Icons: #1f1e1e;
       --Backgtound-button-low: #1a1919;
       --Color-button-low-i: #e0e0e0;
+      --Color-card--skills: #e0e0e0;
 
   }
 
@@ -65,7 +66,7 @@
   .lingua button {
     font-size: 15px;
     font-weight: bold;
-    color: var(--Color-buttom-br-eb);
+    color: var(--Color-buttom-br-en);
   }
   
   
@@ -112,13 +113,13 @@
 
   #Email {
     font-size: 15px;
-    color : var(--backgtound-Texto-pequeno);
+    color : var(--Color-Texto-pequeno);
   } 
   
   #Founder{
     font-weight: 800; 
     font-size: 30px;
-    color: var(--backgtound-Texto-pequeno);
+    color: var(--Color-Texto-pequeno);
   }
   
   #Pequeno-Texto {
@@ -128,7 +129,7 @@
     align-items: center;
     font-size: 17px;
     font-weight: 500;
-    border-right: solid 5px var(--backgtound-Texto-pequeno);
+    border-right: solid 5px var(--Color-Texto-pequeno);
   }
   
   .Social-Midias {
@@ -243,17 +244,21 @@
   }
   
   #Skills {
-    width: 10rem;
-    padding: 0.5rem;
-    max-height: 5rem;
-    background-color: var(--backgtound-Nav-color);
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 10px;
     display: flex;
-    text-align: center;
     justify-items: center;
     align-items: center;
+    height: 50px;
+    max-width: 200px;
+    padding: 10px;
+    background-color: var(--Color-card--skills);
+    border-radius: 10px;
+  }
+
+  #Skills p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
   }
   
   #Skills-Icones {
@@ -271,15 +276,5 @@
     margin: 1.5rem;
     text-align: center;
     font-weight: 900;
-  }
-  
-  .Projectos {
-    margin: 0rem 1rem;
-    width: 100%;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   
