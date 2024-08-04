@@ -1,30 +1,32 @@
 import { useState, useEffect } from 'react';
 import React from 'react';
-import Cards from './components/Cards/Cards';
 import Animetiontexto from './components/ AnimationText/Animetiontext';
-import Modebutton from './components/Buttons/Modebutton';
+import Mode_dark_light from './components/Buttons/Dark_Light';
 import Navbutton from './components/Buttons/Navbutton';
 import useModelinguagem from './Hooks/Modeliguagem';
 
 
 export default function Home() {
 
-  
 const { texts,  navtexts, setLinguagem } = useModelinguagem();
-const [colorbutton, setcolor] = useState('black');
-const handleLanguageChange = (linguagem) => {setLinguagem(linguagem); setcolor(linguagem)}; 
+const [selectedLanguage, setSelectedLanguage] = useState('PT');
+
+const handleLanguageChange = (linguagem) => {
+    setLinguagem(linguagem); 
+    setSelectedLanguage(linguagem)
+}; 
 
 
-return (
+return (    
     <>
-        <header className="App-header">
+      <header className="App-header">
             <section className="Top-barra">
                     <h1 id="Portifolio">Portfólio</h1>
                 <div className='div_buttons'>
-                        <Modebutton></Modebutton>   
+                        <Mode_dark_light></Mode_dark_light>
                             <div className="lingua">
-                                <button className="lingua__button" style={{ color: colorbutton === 'PT' ? 'black' : '#e0e0e0' }} onClick={() => handleLanguageChange('PT')}>PT</button>
-                                <button className="lingua__button" style={{ color: colorbutton === 'EN' ? 'black' : '#e0e0e0' }} onClick={() => handleLanguageChange('EN')}>EN</button>
+                                <button className="lingua__button"  onClick={() => handleLanguageChange('PT')}>PT</button>
+                                <button className="lingua__button"  onClick={() => handleLanguageChange('EN')}>EN</button>
                             </div>
                         <Navbutton></Navbutton>
                 </div>
@@ -77,7 +79,6 @@ return (
                 </div>
 
             </section>
-            <Cards></Cards>
         </main>
     </>
 )}
