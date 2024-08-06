@@ -5,14 +5,20 @@ export default function Cards() {
 
     const projects = {
         project1: {
+            image: "https://i.imgur.com/8Q5Q6yB.png",
             title: "Bot Discord",
             description: "Bot discord pour les débutants",
             time: 'Atualizados 3 minutos atrás',
-            image: "https://i.imgur.com/8Q5Q6yB.png",
         },
 
-    }
+        project2: {
+            image: "https://i.imgur.com/8Q5Q6yB.png",
+            title: "Ibooks",
+            description: "Aplicativo de livros",
+            time: 'Atualizados 5 minutos atrás',
+        }
 
+    }
 
 
     return (

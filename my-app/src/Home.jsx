@@ -17,6 +17,7 @@ const handleLanguageChange = (linguagem) => {
 }; 
 
 
+
 return (    
     <>
       <header className="App-header">
@@ -25,8 +26,8 @@ return (
                 <div className='div_buttons'>
                         <Mode_dark_light></Mode_dark_light>
                             <div className="lingua">
-                                <button className="lingua__button"  onClick={() => handleLanguageChange('PT')}>PT</button>
-                                <button className="lingua__button"  onClick={() => handleLanguageChange('EN')}>EN</button>
+                                <button className="lingua__button" onClick={() => handleLanguageChange('PT')}>PT</button>
+                                <button className="lingua__button" onClick={() => handleLanguageChange('EN')}>EN</button>
                             </div>
                         <Navbutton></Navbutton>
                 </div>

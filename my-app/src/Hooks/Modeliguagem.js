@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 
-export default function useModelinguagem(initialLinguagem = 'EN') {
+export default function useModelinguagem(initialLinguagem = 'PT') {
     const [linguagem, setLinguagem] = useState(initialLinguagem);
     const [texts, setTexts] = useState({});
     const [navtexts, setNavtexts] = useState([]);

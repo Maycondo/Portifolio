@@ -6,22 +6,48 @@
 
   .ModeLight {
       --Color-texte-portifolio: #242323;
+      --Color-button-Light-Dark: #242323;
       --Backgtound-fundo-Color: #f3f2f2;
       --Backgtound-color-nav: #e0e0e0;
       --Color-nav-a: #a3a3a3;
       --Color-nav-a-houve: #181818;
       --Color-buttom-br-en: #e0e0e0;
-      --Color-texto: #141414;
+      --Color-texto: #242424;
+      --Color-icons-redes: #242424;
+      --Backgtound-cards-icons-houver: #919191;
       --Color-Texto-pequeno: #242323;
       --Backgtound-cards-icons: #e0e0e0;
-      --Backgtound-cards-icons-houve: #242323;
-      --Color-icons: #ffffff;
+      --Color-icons-a: #ffffff;
       --Backgtound-a-Icons: #1f1e1e;
       --Backgtound-button-low: #1a1919;
       --Color-button-low-i: #e0e0e0;
       --Color-card--skills: #e0e0e0;
+      --Color-about--text: #242424;
 
   }
+
+  .ModeDark {
+    --Color-texte-portifolio: #eeeeee;
+    --Color-button-Light-Dark: #f7f7f7;
+    --Backgtound-fundo-Color: #1b1b1b;
+    --Backgtound-color-nav: #272525;
+    --Color-nav-a: #ebebeb;
+    --Color-nav-a-houve: #979797;
+    --Color-buttom-br-en: #686868;
+    --Color-texto: #eeeeee;
+    --Color-icons-redes: #eeeeee;
+    --Color-Texto-pequeno: #eeeeee;
+    --Backgtound-cards-icons: #272525;
+    --Backgtound-cards-icons-houver: #535353;
+    --Color-icons-a: #272525;
+    --Backgtound-a-Icons: #eeeeee;
+    --Backgtound-button-low: #eeeeee;
+    --Color-button-low-i: #272727;
+    --Color-card--skills: #e0e0e0;
+    --Color-about--text: #eeeeee;
+
+}
+
 
   header{
     height: 100vh;
@@ -44,6 +70,11 @@
     font-size: 50px;
     font-weight: 900;
     color: var(--Color-texte-portifolio);
+  }
+
+  .Botao_Modo button {
+    font-size: 17px;
+    color: var(--Color-button-Light-Dark);
   }
 
   .div_buttons {
@@ -129,6 +160,7 @@
     align-items: center;
     font-size: 17px;
     font-weight: 500;
+    color: var(--Color-Texto-pequeno);
     border-right: solid 5px var(--Color-Texto-pequeno);
   }
   
@@ -152,21 +184,21 @@
     text-decoration: none;
     font-weight: 700;
     font-size: 19px;
-    color: var(--backgtound-a-Icons);
+    color: var(--Backgtound-a-Icons);
   }
 
   .Social-Midias a:hover {
-    background-color: var(--Backgtound-cards-icons-houve);
-    color: var(--Color-icons);
+    background-color: var(--Backgtound-cards-icons-houver);
     transition: all 1000ms;
   }
 
   .Social-Midias i {
     font-size: 20px;
     font-weight: 900;
+    color: var(--Color-icons-redes);
     margin-left: 1rem;
   }
-  
+
   #LowButton{
     height: 65px;
     width: 65px;
@@ -216,6 +248,7 @@
     font-size: 35px;
     text-align: center;
     font-weight: 900;
+    color: var(--Color-about--text);
   }
   
   .ABOUT {
@@ -230,6 +263,7 @@
     text-align: center;
     margin: 1rem 6rem;
     padding: 1rem 4rem;
+    color: var(--Color-about--text);
   }
   
   .Tecnologias {
