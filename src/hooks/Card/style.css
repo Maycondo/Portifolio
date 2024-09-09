@@ -1,0 +1,138 @@
+.Container_projects {
+    height: 100vh;
+    width: 100vw;
+    background-color:  var(--Backgtound-fundo-Color);
+    gap: 1rem;
+    display: flex;
+    margin: 2rem;
+}
+
+#Projecto_name {
+  width: 400px;
+  font-size: 45px;
+  margin: 4rem 0rem;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  left: 40%;
+  padding: 1em 1.5em;
+  color: #686868;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+#Projecto_name::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 0;
+  background-color: #181817;
+  transition: 0.5s ease;
+}
+
+#Projecto_name:hover {
+  color: #1e1e2b;
+  transition-delay: 0.5s;
+}
+
+#Projecto_name:hover::before {
+  width: 100%;
+}
+
+.Container_Card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.Container_Card img {
+  margin: 2rem;
+  animation: alternate ease;
+  transition: all 10ms ease-out;
+  height: 800px;
+  width: 1000px;
+  overflow: hidden;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.Container_Card  img.active {
+  opacity: 1;
+  position: relative;
+}
+
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active svg {
+    transform: scale(0.9);
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .zoom-container {
+    overflow: hidden;
+  }
+  
+  .zoom-container img {
+    filter: grayscale(100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .zoom-container img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }
+  
+

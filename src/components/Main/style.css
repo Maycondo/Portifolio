@@ -1,0 +1,79 @@
+main{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Backgtound-fundo-Color);
+    transition: all 300ms;
+  }
+
+  #About {
+    width: 400px;
+    font-size: 45px;
+    font-weight: bold;
+    background: transparent;
+    border: none;
+    padding: 0;
+    padding: 1em 1.5em;
+    color: #686868;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    transition: 0.5s ease;
+    cursor: pointer;
+  }
+  
+  #About::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 0;
+    background-color: #181817;
+    transition: 0.5s ease;
+  }
+  
+  #About:hover {
+    color: #1e1e2b;
+    transition-delay: 0.5s;
+  }
+  
+  #About:hover::before {
+    width: 100%;
+  }
+  
+  .ABOUT {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #Text-About {
+    font-size: 35px;
+    text-align: center;
+    margin: 2rem 6rem;
+    padding: 2rem 4rem;
+    color: var(--Color-about--text);
+    transition: all 300ms;
+  }
+  
+  .Tecnologias {
+    height: 15rem;
+    margin: 1rem; 
+    width: 100%;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Projectos { 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+

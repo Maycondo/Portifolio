@@ -1,0 +1,112 @@
+
+
+#Traço-1, #Traço-2 {
+    background-color: rgb(49, 47, 47);
+    transition: all 300ms;
+    height: 6px;
+  }
+
+  .nav-hide {
+    top: 1px; 
+    right: 30px; 
+    z-index: 3;
+    position: fixed;
+    width: auto;
+    transform: translateY(-80%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-show {
+    top: 1px; 
+    z-index: 3;
+    right: 30px; 
+    width: auto;
+    gap: 2rem;
+    transform: translateY(+100%);
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+  }
+
+  .semAnimetionNav {
+    height: 100%;
+    width: 35%;
+    z-index: 1;
+    background-color: rgb(26, 26, 26);
+    position: fixed;
+    top: 0;
+    right: -19.5rem;
+    /* Copy code to element you want to animate */
+    animation: customAni2 400ms linear 0s normal forwards;
+  } 
+
+  @keyframes customAni2 {
+    0% {
+      transform: scaleX(1);
+      transform-origin: 100% 100%;
+      }
+    
+      100% {
+      transform: scaleX(0.3);
+      transform-origin: 100% 100%;
+      }
+  }
+
+  .semAnimetionNav ul {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: space-evenly;
+    align-items: end;
+  }
+
+  .semAnimetionNav ul a {
+    margin: 0 18rem;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+  .AnimetionNav { 
+    height: 100%;
+    width: 25%;
+    z-index: 1;
+    background-color: rgb(26, 26, 26);
+    position: fixed;
+    top: 0;
+    right: -5rem;
+    animation: customAni 400ms linear 0s normal forwards;
+  }
+
+  @keyframes customAni {
+    0% {
+    transform: scaleX(0.0);
+    transform-origin: 100% 100%;
+    }
+
+    100% {
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
+    }
+  }
+
+
+  .AnimetionNav ul {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    justify-content: space-evenly;
+    align-items: end;
+  }
+
+  .AnimetionNav ul a {
+    margin: 0 7rem;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+  }
+
+

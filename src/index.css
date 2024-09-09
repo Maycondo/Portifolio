@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+  }
+
+  .ModeLight {
+      --Color-texte-portifolio: #242323;
+      --Color-button-Light-Dark: #242323;
+      --Backgtound-fundo-Color: #f3f2f2;
+      --Backgtound-color-nav: #e0e0e0;
+      --Color-nav-a: #a3a3a3;
+      --Color-nav-a-houve: #181818;
+      --Color-buttom-br-en: #e0e0e0;
+      --Color-texto: #242424;
+      --Color-icons-redes: #242424;
+      --Backgtound-cards-icons-houver: #919191;
+      --Color-Texto-pequeno: #242323;
+      --Backgtound-cards-icons: #e0e0e0;
+      --Color-icons-a: #ffffff;
+      --Backgtound-a-Icons: #1f1e1e;
+      --Backgtound-button-low: #1a1919;
+      --Color-button-low-i: #e0e0e0;
+      --Color-card--skills: #e0e0e0;
+      --Color-about--text: #242424;
+      --Color-traço--nav-2: #242424;
+      --Backgtound-color-card-projetcs: #e0e0e0;
+  }
+
+  .ModeDark {
+    --Color-texte-portifolio: #eeeeee;
+    --Color-button-Light-Dark: #f7f7f7;
+    --Backgtound-fundo-Color: #1b1b1b;
+    --Backgtound-color-nav: #272525;
+    --Color-nav-a: #ebebeb;
+    --Color-nav-a-houve: #979797;
+    --Color-buttom-br-en: #686868;
+    --Color-texto: #eeeeee;
+    --Color-icons-redes: #eeeeee;
+    --Color-Texto-pequeno: #eeeeee;
+    --Backgtound-cards-icons: #272525;
+    --Backgtound-cards-icons-houver: #535353;
+    --Color-icons-a: #272525;
+    --Backgtound-a-Icons: #eeeeee;
+    --Backgtound-button-low: #eeeeee;
+    --Color-button-low-i: #272727;
+    --Color-card--skills: #e0e0e0;
+    --Color-about--text: #eeeeee;
+    --Color-traço--nav-2: #eeeeee;
+    --Backgtound-color-card-projetcs: #272525;
+}
+
+
+  header{
+    height: 100vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Backgtound-fundo-Color);
+    transition: all 300ms;
+  }
+  
+  .Top-barra{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  #Portifolio {
+    margin: 2rem;
+    font-size: 70px;
+    font-weight: 900;
+    color: var(--Color-texte-portifolio);
+    transition: all 300ms;
+  }
+
+  .Botao_Modo button {
+    font-size: 17px;
+    color: var(--Color-button-Light-Dark);
+    transition: all 300ms;
+  }
+
+  .div_buttons {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 10%;   
+    margin: 2rem;
+    display: flex;
+  }
+
+  .lingua {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 1rem;
+  }
+  
+  .lingua button {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--Color-buttom-br-en);
+    transition: all 300ms;
+  }
+
+  .Narve {
+    height: 5rem;
+    margin: 0rem 4rem;
+    display: flex;
+    border-radius: 50px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--Backgtound-color-nav);
+    transition: all 300ms;
+  }
+  
+  .Narve a {
+    text-decoration: none;
+    color: var(--Color-nav-a);
+    font-weight: 900;
+    font-size: 24px;  
+    animation: reverse all 1000ms;
+    transition: all 300ms;
+  }
+
+  .Narve a:hover{
+    color: var(--Color-nav-a-houve);
+    animation: reverse all 1000ms;
+  }
+
+  .Painel-1 { 
+    height: 100%;
+    display: flex;
+    box-sizing: border-box;
+  } 
+  
+  .Discrição-Perso {
+    width: 50%;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #Name-Perso {
+    margin: 1rem 0rem;
+    font-size: 70px;
+    font-weight: 900;
+    color: var(--Color-Texto-pequeno);
+    transition: all 300ms;
+  }
+
+  #Name-Perso:after{
+    content: '|';
+    margin-left: 8px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+   }
+
+   @keyframes pisca{
+    0%, 100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+  #Email {
+    font-size: 20px;
+    color : var(--Color-Texto-pequeno);
+    transition: all 300ms;
+  } 
+  
+  #Founder{
+    font-weight: 800; 
+    font-size: 35px;
+    color: var(--Color-Texto-pequeno);
+    transition: all 300ms;
+  }
+  
+  #Pequeno-Texto {
+    margin: 1rem 0rem;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    color: var(--Color-Texto-pequeno);
+    border-right: solid 5px var(--Color-Texto-pequeno);
+    transition: all 300ms;
+  }
+  
+  .Social-Midias {
+    height: 35%;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Social-Midias a {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    background-color: var(--Backgtound-cards-icons);
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--Backgtound-a-Icons);
+    transition: all 300ms;
+  }
+
+  .Social-Midias a:hover {
+    background-color: var(--Backgtound-cards-icons-houver);
+    transition: all 1000ms;
+  }
+
+  .Social-Midias i {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--Color-icons-redes);
+    margin-left: 1rem;
+    transition: all 300ms;
+  }
+
+
+  .Imagem-Perso{
+    height: auto;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #Imagem-User{
+    height: 750px;
+    width: 750px;
+    position: relative;
+    top: 0;
+    border-radius: 50%;
+  }
+
+  
