@@ -5,13 +5,13 @@ import './style.css'
 
 
 
-export default function Main ({ texts, navtexts }) {
-
+export default function Main ({ texts, navtexts, handleLanguageChange}) {
+    const sectionId =  handleLanguageChange === "PT" ? 'sobre' : 'about';
 
     return (
         <>
-            <main className="Main" id="ABOUT">
-                <h1 id="About">{navtexts[1]}</h1>
+            <main className="Main" id={sectionId}>
+                <h1>{navtexts[1]}</h1>
                 <div className="ABOUT">  
                     <p id="Text-About">{texts['about']}</p>
                 </div>
@@ -19,7 +19,7 @@ export default function Main ({ texts, navtexts }) {
                     <InfiniteSlider></InfiniteSlider>
                 </section>
 
-                <CardFeatures texts={texts} navtexts={navtexts}></CardFeatures>
+                <CardFeatures texts={texts} navtexts={navtexts} handleLanguageChange={handleLanguageChange} ></CardFeatures>
             </main>
         </>
     )

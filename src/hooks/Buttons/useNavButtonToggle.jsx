@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+// eslint-disable-next-line no-unused-vars
 import useWindowSize from "./useWindowSize";
 import './style.css';
 
@@ -59,6 +60,7 @@ export default function ButtonToggle() {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [showFirstDiv, showNav]);
 
     return (

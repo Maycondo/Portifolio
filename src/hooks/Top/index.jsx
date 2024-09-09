@@ -3,6 +3,7 @@ import './style.css';
 
 
 export default function ButtonTop() {
+    // eslint-disable-next-line no-unused-vars
     const [scroll, setScroll] = useState(0)
 
     const scrollToTop = () => {
@@ -15,7 +16,7 @@ export default function ButtonTop() {
    
     return (
         <div className='Top'>
-            <div class="arrom_2" onClick={scrollToTop}>
+            <div className="arrom_2" onClick={scrollToTop}>
                 <span></span>
                 <span></span>
                 <span></span>

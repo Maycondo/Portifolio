@@ -9,6 +9,11 @@
     font-family: "Josefin Sans", sans-serif;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
   .ModeLight {
       --Color-texte-portifolio: #242323;
       --Color-button-Light-Dark: #242323;

@@ -5,8 +5,8 @@ import ButtonTop from '../../hooks/Top/index.jsx'
 import './style.css'
 
 
-export default function Footer( {texts} ){
-
+export default function Footer( {texts, handleLanguageChange} ){
+    const sectionId = handleLanguageChange === "PT" ? 'contatos' : 'contacts';
     const [getyear, setGetyear] = useState(0);
 
     useEffect(() => {
@@ -17,7 +17,7 @@ export default function Footer( {texts} ){
 
     return (
         <>
-            <footer className="footer">
+            <footer className="footer" id={sectionId}>
                 <div className="footer_pai">
                     <section id="footer-1">
                         <p>© {getyear}</p>

@@ -2,7 +2,8 @@
 
 import './style.css';
 
-export default function CardFeatures({ navtexts }) {
+export default function CardFeatures({ navtexts, handleLanguageChange }) {
+    const sectionId = handleLanguageChange === "PT" ? 'projetos' : 'projects';
 
     const Projects = [
         {
@@ -45,7 +46,7 @@ export default function CardFeatures({ navtexts }) {
     ];
 
     return (
-        <section className="Container_Projetcs">
+        <section className="Container_Projetcs" id={sectionId} >
             <h1 id="Projecto_name">{navtexts[2]}</h1>
             <div className="grid grid-cols-1 sm:grid md:grid-cols-3 gap-6">
                 {Projects.map((project, index) => (
