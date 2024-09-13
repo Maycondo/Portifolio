@@ -28,7 +28,7 @@ export default function Home() {
     const { texts,  navtexts, setLinguagem } = LanguageSwitch();
     const [selectedLanguage, setSelectedLanguage] = useState('PT');
     const [theme, setTheme] = useState('ModeLight');  // Utilizando o hook personalizado
-    const loading = useLoader(3000);
+    const loading = useLoader(4000);
 
     const handleLanguageChange = (linguagem) => {
         setLinguagem(linguagem);
