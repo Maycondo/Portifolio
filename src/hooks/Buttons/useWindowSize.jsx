@@ -8,13 +8,14 @@ export default function useWindowSize ({navtexts, CorStyle, handleLanguageChange
 
     return (
         <>
-            <ul>
-                {navtexts.map((item, index) => (
-                    <li key={index}>
-                        <a href="#">{item}</a>
-                    </li>
-                ))}
-            </ul>
+               <nav> 
+                    <ul>
+                        {navtexts.map((item, index) => (
+                            <li key={index}>
+                                <a href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}>{item}</a>
+                            </li>))}
+                    </ul>
+                </nav>
             <ThemeToggle onThemeChange={handleThemeChange}/>
                 <div className="lingua">
                     <button 

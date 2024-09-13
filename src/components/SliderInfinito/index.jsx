@@ -8,7 +8,8 @@ import {
     SiNodedotjs,
     SiGit,
     SiGithub,
-    SiPostgresql 
+    SiPostgresql,
+    SiCsharp 
   } from "react-icons/si";
 
   
@@ -33,6 +34,8 @@ import {
     <SiGithub size={45} style={{ color: "gray" }} />,
     // eslint-disable-next-line react/jsx-key
     <SiPostgresql size={45} style={{ color: "gray" }} />, // Representando SQL
+    // eslint-disable-next-line react/jsx-key
+    <SiCsharp size={45} style={{ color: "gray" }} />
   ];
   
   

@@ -33,8 +33,8 @@ export default function Footer( {texts, handleLanguageChange} ){
                     </div>
 
                     <section id="footer-2">
-                        <a href="">GITHUB</a>
-                        <a href="">LINKEDIN</a>
+                        <a href="">WHATSAPP</a>
+                        <a href="">INSTAGRAM</a>
                         <a href="">EMAIL</a>
                     </section>
                 </div>

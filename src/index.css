@@ -19,6 +19,7 @@
       --Color-button-Light-Dark: #242323;
       --Backgtound-fundo-Color: #f3f2f2;
       --Backgtound-color-nav: #e0e0e0;
+      --Backgtound-color-nav-animetion: #e0e0e0;
       --Color-nav-a: #a3a3a3;
       --Color-nav-a-houve: #181818;
       --Color-buttom-br-en: #e0e0e0;
@@ -30,11 +31,11 @@
       --Color-icons-a: #ffffff;
       --Backgtound-a-Icons: #1f1e1e;
       --Backgtound-button-low: #1a1919;
-      --Color-button-low-i: #e0e0e0;
       --Color-card--skills: #e0e0e0;
       --Color-about--text: #242424;
       --Color-traço--nav-2: #242424;
       --Backgtound-color-card-projetcs: #e0e0e0;
+      --Color-texto-footer-h1: #e0e0e0;
   }
 
   .ModeDark {
@@ -42,6 +43,7 @@
     --Color-button-Light-Dark: #f7f7f7;
     --Backgtound-fundo-Color: #1b1b1b;
     --Backgtound-color-nav: #272525;
+    --Backgtound-color-nav-animetion: #272525;
     --Color-nav-a: #ebebeb;
     --Color-nav-a-houve: #979797;
     --Color-buttom-br-en: #686868;
@@ -58,6 +60,7 @@
     --Color-about--text: #eeeeee;
     --Color-traço--nav-2: #eeeeee;
     --Backgtound-color-card-projetcs: #272525;
+    --Color-texto-footer-h1: #272525;
 }
 
 

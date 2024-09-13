@@ -14,8 +14,8 @@
     display: block;
     width: 30px;
     height: 30px;
-    border-bottom: 5px solid black;
-    border-right: 5px solid black;
+    border-bottom: 5px solid var(--Backgtound-button-low);
+    border-right: 5px solid var(--Backgtound-button-low);
     transform: rotate(45deg);
     margin: -30px;
     animation: animate28797 2s infinite;

@@ -78,7 +78,7 @@ export default function Home() {
                             </UseWindowSize>
                         </div>
                         <nav> 
-                            <ul className="Nav">
+                            <ul className="Narve">
                                 {navtexts.map((item, index) => (
                                 <li key={index}>
                                     <a href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}>{item}</a>
