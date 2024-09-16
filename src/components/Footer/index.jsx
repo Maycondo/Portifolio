@@ -33,9 +33,9 @@ export default function Footer( {texts, handleLanguageChange} ){
                     </div>
 
                     <section id="footer-2">
-                        <a href="">WHATSAPP</a>
-                        <a href="">INSTAGRAM</a>
-                        <a href="">EMAIL</a>
+                        <div className="btn"><span data-text="WHATSAPP"><a href="">WHATSAPP</a></span></div>
+                        <div className="btn"><span data-text="INSTAGRAM"><a href="">INSTAGRAM</a></span></div>
+                        <div className="btn"><span data-text="EMAIL"><a href="">EMAIL</a></span></div>
                     </section>
                 </div>
 

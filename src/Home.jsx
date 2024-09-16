@@ -48,10 +48,10 @@ export default function Home() {
     if (loading) {
         return <Loader />;
     } 
-
+    
     return (    
         <>
-        <header className="App-header">
+        <header className="App-header" >
                 <section className="Top-barra">
                         <h1 id="Portifolio">Portfólio</h1>
                     <div className='div_buttons'>

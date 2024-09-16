@@ -67,8 +67,8 @@ export default function CardFeatures({ navtexts, handleLanguageChange }) {
                         <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '16px' }}
                             className="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-end text-surface/75 dark:border-white/10 dark:text-neutral-300 "
                         >
-                            <a href=""><i className="bi bi-github text-2xl" style={{cursor: 'pointer', color: 'black'}}></i></a>
-                            <a href=""><i className="bi bi-globe text-2xl" style={{cursor: 'pointer', color: 'black' }}></i></a>
+                            <a href="" target="_blank" ><i className="bi bi-github text-2xl" style={{cursor: 'pointer', color: "var(--Color-icons--projetcs)" }}></i></a>
+                            <a href="" target="_blank" ><i className="bi bi-globe text-2xl" style={{cursor: 'pointer', color: "var(--Color-icons--projetcs)" }}></i></a>
                         </div>
                     </div>
                 ))}

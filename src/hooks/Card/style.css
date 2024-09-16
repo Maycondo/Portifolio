@@ -21,7 +21,6 @@
   text-align: center;
   position: relative;
   transition: 0.5s ease;
-  cursor: pointer;
 }
 
 #Projecto_name::before {
@@ -73,7 +72,6 @@
 .cta {
     border: none;
     background: none;
-    cursor: pointer;
   }
   
   .cta span {
