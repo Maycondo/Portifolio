@@ -1,7 +1,7 @@
 
 
 #Traço-1, #Traço-2 {
-    background-color: rgb(49, 47, 47);
+    background-color: var(--Color-nav-animetino);
     transition: all 300ms;
     height: 6px;
   }
@@ -124,6 +124,20 @@
     color: white;
     font-size: 30px;
     font-weight: 900;
+  }
+
+  .AnimetionNav .Botao_Modo {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .semAnimetionNav .Botao_Modo {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 

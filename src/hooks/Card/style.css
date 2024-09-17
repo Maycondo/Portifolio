@@ -6,41 +6,13 @@
     display: flex;
     margin: 2rem;
 }
-
 #Projecto_name {
-  width: 400px;
-  font-size: 45px;
-  margin: 4rem 0rem;
-  font-weight: bold;
-  background: transparent;
-  border: none;
-  left: 40%;
-  padding: 1em 1.5em;
-  color: #686868;
-  text-transform: uppercase;
+  margin: 3rem;
+  padding: 2rem;
+  font-size: 4rem;
+  font-weight: 900;
   text-align: center;
-  position: relative;
-  transition: 0.5s ease;
-}
-
-#Projecto_name::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4px;
-  width: 0;
-  background-color: #181817;
-  transition: 0.5s ease;
-}
-
-#Projecto_name:hover {
-  color: #1e1e2b;
-  transition-delay: 0.5s;
-}
-
-#Projecto_name:hover::before {
-  width: 100%;
+  color: var(--Color-Texto-pequeno);
 }
 
 .Container_Card {

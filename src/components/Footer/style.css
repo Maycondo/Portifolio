@@ -73,7 +73,7 @@
     /* From Uiverse.io by Mohsinech */ 
     .btn {
       background: transparent;
-      border: 1px solid #141414;
+      border: 1px solid var(--Color-Texto-pequeno);
       outline: none;
       padding: 12px 40px;
       height: 60px;
@@ -116,7 +116,7 @@
       font-weight: 500;
       overflow: hidden;
       position: relative;
-      color: black;
+      color: var(--Color-Texto-pequeno);
     }
 
     .btn span:after {
