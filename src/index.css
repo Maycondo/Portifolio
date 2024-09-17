@@ -38,6 +38,10 @@
       --Backgtound-color-card-projetcs: #e0e0e0;
       --Color-icons--projetcs: #242424;
       --Color-texto-footer-h1: #e0e0e0;
+      --Color-buttons-footer: #272525;
+      --Color-buttins-border-top-footer: #ffffff;
+      --Color-text-buttons-foote-hover: #ffffff;
+      --Color-text-buttons-foote: #272525;
   }
 
   .ModeDark {
@@ -65,6 +69,10 @@
     --Backgtound-color-card-projetcs: #272525;
     --Color-icons--projetcs: #eeeeee;
     --Color-texto-footer-h1: #272525;
+    --Color-buttons-footer: #eeeeee;
+    --Color-text-buttons-foote: #eeeeee;
+    --Color-text-buttons-foote-hover: #272525;
+    --Color-buttins-border-top-footer: #272525;
 }
 
 

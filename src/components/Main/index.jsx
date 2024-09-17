@@ -4,9 +4,8 @@ import InfiniteSlider from '../SliderInfinito/index.jsx'
 import './style.css'
 
 
-
 export default function Main ({ texts, navtexts, handleLanguageChange}) {
-    const sectionId =  handleLanguageChange === "PT" ? 'sobre' : 'about';
+    const sectionId =  handleLanguageChange === "PT" ? 'sobre' : 'about'; // Determina o ID da seção com base na linguagem
 
     return (
         <>

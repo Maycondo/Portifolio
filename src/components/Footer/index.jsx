@@ -33,10 +33,28 @@ export default function Footer( {texts, handleLanguageChange} ){
                     </div>
 
                     <section id="footer-2">
-                        <div className="btn"><span data-text="WHATSAPP"><a href="">WHATSAPP</a></span></div>
-                        <div className="btn"><span data-text="INSTAGRAM"><a href="">INSTAGRAM</a></span></div>
-                        <div className="btn"><span data-text="EMAIL"><a href="">EMAIL</a></span></div>
-                    </section>
+                        <button className="learn-more">
+                            <span className="circle" aria-hidden="true">
+                            <span className="icon arrow"></span>
+                            </span>
+                            <span className="button-text"><a href="https://wa.me/5582988172684" target="_blank" aria-label="Enviar mensagem via WhatsApp">WHATSAPP</a></span>
+                        </button>
+                        <button className="learn-more">
+                            <span className="circle" aria-hidden="true">
+                            <span className="icon arrow"></span>
+                            </span>
+                            <span className="button-text"><a href="https://www.instagram.com/maycon_d2003/" target="_blank" aria-label="Visitar Instagram">INSTAGRAM</a></span>
+                        </button>
+                        <button className="learn-more">
+                            <span className="circle" aria-hidden="true">
+                            <span className="icon arrow"></span>
+                            </span>
+                            <span className="button-text"><a href="mailto:maycondouglasniculau@gmail.com" aria-label="Enviar email">EMAIL</a>
+                            </span>
+                        </button>
+                        
+                </section>
+
                 </div>
 
             </footer>

@@ -5,9 +5,11 @@ import './style.css';
 
 export default function ButtonToggle() {
 
-    const [showNav, setShowNav] = useState(false);
-    const [showFirstDiv, setShowFirstDiv] = useState(false);
-    const [animetion, setAnimetion] = useState('semAnimetionNav');
+    const [showNav, setShowNav] = useState(false); // Controla a visibilidade da barra de navegação
+    const [showFirstDiv, setShowFirstDiv] = useState(false); // Controla o estado da animação do botão (os "traços")
+    const [animetion, setAnimetion] = useState('semAnimetionNav'); // Controla a classe de animação para a navegação
+
+    
     
     useEffect(() => {
         const traço1 = document.getElementById('Traço-1');
@@ -23,45 +25,50 @@ export default function ButtonToggle() {
         }
     }, [showFirstDiv]);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const reciarNav = () => {
         if (!showNav && showFirstDiv) {
-            setShowFirstDiv(false);
+            setShowFirstDiv(false); // Fecha o botão de navegação se a navegação estiver oculta
         }
     };
 
     const handleClick = () => {
-        setShowFirstDiv(prev => !prev);
+        setShowFirstDiv(prev => !prev); // Alterna o estado de animação do botão (abre/fecha)
         setAnimetion(prevAnimetion => {
             const NewAnimetion = prevAnimetion === 'semAnimetionNav' ? 'AnimetionNav' : 'semAnimetionNav';
-            return NewAnimetion;
+            return NewAnimetion; // Alterna a classe de animação da navegação
         });
     };
+    
 
     useEffect(() => {
         const animetindiv = document.getElementById('Animetion_off');
         if (animetindiv) {
             animetindiv.classList.remove('semAnimetionNav', 'AnimetionNav');
-            animetindiv.classList.add(animetion);
+            animetindiv.classList.add(animetion); // Adiciona a classe de animação adequada
         }
     }, [animetion]);
+    
 
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 100) {
-                setShowNav(true);
-                reciarNav();
+                setShowNav(true); // Exibe a navegação ao rolar mais de 100px
+                reciarNav(); // Restaura a animação do botão
             } else {
-                setShowNav(false);
-                setAnimetion('semAnimetionNav')
+                setShowNav(false); // Oculta a navegação quando a rolagem é menor que 100px
+                setAnimetion('semAnimetionNav'); // Reseta a animação
                 reciarNav();
             }
         };
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll); // Adiciona o listener de scroll
+    
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', handleScroll); // Limpa o listener de scroll ao desmontar
         };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [showFirstDiv, showNav]);
+    }, [reciarNav, showFirstDiv, showNav]);
+    
+    
 
     return (
         <>

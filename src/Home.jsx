@@ -12,47 +12,55 @@ import UseWindowSize from './hooks/Buttons/useWindowSize.jsx';
 
 // Função para controlar o delay do Loader
 const useLoader = (delay) => {
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true); // Controla o estado de carregamento (loading)
     
     useEffect(() => {
-      const timer = setTimeout(() => setLoading(false), delay);
-      return () => clearTimeout(timer); // Limpeza do timeout
+      const timer = setTimeout(() => setLoading(false), delay); // Define um tempo de espera para o Loader
+      return () => clearTimeout(timer); // Limpeza do timeout ao desmontar o componente
     }, [delay]);
   
-    return loading;
+    return loading; // Retorna o estado de loading
   };
 
 
 export default function Home() {
 
-    const { texts,  navtexts, setLinguagem } = LanguageSwitch();
-    const [selectedLanguage, setSelectedLanguage] = useState('PT');
-    const [theme, setTheme] = useState('ModeLight');  // Utilizando o hook personalizado
-    const loading = useLoader(4000);
+    const { texts, navtexts, setLinguagem } = LanguageSwitch(); // Hook para troca de linguagem
+    const [selectedLanguage, setSelectedLanguage] = useState('PT'); // Estado da linguagem selecionada
+    const sectionId = selectedLanguage === "PT" ? 'inicio' : 'home'; // Determina o ID da seção com base na linguagem
+    const [theme, setTheme] = useState('ModeLight');  // Estado do tema (claro ou escuro)
+    const loading = useLoader(4000); // Utiliza o hook de carregamento com delay de 4000ms
 
+
+    // Função para trocar a linguagem
     const handleLanguageChange = (linguagem) => {
-        setLinguagem(linguagem);
-        setSelectedLanguage(linguagem);
+        setLinguagem(linguagem); // Atualiza a linguagem no hook personalizado
+        setSelectedLanguage(linguagem); // Atualiza o estado local da linguagem
     };
+
+    // Função para trocar o tema
     const handleThemeChange = (newTheme) => {
-        setTheme(newTheme);
-    };          
+        setTheme(newTheme); // Atualiza o tema
+    };
+
+    // Função para estilizar o botão de linguagem
     const CorStyle = (linguagem) => {
         return linguagem === selectedLanguage
         ? theme === 'ModeLight'
-            ? { color: 'black' }
-            : { color: 'white' }
-        : { color: '#a3a3a3' };
+            ? { color: 'black' } // Cor preta para o tema claro
+            : { color: 'white' } // Cor branca para o tema escuro
+        : { color: '#a3a3a3' }; // Cor cinza para linguagens não selecionadas
     };
 
+    // Exibe o loader enquanto o estado `loading` for `true`
     if (loading) {
         return <Loader />;
     } 
     
     return (    
         <>
-        <header className="App-header" >
-                <section className="Top-barra">
+        <header className="App-header" id={sectionId} >
+                <section className="Top-barra" >
                         <h1 id="Portifolio">Portfólio</h1>
                     <div className='div_buttons'>
                         <ThemeToggle onThemeChange={handleThemeChange}/>

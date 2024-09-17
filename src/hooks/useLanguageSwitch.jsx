@@ -9,7 +9,7 @@ export default function LanguageSwitch(initialLinguagem = 'PT') {
     
     useEffect(() => {
 
-    const navTextsPt = ['INÍCIO', 'SOBRE', 'PROJETOS', 'CONTATOS'];
+    const navTextsPt = ['INICIO', 'SOBRE', 'PROJETOS', 'CONTATOS'];
     const navTextsEn = ['HOME', 'ABOUT', 'PROJECTS', 'CONTACTS'];
 
     const textsPT = {
