@@ -10,7 +10,7 @@ main{
   .Main h1 {
     margin: 2rem;
     padding: 2rem;
-    font-size: 4rem;
+    font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 900;
     text-align: center;
     color: var(--Color-Texto-pequeno);
@@ -24,7 +24,7 @@ main{
   }
   
   #Text-About {
-    font-size: 35px;
+    font-size: clamp(1.5rem, 3vw, 35px);
     text-align: center;
     margin: 2rem 6rem;
     padding: 2rem 4rem;
@@ -36,17 +36,60 @@ main{
     height: 15rem;
     margin: 1rem; 
     width: 100%;
-    gap: 1rem;
+    gap: clamp(1rem, 2vw, 1rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   .Projectos { 
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
   }
+
+  @media (max-width: 768px) {
+    .ABOUT {
+      padding: 1rem;
+      margin: 0;
+    }
+  
+    #Text-About {
+      margin: 1rem 2rem;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+    }
+  
+    .Tecnologias {
+      height: auto;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .Projectos {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Main h1 {
+      font-size: 2rem; 
+    }
+  
+    #Text-About {
+      font-size: 1rem;
+      margin: 1rem;
+      padding: 1rem;
+    }
+  
+    .Projectos {
+      padding: 1rem;
+    }
+  }
+  
 
