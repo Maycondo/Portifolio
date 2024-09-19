@@ -33,13 +33,12 @@ main{
   }
   
   .Tecnologias {
-    height: 15rem;
-    margin: 1rem; 
+    height: 25rem;
+    margin: 1rem 0rem; 
     width: 100%;
-    gap: clamp(1rem, 2vw, 1rem);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
   .Projectos { 
@@ -77,14 +76,19 @@ main{
   }
   
   @media (max-width: 480px) {
+
+    .Main {
+      flex-direction: column; /* Stack dos elementos em uma coluna */
+    }
+    
     .Main h1 {
-      font-size: 2rem; 
+      font-size: 2rem;
+      margin-top: 5rem;
     }
   
     #Text-About {
-      font-size: 1rem;
       margin: 1rem;
-      padding: 1rem;
+      font-size: 1rem;
     }
   
     .Projectos {

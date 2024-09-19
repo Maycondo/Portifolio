@@ -145,7 +145,7 @@
     text-decoration: none;
     color: var(--Color-nav-a);
     font-weight: 900;
-    font-size: 24px;  
+    font-size: clamp(16px, 4vw, 24px); 
     animation: reverse all 1000ms;
     transition: all 300ms;
   }
@@ -211,7 +211,7 @@
     height: 70px;
     display: flex;
     align-items: center;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
     color: var(--Color-Texto-pequeno);
     border-right: solid 5px var(--Color-Texto-pequeno);
     transition: all 300ms;
@@ -269,12 +269,21 @@
     position: relative;
     top: 0;
     border-radius: 50%;
+    object-fit: cover;
   }
   
   @media (max-width: 768px) {
+    .Imagem-Perso {
+      width: 70%; 
+    }
+
+    #Imagem-User {
+      max-width: 80%; 
+    }
+
     .Top-barra {
       flex-direction: column;
-      height: auto; /* Ajustar altura */
+      height: auto; 
     }
   
     .div_buttons {
@@ -290,9 +299,13 @@
     .Discrição-Perso, .Imagem-Perso {
       width: 100%;
     }
+
+    #Pequeno-Texto {
+      font-size: 0.9rem; 
+    }
   
     #Name-Perso, #Portifolio {
-      font-size: 40px; /* Reduz o tamanho da fonte em telas menores */
+      font-size: 40px;
     }
   
     .Narve {
@@ -301,8 +314,12 @@
   }
 
   @media (max-width: 1024px) {
+    .Imagem-Perso {
+      width: 60%; 
+    }
+  
     .Painel-1 {
-      flex-direction: column; /* Coluna em telas menores */
+      flex-direction: column; 
     }
   
     .Discrição-Perso {
@@ -315,9 +332,26 @@
   }
 
   @media (max-width: 480px) {
+
+    .Imagem-Perso {
+      height: 4rem;
+      width: 70%;
+      margin: 0 auto; 
+    }
+  
+    #Imagem-User {
+      max-width: 90%; /* Limitar a largura da imagem */
+      height: auto; /* Ajustar a altura proporcional */
+      margin-bottom: 1rem;
+    }
+
     .Top-barra {
       flex-direction: column;
       padding: 1rem;
+    }
+
+    #Pequeno-Texto {
+      font-size: 0.8rem; /* Ajuste ainda menor para telas muito pequenas */
     }
   
     #Portifolio, #Name-Perso {

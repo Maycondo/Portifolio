@@ -1,5 +1,6 @@
    .footer{
         height: 100vh;
+        padding: 2rem 1rem;
         width: 100%;
         display: flex;
         background-color: var(--Backgtound-fundo-Color);
@@ -10,7 +11,7 @@
       }
       
       .footer_pai{
-        width: 100%;
+        width: auto;
         height: 70%;
       }
       
@@ -42,7 +43,7 @@
       }
       
       .footer-central{
-        margin: 3rem 5rem;
+        margin: 2rem 1rem;
         height: 25rem;
         width: auto;
         display: flex;
@@ -58,9 +59,9 @@
       }
       
       .footer-central h1{
-        line-height: 20rem;
+        line-height: clamp(10rem, 20vw, 20rem);
         color: var(--Color-texto-footer-h1);
-        font-size: 305px;
+        font-size: clamp(3rem, 20vw, 305px);
         font-weight: 900;
       }
       
@@ -159,3 +160,42 @@
     button:hover .button-text {
       color: var(--Color-text-buttons-foote-hover);
     }  
+
+    @media (max-width: 768px) {
+      .footer-central h1 {
+        font-size: 8rem; 
+        line-height: 10rem; 
+      }
+    
+      .footer-central p {
+        font-size: 16px; 
+      }
+    
+      #footer-1 p, #But-div p {
+        font-size: 16px;
+      }
+      
+      button.learn-more {
+        width: 10rem; 
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .footer-central h1 {
+        font-size: 4rem; 
+        line-height: 6rem;
+      }
+    
+      .footer-central p {
+        font-size: 14px; 
+      }
+    
+      #footer-1 p, #But-div p {
+        font-size: 14px;
+      }
+    
+      button.learn-more {
+        width: 8rem; 
+      }
+    }
+    

@@ -1,15 +1,17 @@
 .Container_projects {
-    height: 100vh;
-    width: 100vw;
-    background-color:  var(--Backgtound-fundo-Color);
-    gap: 1rem;
-    display: flex;
-    margin: 2rem;
+  height: auto; 
+  min-height: 100vh; 
+  width: 100%;
+  background-color:  var(--Background-fundo-Color);
+  gap: 1rem;
+  display: flex;
+  flex-direction: column; 
+  margin: 2rem 0;
 }
 #Projecto_name {
   margin: 3rem;
   padding: 2rem;
-  font-size: 4rem;
+  font-size: clamp(2rem, 5vw, 4rem); 
   font-weight: 900;
   text-align: center;
   color: var(--Color-Texto-pequeno);
@@ -26,9 +28,10 @@
 .Container_Card img {
   margin: 2rem;
   animation: alternate ease;
-  transition: all 10ms ease-out;
-  height: 800px;
-  width: 1000px;
+  height: auto;
+  max-width: 100%;
+  transition: all 2s ease;
+  object-fit: cover;
   overflow: hidden;
   -webkit-transition: all 2s ease;
   -moz-transition: all 2s ease;
@@ -103,6 +106,34 @@
   .zoom-container img:hover {
     filter: grayscale(0%);
     transform: scale(1.1);
+  }
+
+  @media (max-width: 768px) {
+    .Container_projects {
+      flex-direction: column;
+      margin: 1rem;
+    }
+  
+    .Container_Card img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    #Projecto_name {
+      font-size: 2rem; /* Diminui o tamanho da fonte em telas menores */
+      margin: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #Projecto_name {
+      font-size: 1.5rem; /* Diminui ainda mais para telas muito pequenas */
+    }
+  
+    .Container_Card img {
+      max-width: 100%;
+      height: auto;
+    }
   }
   
 
