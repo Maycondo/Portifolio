@@ -29,7 +29,10 @@ export default function Footer( {texts, handleLanguageChange} ){
 
                     <div className="footer-central">
                         <p>{texts['text_footer']}</p>
-                        <h1>LET'S TALK</h1>
+                        <div className="text-container">
+                            <span className="lets">LET'S</span>
+                            <span className="talk">TALK</span>
+                        </div>
                     </div>
 
                     <section id="footer-2">
