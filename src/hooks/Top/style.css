@@ -2,6 +2,21 @@
     transform: rotate(180deg);
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    .arrom_2 {
+        margin: 1.5rem;
+        padding-top: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .arrom_2 {
+        margin: 1rem;
+        padding-top: 1rem;
+    }
+  }
+  
   
   .arrom_2 span {
     display: block;
@@ -13,6 +28,23 @@
     margin: -30px;
     animation: animate28797 2s infinite;
   }
+
+  @media (max-width: 768px) {
+    .arrom_2 span {
+        width: 25px; 
+        height: 25px;
+        margin: -25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .arrom_2 span {
+        width: 20px; 
+        height: 20px;
+        margin: -20px;
+    }
+  }
+  
   
   .arrom_2 span:nth-child(2) {
     animation-delay: -0.2s;

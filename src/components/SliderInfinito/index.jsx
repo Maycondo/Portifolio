@@ -11,31 +11,31 @@ import {
   SiPostgresql,
   SiCsharp
 } from "react-icons/si";
-import "./style.css"
+import "./style.css";
 
 const LOGOS = [
-     // eslint-disable-next-line react/jsx-key
-  <SiJavascript className="icon icon-mobile icon-tablet icon-desktop" />,
-     // eslint-disable-next-line react/jsx-key
-  <SiHtml5 className="icon icon-mobile icon-tablet icon-desktop" />,
-       // eslint-disable-next-line react/jsx-key
-  <SiCss3 className="icon icon-mobile icon-tablet icon-desktop" />,
-       // eslint-disable-next-line react/jsx-key
-  <SiPython className="icon icon-mobile icon-tablet icon-desktop" />,
-       // eslint-disable-next-line react/jsx-key
-  <SiReact className="icon icon-mobile icon-tablet icon-desktop" />,
-       // eslint-disable-next-line react/jsx-key
-  <SiDjango className="icon icon-mobile icon-tablet icon-desktop" />,
-       // eslint-disable-next-line react/jsx-key
-  <SiNodedotjs className="icon icon-mobile icon-tablet icon-desktop" />,
-       // eslint-disable-next-line react/jsx-key
-  <SiGit className="icon icon-mobile icon-tablet icon-desktop" />,
-       // eslint-disable-next-line react/jsx-key
-  <SiGithub className="icon icon-mobile icon-tablet icon-desktop" />,
-       // eslint-disable-next-line react/jsx-key
-  <SiPostgresql className="icon icon-mobile icon-tablet icon-desktop" />,
-       // eslint-disable-next-line react/jsx-key
-  <SiCsharp className="icon icon-mobile icon-tablet icon-desktop" />
+  // eslint-disable-next-line react/jsx-key
+  <SiJavascript className="text-[8vw] sm:text-[6vw] md:text-[4vw] lg:text-[2vw]" style={{ color: "grey" }} />,
+  // eslint-disable-next-line react/jsx-key
+  <SiHtml5 className="text-[8vw] sm:text-[6vw] md:text-[4vw] lg:text-[2vw]" style={{ color: "grey" }} />,
+  // eslint-disable-next-line react/jsx-key
+  <SiCss3 className="text-[8vw] sm:text-[6vw] md:text-[4vw] lg:text-[2vw]" style={{ color: "grey" }} />,
+  // eslint-disable-next-line react/jsx-key
+  <SiPython className="text-[8vw] sm:text-[6vw] md:text-[4vw] lg:text-[2vw]" style={{ color: "grey" }} />,
+  // eslint-disable-next-line react/jsx-key
+  <SiReact className="text-[8vw] sm:text-[6vw] md:text-[4vw] lg:text-[2vw]" style={{ color: "grey" }} />,
+  // eslint-disable-next-line react/jsx-key
+  <SiDjango className="text-[8vw] sm:text-[6vw] md:text-[4vw] lg:text-[2vw]" style={{ color: "grey" }} />,
+  // eslint-disable-next-line react/jsx-key
+  <SiNodedotjs className="text-[8vw] sm:text-[6vw] md:text-[4vw] lg:text-[2vw]" style={{ color: "grey" }} />,
+  // eslint-disable-next-line react/jsx-key
+  <SiGit className="text-[8vw] sm:text-[6vw] md:text-[4vw] lg:text-[2vw]" style={{ color: "grey" }} />,
+  // eslint-disable-next-line react/jsx-key
+  <SiGithub className="text-[8vw] sm:text-[6vw] md:text-[4vw] lg:text-[2vw]" style={{ color: "grey" }} />,
+  // eslint-disable-next-line react/jsx-key
+  <SiPostgresql className="text-[8vw] sm:text-[6vw] md:text-[4vw] lg:text-[2vw]" style={{ color: "grey" }} />,
+  // eslint-disable-next-line react/jsx-key
+  <SiCsharp className="text-[8vw] sm:text-[6vw] md:text-[4vw] lg:text-[2vw]" style={{ color: "grey" }} />
 ];
 
 export default function InfiniteSlider() {
@@ -45,7 +45,7 @@ export default function InfiniteSlider() {
         <div className="animate-infinite-slider flex w-[calc(250px*22)] mt-4">
           {LOGOS.map((logo, index) => (
             <div
-              className="slide flex w-[12vw] sm:w-[8vw] md:w-[6vw] lg:w-[5vw] items-center justify-center"
+              className="slide flex w-[12vw] sm:w-[8vw] md:w-[6vw] lg:w-[8vw] items-center justify-center"
               key={index}
             >
               {logo}
@@ -53,7 +53,7 @@ export default function InfiniteSlider() {
           ))}
           {LOGOS.map((logo, index) => (
             <div
-              className="slide flex w-[12vw] sm:w-[8vw] md:w-[6vw] lg:w-[6vw] items-center justify-center"
+              className="slide flex w-[12vw] sm:w-[8vw] md:w-[6vw] lg:w-[8vw] items-center justify-center"
               key={index}
             >
               {logo}
@@ -63,7 +63,7 @@ export default function InfiniteSlider() {
         <div className="animate-infinite-slider-reverse flex w-[calc(250px*22)] mt-4">
           {LOGOS.map((logo, index) => (
             <div
-              className="slide flex w-[12vw] sm:w-[8vw] md:w-[6vw] lg:w-[6vw] items-center justify-center"
+              className="slide flex w-[12vw] sm:w-[8vw] md:w-[6vw] lg:w-[8vw] items-center justify-center"
               key={index}
             >
               {logo}

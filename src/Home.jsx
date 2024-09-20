@@ -21,7 +21,7 @@ const useLoader = (delay) => {
   
     return loading; // Retorna o estado de loading
   };
-
+     
 
 export default function Home() {
 
@@ -85,7 +85,7 @@ export default function Home() {
                                 handleThemeChange={handleThemeChange}>
                             </UseWindowSize>
                         </div>
-                        <nav> 
+                        <nav>               
                             <ul className="Narve">
                                 {navtexts.map((item, index) => (
                                 <li key={index}>

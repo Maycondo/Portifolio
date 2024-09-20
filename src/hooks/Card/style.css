@@ -8,10 +8,11 @@
   flex-direction: column; 
   margin: 2rem 0;
 }
+
 #Projecto_name {
   margin: 3rem;
   padding: 2rem;
-  font-size: clamp(2rem, 5vw, 4rem); 
+  font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
   text-align: center;
   color: var(--Color-Texto-pequeno);
@@ -120,14 +121,13 @@
     }
   
     #Projecto_name {
-      font-size: 2rem; /* Diminui o tamanho da fonte em telas menores */
       margin: 1rem;
     }
   }
   
   @media (max-width: 480px) {
     #Projecto_name {
-      font-size: 1.5rem; /* Diminui ainda mais para telas muito pequenas */
+      font-size: 2rem;
     }
   
     .Container_Card img {

@@ -145,7 +145,7 @@
     text-decoration: none;
     color: var(--Color-nav-a);
     font-weight: 900;
-    font-size: clamp(16px, 4vw, 24px); 
+    font-size: clamp(16px, 3vw, 24px); 
     animation: reverse all 1000ms;
     transition: all 300ms;
   }
@@ -313,6 +313,74 @@
     }
   }
 
+
+  @media (max-width: 480px) {
+    .div_buttons {
+      margin: 0.5rem;
+      gap: 0.7rem,;
+    }
+
+    .Narve {
+      height: 9rem;
+    }
+
+    .Botao_Modo {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .Narve a, .Social-Midias i, #Email {
+      font-size: 13px; 
+    }
+
+    .Discrição-Perso {
+      margin: 1rem;
+    }
+
+    .Imagem-Perso {
+      height: 4rem;
+      width: 70%;
+      margin: 3 auto; 
+    }
+  
+    #Imagem-User {
+      max-width: 65%; 
+      height: auto; 
+    }
+
+    .Top-barra {
+      flex-direction: column;
+      padding: 0.5rem;
+    }
+
+    #Pequeno-Texto {
+      font-size: 0.8rem; 
+    }
+  
+    #Portifolio, #Name-Perso {
+      font-size: 1.5rem; 
+    }
+
+    #Portifolio, #Name-Perso  {
+      margin: 0.5rem 0rem;
+    }
+  
+    .div_buttons {
+      width: 100%;
+      gap: 0.5rem;
+      flex-direction: column;
+    }
+  
+    .Narve {
+      margin: 0;
+      height: auto;
+    }
+  
+    .Social-Midias a {
+      font-size: 0.8rem; 
+    }
+  }
+
   @media (max-width: 1024px) {
     .Imagem-Perso {
       width: 60%; 
@@ -330,48 +398,3 @@
       width: 100%;
     }
   }
-
-  @media (max-width: 480px) {
-
-    .Imagem-Perso {
-      height: 4rem;
-      width: 70%;
-      margin: 0 auto; 
-    }
-  
-    #Imagem-User {
-      max-width: 90%; /* Limitar a largura da imagem */
-      height: auto; /* Ajustar a altura proporcional */
-      margin-bottom: 1rem;
-    }
-
-    .Top-barra {
-      flex-direction: column;
-      padding: 1rem;
-    }
-
-    #Pequeno-Texto {
-      font-size: 0.8rem; /* Ajuste ainda menor para telas muito pequenas */
-    }
-  
-    #Portifolio, #Name-Perso {
-      font-size: 1.1rem; 
-    }
-  
-    .div_buttons {
-      width: 100%;
-      flex-direction: column;
-    }
-  
-    .Narve {
-      margin: 0;
-      height: auto;
-    }
-  
-    .Social-Midias a {
-      font-size: 1rem; 
-    }
-  }
-  
-  
-  
