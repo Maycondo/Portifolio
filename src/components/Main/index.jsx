@@ -1,7 +1,14 @@
 /* eslint-disable react/prop-types */
+import { motion } from 'framer-motion';
 import CardFeatures from '../../hooks/Card/useCardFeatures.jsx'
 import InfiniteSlider from '../SliderInfinito/index.jsx'
 import './style.css'
+
+
+const textVariant = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 }
+};
 
 
 export default function Main ({ texts, navtexts, handleLanguageChange}) {
@@ -10,10 +17,12 @@ export default function Main ({ texts, navtexts, handleLanguageChange}) {
     return (
         <>
             <main className="Main" id={sectionId}>
+                <motion.div initial="hidden" animate="visible" variants={textVariant} transition={{ duration: 0.8, ease: "easeOut" }}>
                 <h1>{navtexts[1]}</h1>
                 <div className="ABOUT">  
                     <p id="Text-About">{texts['about']}</p>
                 </div>
+                </motion.div>
                 <section className="Tecnologias">
                     <InfiniteSlider></InfiniteSlider>
                 </section>
