@@ -1,16 +1,15 @@
+/* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
-// eslint-disable-next-line no-unused-vars
-import useWindowSize from "./useWindowSize";
+import UseWindowSize from "./useWindowSize";
 import './style.css';
 
-export default function ButtonToggle() {
+export default function ButtonToggle({ navtexts = [], CorStyle = () => ({ color: "black" }), handleLanguageChange, handleThemeChange }) {
 
     const [showNav, setShowNav] = useState(false); // Controla a visibilidade da barra de navegação
     const [showFirstDiv, setShowFirstDiv] = useState(false); // Controla o estado da animação do botão (os "traços")
-    const [animetion, setAnimetion] = useState('semAnimetionNav'); // Controla a classe de animação para a navegação
+    const [navAnimation, setNavAnimation] = useState(false)
 
-    
-    
+
     useEffect(() => {
         const traço1 = document.getElementById('Traço-1');
         const traço2 = document.getElementById('Traço-2');
@@ -27,29 +26,19 @@ export default function ButtonToggle() {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const reciarNav = () => {
-        if (!showNav && showFirstDiv) {
+        if (!showNav && showFirstDiv )  {
             setShowFirstDiv(false); // Fecha o botão de navegação se a navegação estiver oculta
         }
     };
 
     const handleClick = () => {
         setShowFirstDiv(prev => !prev); // Alterna o estado de animação do botão (abre/fecha)
-        setAnimetion(prevAnimetion => {
-            const NewAnimetion = prevAnimetion === 'semAnimetionNav' ? 'AnimetionNav' : 'semAnimetionNav';
-            return NewAnimetion; // Alterna a classe de animação da navegação
-        });
     };
-    
 
-    useEffect(() => {
-        const animetindiv = document.getElementById('Animetion_off');
-        if (animetindiv) {
-            animetindiv.classList.remove('semAnimetionNav', 'AnimetionNav');
-            animetindiv.classList.add(animetion); // Adiciona a classe de animação adequada
-        }
-    }, [animetion]);
-    
-
+    const toggleNav = () => {
+        setNavAnimation(!navAnimation);
+    };
+        
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 100) {
@@ -57,8 +46,8 @@ export default function ButtonToggle() {
                 reciarNav(); // Restaura a animação do botão
             } else {
                 setShowNav(false); // Oculta a navegação quando a rolagem é menor que 100px
-                setAnimetion('semAnimetionNav'); // Reseta a animação
                 reciarNav();
+                setNavAnimation(false)
             }
         };
         window.addEventListener('scroll', handleScroll); // Adiciona o listener de scroll
@@ -68,12 +57,12 @@ export default function ButtonToggle() {
         };
     }, [reciarNav, showFirstDiv, showNav]);
     
-    
+
 
     return (
         <>
             <div className={showNav ? 'nav-show' : 'nav-hide'}>
-                <button onClick={handleClick} style={{ border: 'none', background: 'none', padding: 0 }}>
+                <button onClick={() => { handleClick(); toggleNav(); } } style={{ border: 'none', background: 'none', padding: 0 }}>
                     <div id="Traço-1" style={{
                         width: '60px',
                         height: '13px',
@@ -92,6 +81,10 @@ export default function ButtonToggle() {
                     </div>
                 </button>
             </div>
+
+            { navAnimation && <UseWindowSize navtexts={navtexts}  CorStyle={CorStyle}  handleLanguageChange={handleLanguageChange}  handleThemeChange={handleThemeChange}>
+            </UseWindowSize> } 
+
         </>
     );
 }

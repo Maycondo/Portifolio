@@ -2,12 +2,12 @@ import ThemeToggle from '../Buttons/useThemeToggle';
 import './style.css';
 
 
-export default function useWindowSize ({navtexts, CorStyle, handleLanguageChange, handleThemeChange}) {
+export default function useWindowSize ({ navtexts = [], CorStyle = () => ({ color: "black" }), handleLanguageChange, handleThemeChange = () => ({ color: "white" })}) {
 
     
 
     return (
-        <>
+        <div className='Nav_animetion'>
                <nav> 
                     <ul>
                         {navtexts.map((item, index) => (
@@ -16,18 +16,11 @@ export default function useWindowSize ({navtexts, CorStyle, handleLanguageChange
                             </li>))}
                     </ul>
                 </nav>
-            <ThemeToggle onThemeChange={handleThemeChange}/>
+            <ThemeToggle onThemeChange={ handleThemeChange }/>
                 <div className="lingua">
-                    <button 
-                    className="lingua__button" 
-                    style={CorStyle('PT')} 
-                    onClick={() => handleLanguageChange('PT')}>PT</button>
-
-                    <button 
-                    className="lingua__button" 
-                    style={CorStyle('EN')} 
-                    onClick={() => handleLanguageChange('EN')}>EN</button>
+                    <button  className="lingua__button"  style={ CorStyle('PT')}  onClick={() => handleLanguageChange('PT')}>PT</button>
+                    <button  className="lingua__button"  style={ CorStyle('EN')}  onClick={() => handleLanguageChange('EN')}>EN</button>
                 </div>
-        </>
+        </div>
     )
 }
