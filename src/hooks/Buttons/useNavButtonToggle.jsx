@@ -82,8 +82,8 @@ export default function ButtonToggle({ navtexts = [], CorStyle = () => ({ color:
                 </button>
             </div>
 
-            { navAnimation && <UseWindowSize navtexts={navtexts}  CorStyle={CorStyle}  handleLanguageChange={handleLanguageChange}  handleThemeChange={handleThemeChange}>
-            </UseWindowSize> } 
+            { navAnimation &&
+            <UseWindowSize navtexts={navtexts}  CorStyle={CorStyle}  handleLanguageChange={handleLanguageChange}  handleThemeChange={handleThemeChange}>            </UseWindowSize> } 
 
         </>
     );
