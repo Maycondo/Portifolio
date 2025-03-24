@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import CardFeatures from '../../hooks/Card/useCardFeatures.jsx'
 import InfiniteSlider from '../SliderInfinito/index.jsx'
+import ScrollReveal from "../../hooks/ScrollReveal.js/ScrollReveal.jsx";
 import './style.css'
 
 
@@ -18,9 +19,12 @@ export default function Main ({ texts, navtexts, handleLanguageChange}) {
         <>
             <main className="Main" id={sectionId}>
                 <motion.div initial="hidden" animate="visible" variants={textVariant} transition={{ duration: 0.8, ease: "easeOut" }}>
-                <h1>{navtexts[1]}</h1>
+                <h1>{navtexts[1]}</h1>  
                 <div className="ABOUT">  
+                <ScrollReveal>
                     <p id="Text-About">{texts['about']}</p>
+                </ScrollReveal>
+                    
                 </div>
                 </motion.div>
                 <section className="Tecnologias">
