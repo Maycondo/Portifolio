@@ -5,6 +5,7 @@ import Footer from './components/Footer/index.jsx';
 import Loader from './components/Loader/index.jsx';
 import Imagem from "./imagens/Imagem.jpeg";
 import ButtonLow from './hooks/Low/index.jsx';
+import CircularText from "./hooks/CircularText/CircularText.jsx";
 import TextAnimation from './hooks/ AnimationText/useTextAnimation.jsx';
 import ThemeToggle from './hooks/Buttons/useThemeToggle.jsx';
 import ButtonToggle from './hooks/Buttons/useNavButtonToggle.jsx';
@@ -132,8 +133,10 @@ export default function Home() {
                             <p id="Pequeno-Texto">{texts['text_peque']}</p> 
                             </motion.div >
                                 <ButtonLow></ButtonLow>
-                            </div>
-                            
+                                    <div className='CircularText'>
+                                        <CircularText/>
+                                    </div>
+                                </div>
                     </div>
 
                 </section>

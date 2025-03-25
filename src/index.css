@@ -94,7 +94,7 @@
 
   #Portifolio {
     margin: 2rem;
-    font-size: clamp(2.5rem, 5vw, 70px);
+    font-size: clamp(2.5rem, 5vw, 55px);
     font-weight: 900;
     color: var(--Color-texte-portifolio);
     transition: all 300ms;
@@ -241,6 +241,15 @@
     justify-content: start;
     align-items: start;
   }
+
+  .CircularText {
+    width: 100%;
+    height: 75%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
   
   .Social-Midias a {
     height: clamp(60px, 10vw, 75px); 

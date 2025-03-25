@@ -1,4 +1,6 @@
 /* eslint-disable react/prop-types */
+import AnimatedContent from "./AnimatedContent/AnimatedContent";
+
 
 import './style.css';
 
@@ -48,6 +50,16 @@ export default function CardFeatures({ navtexts, handleLanguageChange }) {
     return (
         <section className="Container_Projetcs" id={sectionId} >
             <h1 id="Projecto_name">{navtexts[2]}</h1>
+            <AnimatedContent
+                distance={150}
+                direction="horizontal"
+                reverse={false}
+                config={{ tension: 80, friction: 20 }}
+                initialOpacity={0.2}
+                animateOpacity
+                scale={1.0}
+                threshold={0.2}>
+
             <div className="grid grid-cols-1 sm:grid md:grid-cols-3 gap-6">
                 {Projects.map((project, index) => (
                     <div style={{ backgroundColor: "var(--Backgtound-color-card-projetcs)", color: "var(--Color-texto)"}} key={index}className="mx-3 mt-6 flex flex-col rounded-lg  text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white sm:shrink-0 sm:grow sm:basis-0">
@@ -73,6 +85,7 @@ export default function CardFeatures({ navtexts, handleLanguageChange }) {
                     </div>
                 ))}
             </div>
+            </AnimatedContent>
         </section>
     );
 }
