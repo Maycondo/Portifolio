@@ -84,7 +84,7 @@
     transition: all 300ms;
   }
   
-  .Top-barra {
+  .Barra_top {
     height: 5rem;
     width: 100%;
     display: flex;
@@ -94,7 +94,7 @@
 
   #Portifolio {
     margin: 2rem;
-    font-size: clamp(2.5rem, 5vw, 55px);
+    font-size: clamp(2.5rem, 5vw, 10px);
     font-weight: 900;
     color: var(--Color-texte-portifolio);
     transition: all 300ms;
@@ -168,11 +168,10 @@
     gap: 0.5rem;
   }
 
-  .Imagem-Perso {
+  .Painel-img-redes {
     height: auto;
-    width: 20%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
   }
 
@@ -282,6 +281,129 @@
     transition: all 300ms;
   }
 
+@media (max-width: 480px) {
+
+    .Barra_top {
+      display: flex;
+      padding: 0.5rem;
+    }
+
+    #Portifolio {
+      font-size: 1rem;
+      margin: 0.5rem;
+    } 
+
+    .Container-Buttons {
+      display: flex;
+      gap: 0.8rem,;
+    }
+
+    .Botao_Modo {
+      display: flex;
+      justify-content: center;
+      margin: 0rem 1.5rem;
+    }
+
+    .Narve {
+      display: none;
+    }
+
+    .Painel-Perso {
+      height: 100%; 
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0.5rem;
+    }
+    
+    .Painel-img-redes {
+      height: 30%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Conteiner-Image {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Imagem-Perso {
+      height: 100%;
+      width: 100%;
+      display: flex;
+    }
+
+    #Imagem-User {
+      height: 225px;
+      width: 210px;
+      border-radius: 10%;
+    }
+
+    .Social-Midias {
+      height: 80%;
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .Container-discrição {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #Founder{
+      font-size: 1rem;
+    }
+
+    .Botao_Modo {
+      display: flex;
+      justify-content: center;
+    }
+    
+
+    .Discrição-Perso {
+      margin: 0.5rem;
+    }
+
+    .Social-Midias {
+      margin-right: 1rem;
+    }
+
+    .Imagem-Perso {
+      height: 4rem;
+      width: 70%;
+      margin: 3 auto; 
+    }
+  
+    #Imagem-User {
+      max-width: 65%; 
+      height: auto; 
+    }
+
+    .Top-barra {
+      flex-direction: column;
+      padding: 0.5rem;
+    }
+
+    #Pequeno-Texto {
+      font-size: 0.7rem; 
+      margin: 0.3rem 0rem;
+      margin-right: 1rem;
+    }
+  
+
+  }
+
 
   @media (max-width: 768px) {
     .Imagem-Perso {
@@ -324,82 +446,6 @@
     }
   }
 
-  @media (max-width: 480px) {
-    .div_buttons {
-      margin: 0.2rem;
-      gap: 0.1rem,;
-    }
-
-    #Founder{
-      font-size: 1rem;
-    }
-
-    .Narve {
-      height: 9rem;
-    }
-
-    .Botao_Modo {
-      display: flex;
-      justify-content: center;
-    }
-    
-    .Narve a, .Social-Midias i, #Email {
-      font-size: 13px; 
-    }
-
-    .Discrição-Perso {
-      margin: 0.5rem;
-    }
-
-    .Social-Midias {
-      margin-right: 1rem;
-    }
-
-    .Imagem-Perso {
-      height: 4rem;
-      width: 70%;
-      margin: 3 auto; 
-    }
-  
-    #Imagem-User {
-      max-width: 65%; 
-      height: auto; 
-    }
-
-    .Top-barra {
-      flex-direction: column;
-      padding: 0.5rem;
-    }
-
-    #Pequeno-Texto {
-      font-size: 0.7rem; 
-      margin: 0.3rem 0rem;
-      margin-right: 1rem;
-    }
-  
-    #Portifolio, #Name-Perso {
-      font-size: 1.5rem; 
-    }
-
-    #Portifolio, #Name-Perso  {
-      margin: 0.5rem 0rem;
-    }
-  
-    .div_buttons {
-      width: 100%;
-      gap: 0.5rem;
-      flex-direction: column;
-    }
-  
-    .Narve {
-      margin: 0;
-      height: auto;
-    }
-  
-    .Social-Midias a {
-      font-size: 0.8rem; 
-    }
-  }
 
   @media (max-width: 1024px) {
     .Imagem-Perso {

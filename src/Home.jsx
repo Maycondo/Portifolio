@@ -25,16 +25,6 @@ const useLoader = (delay) => {
 };
 
 
-const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-};
-
-const divVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
-    visible: { scale: 1, opacity: 1 }
-};
-
 const slideUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
@@ -84,11 +74,9 @@ export default function Home() {
     return (    
         <>
         <header className="App-header" id={sectionId} >
-                <section className="Top-barra" >
-                <motion.div initial="hidden" animate="visible" variants={fadeInUp} transition={{ duration: 0.5, ease: "easeOut" }}>
+                <section className="Barra_top" >
                         <h1 id="Portifolio">Portfólio</h1>
-                </motion.div>
-                    <div className='div_buttons'>
+                    <div className='Container-Buttons'>
                         <ThemeToggle onThemeChange={ handleThemeChange }/>
                             <div className="lingua">
                                 <button  className="lingua__button"  style={CorStyle('PT')}  onClick={() => handleLanguageChange('PT')}>PT</button>
@@ -109,10 +97,10 @@ export default function Home() {
                 <section className="Painel-1">
 
                     <div className="Painel-Perso">
-                            <div className="Imagem-Perso">
-                                <motion.div initial="hidden" animate="visible" variants={divVariants} transition={{ duration: 0.8, ease: "easeInOut" }} className="rounded-full">
+                            <div className="Painel-img-redes">
+                                <div className='Container-Image'>
                                     <img id="Imagem-User" src={Imagem} alt="Imagem_Perso"/>
-                                </motion.div>
+                                </div>
                                 <div className="Social-Midias">
                                     <motion.a  href="https://www.linkedin.com/in/maycon-douglas-b97786306/"  target="_blank" initial="hidden" animate="visible" variants={linkVariants} transition={{ duration: 0.5, delay: 0.1 }}>
                                         <i className="bi bi-linkedin"></i>Linkedin
@@ -125,7 +113,7 @@ export default function Home() {
                                     </motion.a>
                                 </div>
                             </div>
-                            <div className="Discrição-Perso">
+                            <div className="Container-discrição">
                                 <TextAnimation></TextAnimation>
                             <motion.div initial="hidden" animate="visible" variants={slideUp} transition={{ duration: 0.8, ease: "easeInOut" }}>
                                 <h5 id="Email">maycondouglasniculau@gmail.com</h5>
