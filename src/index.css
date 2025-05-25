@@ -106,7 +106,7 @@
     transition: all 300ms;
   }
 
-  .div_buttons {
+  .Container-Buttons {
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -182,15 +182,15 @@
     object-fit: cover;
   }
 
-  #Name-Perso {
+  #Animetion-text {
     margin: 1rem 0rem;
-    font-size: clamp(3rem, 5vw, 5rem);
+    font-size: clamp(2.2rem, 5vw, 5rem);
     font-weight: 900;
     color: var(--Color-Texto-pequeno);
     transition: all 300ms;
   }
 
-  #Name-Perso:after {
+  #Animetion-text:after {
     content: '|';
     margin-left: 8px;
     opacity: 1;
@@ -225,9 +225,10 @@
     transition: all 300ms;
   }
   
-  #Pequeno-Texto {
+  #Texto-mini {
     height: 70px;
     display: flex;
+    margin: 1.5rem 0rem;
     align-items: center;
     font-size: clamp(1rem, 2.5vw, 1.3rem);
     color: var(--Color-Texto-pequeno);
@@ -361,17 +362,28 @@
       align-items: center;
     }
 
-    #Founder{
+    .Animetion-text {
       font-size: 1rem;
+      margin: 0.5rem 0rem;
     }
 
-    .Botao_Modo {
-      display: flex;
-      justify-content: center;
+    #Founder{
+      font-size: 1.2rem;
+      margin: 0.5rem 0rem;
     }
-    
+
+    #Email {
+      font-size: 1.2rem;
+      margin: 0.5rem 0rem;
+    }
+
+    #Pequeno-Texto {
+      font-size: 1.5rem;
+      margin: 0.5rem 0rem;
+    }
 
     .Discrição-Perso {
+      font-size: 1.2rem;
       margin: 0.5rem;
     }
 
@@ -384,24 +396,12 @@
       width: 70%;
       margin: 3 auto; 
     }
-  
+
     #Imagem-User {
       max-width: 65%; 
       height: auto; 
     }
-
-    .Top-barra {
-      flex-direction: column;
-      padding: 0.5rem;
-    }
-
-    #Pequeno-Texto {
-      font-size: 0.7rem; 
-      margin: 0.3rem 0rem;
-      margin-right: 1rem;
-    }
-  
-
+   
   }
 
 

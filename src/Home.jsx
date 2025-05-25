@@ -118,7 +118,7 @@ export default function Home() {
                             <motion.div initial="hidden" animate="visible" variants={slideUp} transition={{ duration: 0.8, ease: "easeInOut" }}>
                                 <h5 id="Email">maycondouglasniculau@gmail.com</h5>
                                 <h1 id="Founder">Description</h1>
-                            <p id="Pequeno-Texto">{texts['text_peque']}</p> 
+                            <p id="Texto-mini">{texts['text_peque']}</p> 
                             </motion.div >
                                 <ButtonLow></ButtonLow>
                                     <div className='CircularText'>

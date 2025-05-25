@@ -31,7 +31,7 @@ export default function TextAnimation() {
 
     return(
         <>
-          <h1 id="Name-Perso">{displayedText}</h1>
+          <h1 id="Animetion-text">{displayedText}</h1>
         </>
     )
 

@@ -4,3 +4,12 @@
     font-family: 'Open Sans', sans-serif;
     fill: var(--Color-texte-portifolio);
 }
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: 'Open Sans', sans-serif;
+        
+    }
+}

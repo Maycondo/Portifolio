@@ -1,4 +1,5 @@
 .Low {
+  width: 100%;
   margin: 2rem;
   padding-top: 2rem;
   display: flex;
@@ -15,8 +16,15 @@
 
 @media (max-width: 480px) {
   .Low {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: end;
       margin: 1rem;
       padding-top: 1rem;
+
+
   }
 }
 
