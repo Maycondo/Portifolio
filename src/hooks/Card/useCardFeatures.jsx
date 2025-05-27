@@ -22,18 +22,24 @@ export default function CardFeatures({ navtexts, handleLanguageChange }) {
     const Projects = [
         {
             title: "Bot Discord",
-            description: 'Em uma tarde ensolarada, Lucas caminhava pelo parque com um sorriso no rosto...',
+            description: 'Criação de um bot interativo para gerenciar servidores do Discord. Implementação da biblioteca discord.py para permitir a interação com API Discord. O bot oferece comandos personalizados para moderar e organizar servidores do Discord Responde os usuários com comandos pre-definidos, tornando a interações com usuários mais fluida...',
             image: 'https://tecdn.b-cdn.net/img/new/standard/city/044.webp',
+            link: 'https://github.com/Maycondo/DiscordBot',
+
         },
         {
-            title: "Portfolio Website",
-            description: 'Sofia adorava explorar livrarias antigas...',
+            title: "MyBooks Website",
+            description: 'My-Books é um site onde vou cadastrar todos os livros que estou lendo. Em cada cadastro, haverá uma breve descrição do livro e algumas opiniões pessoais sobre aspectos abordados na leitura. Também haverá uma seção de favoritos, onde serão exibidos todos os livros que marquei como favoritos.',
             image: 'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
+            link: 'https://github.com/Maycondo/my-books',
+            site: 'https://my-books-wheat.vercel.app/',
         },
         {
-            title: "E-commerce App",
-            description: 'No meio da noite, Ana acordou com uma leve brisa...',
+            title: "Web iBooks",
+            description: 'O iBooks é um projeto pessoal desenvolvido para consolidar e demonstrar minhas habilidades em desenvolvimento web. Ele faz requisições à API do Google Books para obter informações detalhadas sobre livros, incluindo autores, descrições, avaliações e capas. Os usuários podem criar uma lista personalizada de favoritos para acessar seus livros preferidos.',
             image: 'https://tecdn.b-cdn.net/img/new/standard/city/042.webp',
+            link: 'https://github.com/Maycondo/WebIbooks',
+            site: 'https://web-ibooks.vercel.app/',
         },
         // ...demais projetos omitidos por brevidade
     ];
@@ -75,8 +81,8 @@ export default function CardFeatures({ navtexts, handleLanguageChange }) {
                                 style={{ display: 'flex', justifyContent: 'flex-end', gap: '16px' }}
                                 className="mt-auto border-t-2 border-neutral-100 px-6 py-3 text-end text-surface/75 dark:border-white/10 dark:text-neutral-300"
                             >
-                                <a href="" target="_blank"><i className="bi bi-github text-2xl" style={{ cursor: 'pointer', color: "var(--Color-icons--projetcs)" }}></i></a>
-                                <a href="" target="_blank"><i className="bi bi-globe text-2xl" style={{ cursor: 'pointer', color: "var(--Color-icons--projetcs)" }}></i></a>
+                                <a href={project.link}target="_blank"><i className="bi bi-github text-2xl" style={{ cursor: 'pointer', color: "var(--Color-icons--projetcs)" }}></i></a>
+                                <a href={project.site} target="_blank"><i className="bi bi-globe text-2xl" style={{ cursor: 'pointer', color: "var(--Color-icons--projetcs)" }}></i></a>
                             </div>
                         </div>
                     ))}
