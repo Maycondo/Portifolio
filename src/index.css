@@ -328,6 +328,22 @@ header {
   display: none;
 }
 
+.Nav_animetion {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Nav_animetion nav a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  margin: 0.5rem;
+  transition: all 300ms;
+}
+
 .Painel-Perso {
   height: 100%; 
   width: 100%;
