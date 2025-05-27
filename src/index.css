@@ -186,7 +186,7 @@ header {
 
 #Animetion-text {
   margin: 1rem 0rem;
-  font-size: clamp(1.5rem, 5vw, 5rem);
+  font-size: clamp(1.7rem, 5vw, 5rem);
   font-weight: 900;
   color: var(--Color-Texto-pequeno);
   transition: all 300ms;
