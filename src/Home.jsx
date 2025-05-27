@@ -97,7 +97,7 @@ export default function Home() {
                 <section className="Painel-1">
 
                     <div className="Painel-Perso">
-                            <div className="Painel-img-redes">
+                            <div className="Painel-img-rede">
                                 <div className='Container-Image'>
                                     <img id="Imagem-User" src={Imagem} alt="Imagem_Perso"/>
                                 </div>
@@ -113,7 +113,7 @@ export default function Home() {
                                     </motion.a>
                                 </div>
                             </div>
-                            <div className="Container-discrição">
+                            <div className="Container-discrition">
                                 <TextAnimation></TextAnimation>
                             <motion.div initial="hidden" animate="visible" variants={slideUp} transition={{ duration: 0.8, ease: "easeInOut" }}>
                                 <h5 id="Email">maycondouglasniculau@gmail.com</h5>
