@@ -177,7 +177,7 @@ header {
   justify-content: space-around;
 }
    
-#Imagem-User{
+#Imagem-User {
   width: auto;
   border-radius: 5%;
   display: flex;
@@ -235,7 +235,7 @@ header {
   display: flex;
   margin: 1.5rem 0rem;
   align-items: center;
-  font-size: clamp(1rem, 2.5vw, 1.7rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.7rem);
   color: var(--Color-Texto-pequeno);
   border-right: solid 5px var(--Color-Texto-pequeno);
   transition: all 300ms;
@@ -260,8 +260,8 @@ header {
 }
   
 .Social-Midias a {
-  height: clamp(60px, 10vw, 75px); 
-  font-size: clamp(1rem, 3vw, 1.1rem); 
+  height: clamp(45px, 10vw, 75px); 
+  font-size: clamp(0.9rem, 3vw, 1.1rem); 
   width: 100%;
   display: flex;
   background-color: var(--Backgtound-cards-icons);
@@ -280,7 +280,7 @@ header {
 }
 
 .Social-Midias i {
-  font-size: clamp(1.2rem, 3vw, 1.3rem); 
+  font-size: clamp(1rem, 3vw, 1.3rem); 
   font-weight: 900;
   color: var(--Color-icons-redes);
   margin-left: 1rem;
@@ -384,7 +384,7 @@ header {
 }
 
 #Pequeno-Texto {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin: 0.5rem 0rem;
 }
 
