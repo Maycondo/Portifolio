@@ -25,12 +25,7 @@ export default function Main({ texts, navtexts, handleLanguageChange }) {
 
     return (
         <main className="Main" id={sectionId}>
-            <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={textVariant}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-            >
+            <motion.div initial="hidden" animate="visible" variants={textVariant} transition={{ duration: 0.8, ease: "easeOut" }} >
                 <h1>{navtexts[1]}</h1>
                 <div className="ABOUT">
                     <ScrollReveal>
