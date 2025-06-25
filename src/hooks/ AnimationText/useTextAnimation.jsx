@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 export default function TextAnimation() {
 
     const [messageIndex, setMessageIndex] = useState(0);
-    const [messages] = useState(["Welcome to my portfolio", "My name is Michael", "I'm a full stack developer",])
+    const [messages] = useState(["Welcome to my portfolio", "My name is Michael :) ", "I'm a full stack developer {}",])
     const [displayedText, setDisplayedText] = useState('');
     const [charIndex, setCharIndex] = useState(0);
 
@@ -12,7 +12,7 @@ export default function TextAnimation() {
             setMessageIndex((prevIndex) => (prevIndex + 1) % messages.length);
             setDisplayedText('')
             setCharIndex(0)
-            }, 5000);
+            }, 7000);
 
             return () => clearInterval(intervalId);
     }, [messages.length]);

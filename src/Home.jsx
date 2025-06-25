@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Socialmidias from './components/Socialmidias/Socialmidias.jsx';
 import Main from './components/Main/index.jsx';
 import Footer from './components/Footer/index.jsx';
 import Loader from './components/Loader/index.jsx';
 import Imagem from "./imagens/Imagem.jpeg";
 import ButtonLow from './hooks/Low/index.jsx';
-import CircularText from "./hooks/CircularText/CircularText.jsx";
 import TextAnimation from './hooks/ AnimationText/useTextAnimation.jsx';
 import ThemeToggle from './hooks/Buttons/useThemeToggle.jsx';
 import ButtonToggle from './hooks/Buttons/useNavButtonToggle.jsx';
@@ -31,10 +31,7 @@ const slideUp = {
 };
 
 
-const linkVariants = {
-      hidden: { opacity: 0, y: 20 },
-      visible: { opacity: 1, y: 0 }
-};
+
      
 
 export default function Home() {
@@ -75,7 +72,7 @@ export default function Home() {
         <>
         <header className="App-header" id={sectionId} >
                 <section className="Barra_top" >
-                        <h1 id="Portifolio">Portfólio</h1>
+                        <h1 id="Portifolio">Portfólio</h1>                      
                     <div className='Container-Buttons'>
                         <ThemeToggle onThemeChange={ handleThemeChange }/>
                             <div className="lingua">
@@ -97,38 +94,26 @@ export default function Home() {
                 <section className="Painel-1">
 
                     <div className="Painel-Perso">
-                            <div className="Painel-img-rede">
                                 <div className='Container-Image'>
                                     <img id="Imagem-User" src={Imagem} alt="Imagem_Perso"/>
                                 </div>
-                                <div className="Social-Midias">
-                                    <motion.a  href="https://www.linkedin.com/in/maycon-douglas-b97786306/"  target="_blank" initial="hidden" animate="visible" variants={linkVariants} transition={{ duration: 0.5, delay: 0.1 }}>
-                                        <i className="bi bi-linkedin"></i>Linkedin
-                                    </motion.a>
-                                    <motion.a  href="https://github.com/Maycondo"  target="_blank" initial="hidden" animate="visible" variants={linkVariants} transition={{ duration: 0.5, delay: 0.3 }}>
-                                        <i className="bi bi-git"></i>Github
-                                    </motion.a>
-                                    <motion.a  href="#" initial="hidden" animate="visible" variants={linkVariants} transition={{ duration: 0.5, delay: 0.5 }}>
-                                        <i className="bi bi-file-text-fill"></i>Curriculo
-                                    </motion.a>
-                                </div>
-                            </div>
+                                {/* Redes Sociais 
+
+                                */}
                             <div className="Container-discrition">
                                 <TextAnimation></TextAnimation>
-                            <motion.div initial="hidden" animate="visible" variants={slideUp} transition={{ duration: 0.8, ease: "easeInOut" }}>
-                                <h5 id="Email">maycondouglasniculau@gmail.com</h5>
-                                <h1 id="Founder">Description</h1>
+                            <motion.div className='painel-textos' initial="hidden" animate="visible" variants={slideUp} transition={{ duration: 0.8, ease: "easeInOut" }}>
+                              { /*  <h5 id="Email">maycondouglasniculau@gmail.com</h5> 
+                                 <h1 id="Founder">Description</h1> */}
                             <p id="Texto-mini">{texts['text_peque']}</p> 
                             </motion.div >
                                 <ButtonLow></ButtonLow>
-                                    <div className='CircularText'>
-                                        <CircularText/>
-                                    </div>
                                 </div>
                     </div>
 
                 </section>
         </header>
+            <Socialmidias></Socialmidias>
             <Main  texts={texts}  navtexts={navtexts} handleLanguageChange={selectedLanguage} ></Main>
             <Footer texts={texts} handleLanguageChange={selectedLanguage} ></Footer>
         </>
