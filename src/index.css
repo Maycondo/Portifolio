@@ -82,6 +82,24 @@ header {
   flex-direction: column;
   background-color: var(--Backgtound-fundo-Color);
   transition: all 300ms;
+    background: var(--Backgtound-fundo-Color);
+  --gap: 5em;
+  --line: 1px;
+  --color: rgba(94, 94, 94, 0.2);
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+  background-size: var(--gap) var(--gap);
 }
   
 .Barra_top {
@@ -92,9 +110,9 @@ header {
   justify-content: space-between;
 }
 
-#Portifolio {
+#Name {
   margin: 2rem;
-  font-size: clamp(3rem, 10vw, 1.5rem);
+  font-size: clamp(2rem, 10vw, 1.5rem);
   font-weight: 900;
   color: var(--Color-texte-portifolio);
   transition: all 300ms;
@@ -157,9 +175,28 @@ header {
 
 .Painel-1 { 
   height: 100%;
+  width: 100%;  
   display: flex;
-  box-sizing: border-box;
-} 
+}
+
+.Container-Title {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+
+.Portfólio {
+  font-size: clamp(18rem, 3vw, 2rem);
+  font-weight: 900;
+  margin: 12rem;
+  text-align: center;
+  color: var(--Color-texte-portifolio);
+  transition: all 300ms;
+}
   
 .Painel-Perso {
   height: 100%;

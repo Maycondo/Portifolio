@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Socialmidias from './components/Socialmidias/Socialmidias.jsx';
+
+
+// Importando os componentes necessários
 import Main from './components/Main/index.jsx';
 import Footer from './components/Footer/index.jsx';
 import Loader from './components/Loader/index.jsx';
+import BlurText from './hooks/ AnimationText/BlurText.jsx';
 import Imagem from "./imagens/Imagem.jpeg";
 import ButtonLow from './hooks/Low/index.jsx';
 import TextAnimation from './hooks/ AnimationText/useTextAnimation.jsx';
+
+// Importando os hooks personalizados para troca de tema e linguagem
 import ThemeToggle from './hooks/Buttons/useThemeToggle.jsx';
 import ButtonToggle from './hooks/Buttons/useNavButtonToggle.jsx';
 import LanguageSwitch from './hooks/useLanguageSwitch.jsx';
@@ -30,9 +34,13 @@ const slideUp = {
     visible: { opacity: 1, y: 0 }
 };
 
+const Name = "Michael {}"; // Nome do portfólio, pode ser alterado conforme necessário
+const Portfólio = "Portfólio"; // Nome do portfólio, pode ser alterado
 
 
-     
+const handleAnimationComplete = () => {
+  console.log('Animation completed!');
+};
 
 export default function Home() {
 
@@ -72,7 +80,7 @@ export default function Home() {
         <>
         <header className="App-header" id={sectionId} >
                 <section className="Barra_top" >
-                        <h1 id="Portifolio">Portfólio</h1>                      
+                        <h1 id="Name">{Name}</h1>                      
                     <div className='Container-Buttons'>
                         <ThemeToggle onThemeChange={ handleThemeChange }/>
                             <div className="lingua">
@@ -92,28 +100,39 @@ export default function Home() {
                             </ul>
                         </nav>
                 <section className="Painel-1">
-
+                    <div className="Container-Title">
+                        <BlurText
+                            className="Portfólio"
+                            text={Portfólio}
+                            delay={200}
+                            animateBy="words"
+                            direction="top"
+                            onAnimationComplete={handleAnimationComplete}></BlurText>
+                            
+                    </div>
+                     { /*
                     <div className="Painel-Perso">
-                                <div className='Container-Image'>
+           <div className='Container-Image'>
                                     <img id="Imagem-User" src={Imagem} alt="Imagem_Perso"/>
                                 </div>
-                                {/* Redes Sociais 
+        
 
-                                */}
+                                
                             <div className="Container-discrition">
                                 <TextAnimation></TextAnimation>
                             <motion.div className='painel-textos' initial="hidden" animate="visible" variants={slideUp} transition={{ duration: 0.8, ease: "easeInOut" }}>
                               { /*  <h5 id="Email">maycondouglasniculau@gmail.com</h5> 
-                                 <h1 id="Founder">Description</h1> */}
+                                 <h1 id="Founder">Description</h1> 
                             <p id="Texto-mini">{texts['text_peque']}</p> 
                             </motion.div >
                                 <ButtonLow></ButtonLow>
                                 </div>
+
                     </div>
+                                          */  }
 
                 </section>
         </header>
-            <Socialmidias></Socialmidias>
             <Main  texts={texts}  navtexts={navtexts} handleLanguageChange={selectedLanguage} ></Main>
             <Footer texts={texts} handleLanguageChange={selectedLanguage} ></Footer>
         </>
