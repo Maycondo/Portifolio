@@ -5,10 +5,9 @@ import { useState, useEffect } from 'react';
 import Main from './components/Main/index.jsx';
 import Footer from './components/Footer/index.jsx';
 import Loader from './components/Loader/index.jsx';
+import PainelAdmin from './components/PainelAmind/PainelAmind.jsx';
 import BlurText from './hooks/ AnimationText/BlurText.jsx';
-import Imagem from "./imagens/Imagem.jpeg";
 import ButtonLow from './hooks/Low/index.jsx';
-import TextAnimation from './hooks/ AnimationText/useTextAnimation.jsx';
 
 // Importando os hooks personalizados para troca de tema e linguagem
 import ThemeToggle from './hooks/Buttons/useThemeToggle.jsx';
@@ -29,10 +28,6 @@ const useLoader = (delay) => {
 };
 
 
-const slideUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-};
 
 const Name = "Michael {}"; // Nome do portfólio, pode ser alterado conforme necessário
 const Portfólio = "Portfólio"; // Nome do portfólio, pode ser alterado
@@ -107,31 +102,13 @@ export default function Home() {
                             delay={200}
                             animateBy="words"
                             direction="top"
-                            onAnimationComplete={handleAnimationComplete}></BlurText>
-                            
+                            onAnimationComplete={handleAnimationComplete}></BlurText> 
+                        <div className="Container-Text">
+                            <ButtonLow></ButtonLow>
+                        </div>
                     </div>
-                     { /*
-                    <div className="Painel-Perso">
-           <div className='Container-Image'>
-                                    <img id="Imagem-User" src={Imagem} alt="Imagem_Perso"/>
-                                </div>
-        
-
-                                
-                            <div className="Container-discrition">
-                                <TextAnimation></TextAnimation>
-                            <motion.div className='painel-textos' initial="hidden" animate="visible" variants={slideUp} transition={{ duration: 0.8, ease: "easeInOut" }}>
-                              { /*  <h5 id="Email">maycondouglasniculau@gmail.com</h5> 
-                                 <h1 id="Founder">Description</h1> 
-                            <p id="Texto-mini">{texts['text_peque']}</p> 
-                            </motion.div >
-                                <ButtonLow></ButtonLow>
-                                </div>
-
-                    </div>
-                                          */  }
-
                 </section>
+                <PainelAdmin texts={texts} handleLanguageChange={handleLanguageChange} ></PainelAdmin>
         </header>
             <Main  texts={texts}  navtexts={navtexts} handleLanguageChange={selectedLanguage} ></Main>
             <Footer texts={texts} handleLanguageChange={selectedLanguage} ></Footer>
