@@ -13,8 +13,7 @@ export default function useWindowSize ({ navtexts = [], CorStyle = () => ({ colo
             animate={{ x: "0%" }}    
             exit={{ x: "-100%" }}     
             transition={{ duration: 0.5, ease: [0.25, 0.8, 0.25, 1], }}
-
-        className="Nav_animation-wrapper"
+             className="Nav_animation-wrapper"
     >
         <div className='Nav_animetion'>
                <nav> 

@@ -1,6 +1,4 @@
-.Container_projects {
-  height: auto; 
-  min-height: 100vh; 
+.page-wrapper-3{
   width: 100%;
   background-color:  var(--Background-fundo-Color);
   gap: 1rem;
@@ -9,16 +7,15 @@
   margin: 2rem 0;
 }
 
-#Projecto_name {
-  margin: 3rem;
-  padding: 2rem;
+#ProjectoName {
+  margin: 1rem;
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
   text-align: center;
   color: var(--Color-Texto-pequeno);
 }
 
-.Container_Card {
+.section-timeline-2{
   height: 100%;
   width: 100%;
   display: flex;
@@ -26,114 +23,60 @@
   justify-content: center;
 }
 
-.Container_Card img {
-  margin: 2rem;
-  animation: alternate ease;
-  height: auto;
-  max-width: 100%;
-  transition: all 2s ease;
-  object-fit: cover;
-  overflow: hidden;
-  -webkit-transition: all 2s ease;
-  -moz-transition: all 2s ease;
-  -ms-transition: all 2s ease;
-  transition: all 2s ease;
+.container-4 {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.Container_Card  img.active {
-  opacity: 1;
-  position: relative;
+.timeline_component {
+  width: 100%;
+  max-width: 1350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.cta {
-    border: none;
-    background: none;
-  }
-  
-  .cta span {
-    padding-bottom: 7px;
-    letter-spacing: 4px;
-    font-size: 14px;
-    padding-right: 15px;
-    text-transform: uppercase;
-  }
-  
-  .cta svg {
-    transform: translateX(-8px);
-    transition: all 0.3s ease;
-  }
-  
-  .cta:hover svg {
-    transform: translateX(0);
-  }
-  
-  .cta:active svg {
-    transform: scale(0.9);
-  }
-  
-  .hover-underline-animation {
-    position: relative;
-    color: black;
-    padding-bottom: 20px;
-  }
-  
-  .hover-underline-animation:after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #000000;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .cta:hover .hover-underline-animation:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+.timeline_item {
+  width: 100%;
+  display: flex;
+  background-color: var(--Color-Card-Background);
+  border-radius: 10px;
+  padding: 4rem 0rem;
+  box-shadow: var(--Box-Shadow);
+}
 
-  .zoom-container {
-    overflow: hidden;
-  }
-  
-  .zoom-container img {
-    filter: grayscale(100%);
-    transition: transform 0.3s ease;
-  }
-  
-  .zoom-container img:hover {
-    filter: grayscale(0%);
-    transform: scale(1.1);
-  }
+.timeline_item .timeline_left {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
 
-  @media (max-width: 768px) {
-    .Container_projects {
-      flex-direction: column;
-      margin: 1rem;
-    }
-  
-    .Container_Card img {
-      max-width: 100%;
-      height: auto;
-    }
-  
-    #Projecto_name {
-      margin: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    #Projecto_name {
-      font-size: 2rem;
-    }
-  
-    .Container_Card img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-  
+.timeline_item h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 900;
+  color: var(--Color-Texto-pequeno);
+  text-align: center;
+}
 
+.timeline_item .timeline_centre {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.timeline_item .timeline_right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
