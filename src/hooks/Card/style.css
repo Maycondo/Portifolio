@@ -1,179 +1,178 @@
-.page-wrapper-3{
-  width: 100%;
-  background-color:  var(--Background-fundo-Color);
-  gap: 1rem;
-  display: flex;
-  flex-direction: column; 
-  margin: 2rem 0;
-}
 
-#ProjectoName {
-  margin: 1rem;
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: 900;
-  text-align: center;
-  color: var(--Color-Texto-pequeno);
-}
-
-.section-timeline-2{
-  height: 100%;
+.page-wrapper-3 {
   width: 100%;
-  display: flex;
-  align-content: end;
-  justify-content: end;
-}
-
-.container-4 {
-  width: 100%;
-  max-width: 1400px;
+  background-color: var(--Backgtound-fundo-Color);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 2rem 0;
+  min-height: 200vh; /* Para permitir a rolagem e ver a linha do tempo */
+}
+
+.section-timeline-2 {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto; /* Centraliza a seção */
+  position: relative; /* Para a linha central */
+}
+
+/* Coluna da esquerda (Navegação) */
+.container-left {
+  height: 100vh; /* Altura total da viewport */
+  width: 30%; /* Largura para a navegação dos nomes */
+  display: flex;
+  justify-content: space-around; /* Alinha o texto à direita da sua coluna */
+  padding-right: 50px; /* Espaçamento entre o texto e a linha central */
+  position: sticky; /* Torna a navegação "grudenta" na tela */
+  top: 100px; /* Distância do topo */
+  height: fit-content; /* Altura se ajusta ao conteúdo */
+  align-self: flex-start; /* Ajuda no sticky */
+}
+
+.timeline_nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem; /* Espaçamento entre os nomes dos projetos */
+  text-align: right; /* Alinha o texto à direita */
+}
+
+.timeline_nav_item {
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  font-weight: 900;
+  color: #555; /* Cor padrão */
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.timeline_nav_item.active {
+  color: var(--Color-Texto-pequeno); /* Cor para o item ativo */
+}
+
+
+/* Coluna da direita (Conteúdo dos projetos) */
+.container-right {
+  width: 70%; /* Largura para o conteúdo dos projetos */
+  padding-left: 50px; /* Espaçamento entre a linha central e o conteúdo */
+  position: relative; /* Para a linha central */
 }
 
 .timeline_component {
-  width: 100%;
-  max-width: 1350px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  gap: 15rem; /* Espaçamento entre os itens da timeline para permitir rolagem */
+  position: relative; /* Para posicionar a linha central relativa a este */
 }
 
 .timeline_item {
-  width: 100%;
   display: flex;
   background-color: var(--Color-Card-Background);
   border-radius: 10px;
-  padding: 4rem 4rem;
+  padding: 4rem;
   box-shadow: var(--Box-Shadow);
+  min-height: 600px; /* Dá uma altura para cada item para a rolagem */
+  align-items: center;
+  justify-content: center;
 }
 
-.timeline_item .timeline_left {
-  height: 100%;
-  width: 40%;
+.timeline_right_content {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: end;
+  align-items: flex-start; /* Alinha o texto e imagem à esquerda dentro do card */
 }
 
-.timeline_item h2 {
-  font-size: clamp(2rem, 3vw, 3.5rem);
-  font-weight: 900;
-  color: var(--Color-Texto-pequeno);
-  text-align: center;
-}
-
-.timeline_item .timeline_centre {
-  width: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.timeline_item .timeline_centre .timeline_circle {
-  width: 30px;
-  height: 30px;
-  background-color: var(--Backgtound-color-nav);
-  border-radius: 50%;
-  position: relative;
-}
-
-.timeline_item .timeline_centre .timeline_circle_inner {
-  width: 20px;
-  height: 20px;
-  background-color: var(--Color-Texto-pequeno);
-  border-radius: 50%;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-}
-
-.timeline_item .timeline_centre::before {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 300rem;
-  background-color: var(--Color-Texto-pequeno);
-  left: 52.9%;
-  top: -590%;
-}
-
-.timeline_item .timeline_centre::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  height: 300rem;
-  background-color: var(--Color-Texto-pequeno);
-  left: 52.9%;
-  bottom: -590%;
-}
-
-
-
-.timeline_item .timeline_right {
-  width: 85%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.timeline_item .timeline_right p {
+.timeline_right_content p {
   font-size: clamp(1.5rem, 2vw, 1.9rem);
   font-weight: 400;
-  margin: 4rem 0;
+  margin: 1rem 0;
   color: var(--Color-Texto-pequeno);
 }
 
-.timeline_item .timeline_right p span {
-  font-weight: 900;
-  color: var(--Color-Texto-pequeno);
-}
-
-.timeline_item .timeline_right img {
+.timeline_right_content img {
   width: 100%;
-  max-width: 1000px;
+  max-width: 800px;
   height: auto;
   border-radius: 10px;
   box-shadow: var(--Box-Shadow);
-}
-
-.timeline_item .timeline_left img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-}
-
-.timeline_item .timeline_right .timeline_right_text {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.timeline_item .timeline_tech {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  align-items: start;
-  gap: 1rem;
   margin-top: 2rem;
 }
 
+.timeline_right_content .timeline_tech_roles {
+  display: flex;
+  margin: 2rem 0rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem; /* Espaçamento acima da descrição */
+}
 
-.timeline_item .timeline_tech span {
+.timeline_right_content .timeline_tech_item {
   font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 800;
   background: var(--Backgtound-color-nav);
   padding: 0.5rem 1rem;
   border-radius: 50px;
-  text-align: center;
   color: var(--Color-Texto-pequeno);
-  margin: 0;
 }
 
 
+/* LINHA CENTRAL E CÍRCULOS (Adaptado para o novo layout) */
+.section-timeline-2::before {
+  content: '';
+  position: absolute;
+  left: calc(30% + 25px); /* Ajusta a posição da linha central para ficar entre as colunas */
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: var(--Color-Texto-pequeno);
+  z-index: 1; /* Garante que a linha esteja visível */
+}
 
+/* RESPONSIVIDADE (Adaptação para telas menores) */
+@media (max-width: 991px) {
+  .section-timeline-2 {
+    flex-direction: column; /* Empilha as colunas */
+    align-items: center; /* Centraliza tudo */
+  }
+
+  .container-left,
+  .container-right {
+    width: 100%; /* Ocupa toda a largura */
+    padding: 0 1rem; /* Padding horizontal */
+    position: static; /* Remove o sticky */
+  }
+
+  .timeline_nav {
+    flex-direction: row; /* Nomes dos projetos em linha */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .timeline_nav_item {
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte */
+  }
+
+  /* Esconde a linha do tempo e círculos em telas menores */
+  .section-timeline-2::before,
+  .timeline_item::before,
+  .timeline_item::after {
+    display: none;
+  }
+
+  .timeline_item {
+    padding: 2rem; /* Menor padding para os cards */
+    margin-bottom: 2rem; /* Espaçamento entre os cards */
+    min-height: auto; /* Remove a altura mínima */
+  }
+
+  .timeline_right_content {
+    align-items: center; /* Centraliza conteúdo em telas menores */
+    text-align: center;
+  }
+
+  .timeline_right_content .timeline_tech_roles {
+    justify-content: center; /* Centraliza as techs */
+  }
+}
