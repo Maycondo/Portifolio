@@ -35,7 +35,7 @@ const Projects = [
     title: 'Spotify Gmone',
     description: 'Spotify Gmone é um projeto que visa criar uma plataforma de streaming de música semelhante ao Spotify, mas com um toque único. O nome "Gmone" é uma combinação de "Gnome" e "Music", refletindo a inspiração no ambiente de desktop Gnome. O projeto utiliza tecnologias modernas para oferecer uma experiência de usuário envolvente e intuitiva.',
     image: 'https://tecdn.b-cdn.net/img/new/standard/city/041.webp', // Placeholder
-    tech: ['HTML', 'CSS', 'JavaScript', 'React'],
+    tech: ['C#', "ASP.NET Core", "Entity Framework Core", ]
   },
 
 ];
