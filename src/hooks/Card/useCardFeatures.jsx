@@ -13,8 +13,11 @@ export default function CardFeatures({  handleLanguageChange }) {
             description: 'Criação de um bot interativo para gerenciar servidores do Discord. Implementação da biblioteca discord.py para permitir a interação com API Discord. O bot oferece comandos personalizados para moderar e organizar servidores do Discord Responde os usuários com comandos pre-definidos, tornando a interações com usuários mais fluida...',
             image: 'https://tecdn.b-cdn.net/img/new/standard/city/044.webp',
             link: 'https://github.com/Maycondo/DiscordBot',
-            tech: 'Python, Discord.py',
-
+            tech: [
+                "Python",
+                "discord.py",
+                "API Discord",
+            ],
         },
 
         {
@@ -23,7 +26,12 @@ export default function CardFeatures({  handleLanguageChange }) {
             image: 'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
             link: 'https://github.com/Maycondo/my-books',
             site: 'https://my-books-wheat.vercel.app/',
-            tech: 'React, TypeScript, Node.js, Express, MongoDB',
+            tech: [
+                "React",
+                "Node.js",
+                "Express",
+                "MongoDB",
+            ]
         },
 
         {
@@ -32,8 +40,26 @@ export default function CardFeatures({  handleLanguageChange }) {
             image: 'https://tecdn.b-cdn.net/img/new/standard/city/042.webp',
             link: 'https://github.com/Maycondo/WebIbooks',
             site: 'https://web-ibooks.vercel.app/',
-            tech: 'React, Node.js, Express, MongoDB',
+            tech: [
+                "React",
+                "Node.js",
+                "Express",
+                "MongoDB",
+            ]
         },
+
+        {
+            title: "Spotify Gmone",
+            description: 'Spotify Gmone é um projeto que visa criar uma plataforma de streaming de música semelhante ao Spotify, mas com um toque único. O nome "Gmone" é uma combinação de "Gnome" e "Music", refletindo a inspiração no ambiente de desktop Gnome. O projeto utiliza tecnologias modernas para oferecer uma experiência de usuário envolvente e intuitiva.',
+            image: 'https://tecdn.b-cdn.net/img/new/standard/city/041.webp',
+            link: '',
+            site: 'https://spotify-gmone.vercel.app/',
+            tech: [
+                "C#",
+                "ASP.NET Core",
+                "Entity Framework Core",
+            ]
+        }
         // ...demais projetos omitidos por brevidade
     ];
 
@@ -49,15 +75,18 @@ export default function CardFeatures({  handleLanguageChange }) {
                                         <h2>{project.title}</h2>
                                     </div>
                                     <div className='timeline_centre'>
-
+                                        <div className='timeline_circle'>
+                                            <div className='timeline_circle_inner'>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div className='timeline_right'>
                                          <p>{project.description}</p>
                                         <img src={project.image} alt={project.title} />
-                                        <div className='timeline_links'>
-                                            <a href={project.link} target="_blank" rel="noopener noreferrer">
-                                                <i className="fab fa-github"></i>
-                                            </a>
+                                        <div className='timeline_tech'>
+                                            {project.tech.map((tech, index) => (
+                                                <span key={index} className='timeline_tech_item'>{tech}</span>
+                                            ))}
                                             </div>
                                     </div>
                                 </div>
