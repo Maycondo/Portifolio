@@ -190,7 +190,7 @@ header {
 }
 
 .Portfólio {
-  font-size: clamp(18rem, 3vw, 2rem);
+  font-size: clamp(3rem, 3vw, 2rem);
   font-weight: 900;
   margin: 1rem;
   text-align: center;
@@ -302,10 +302,10 @@ header {
 }
 
 @media (max-width: 480px) {
-.Painel-img-rede {
-  height: auto;
+.Container-Title {
+  height: 100%;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
