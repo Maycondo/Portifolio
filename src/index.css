@@ -190,7 +190,7 @@ header {
 }
 
 .Portfólio {
-  font-size: clamp(19rem, 3vw, 2rem);
+  font-size: 19rem  ;
   font-weight: 900;
   margin: 1rem;
   text-align: center;
@@ -305,6 +305,7 @@ header {
 .Container-Title {
   height: 100%;
   width: 100%;
+  margin: 0%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -322,8 +323,13 @@ header {
   padding: 0.5rem;
 }
 
-#Portifolio {
-  font-size: 1.7rem;
+#Name {
+  font-size: 1.2rem;
+  display: flex;
+}
+
+.Portfólio {
+  font-size: 4rem;
   margin: 0.5rem;
 }
 
@@ -349,6 +355,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 1000;
 }
 
 .Nav_animetion nav a {

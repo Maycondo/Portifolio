@@ -89,3 +89,28 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 480px) {
+  .Painel-Admin {
+    position: absolute;
+    display: flex;
+    flex-direction: row; /* <- esta linha é essencial */
+    justify-content: center;
+    align-items: center;
+    top: 85%;
+    left: 12%;
+    height: 70px;
+    width: 80%; /* use 100% para ocupar toda a largura da tela */
+    border-radius: 10px;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .socialContainer {
+    width: 42px;
+    height: 42px;
+    border-radius: 5px;
+    margin: 0 5px;
+
+}
+}
