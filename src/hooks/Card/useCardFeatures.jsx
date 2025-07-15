@@ -2,7 +2,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect, useRef } from 'react';
-import './style.css'; // Crie ou atualize este CSS
+import Carddetails from "./cardDetails.jsx"
+import './useCardFeatures.css'; // Crie ou atualize este CSS
 
 // Exemplo de array de projetos (usando IDs únicos)
 const Projects = [
@@ -43,7 +44,13 @@ const Projects = [
 
 function DynamicTimeline({ sectionId, navtexts }) {
   const [activeProject, setActiveProject] = useState(Projects[0].id); // Começa com o primeiro projeto ativo
+  const [carddetails, setCardDetails] = useState(false); 
   const itemRefs = useRef([]); // Para armazenar referências a cada item da timeline
+
+  const HangledDetails = () => {
+    setCardDetails(!carddetails)
+    console.log("DETALHES DO PROJETOS")
+  }
 
   // Adiciona um ref para cada item da timeline
   useEffect(() => {
@@ -93,7 +100,7 @@ function DynamicTimeline({ sectionId, navtexts }) {
     }
   };
 
-  // eslint-disable-next-line no-unused-vars
+   
   const currentProjectDetails = Projects.find(p => p.id === activeProject);
 
 
@@ -116,7 +123,12 @@ function DynamicTimeline({ sectionId, navtexts }) {
               <div className="timeline_item" key={project.id} id={project.id} ref={(el) => (itemRefs.current[index] = el)} >
                 <div className="timeline_right_content">
                   <p>{project.description}</p>
-                  <img src={project.image} alt={project.title} />
+                  <img src={project.image} alt={project.title} onClick={() => HangledDetails()}/>
+                      {carddetails && (
+                        <Carddetails>
+                        </Carddetails>
+                      )
+                    }
                     <div className="timeline_tech_roles"> {/* Para os "Roles" / Techs */}
                     {project.tech.map((tech, techIndex) => (
                       <span key={techIndex} className="timeline_tech_item">{tech}</span>

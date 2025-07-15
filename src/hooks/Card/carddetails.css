@@ -1,0 +1,27 @@
+.card-backdrop-filter {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    align-self: end;
+    top: 0;
+    left: 0;
+    background: rgba(1, 1, 1, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.9px);
+    -webkit-backdrop-filter: blur(6.9px);
+    z-index: 1000;
+}
+
+.card-details {
+    height: 96%;
+    width: 100%;
+    position: relative;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    top: 6rem;
+    background-color: rgb(204, 204, 204);
+    display: flex;
+
+}
