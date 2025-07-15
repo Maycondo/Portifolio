@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React, { useState, useEffect, useRef } from 'react';
@@ -49,15 +50,12 @@ function DynamicTimeline({ sectionId, navtexts }) {
     itemRefs.current = itemRefs.current.slice(0, Projects.length);
   }, [Projects.length]);
 
-
   // Intersection Observer para detectar qual item está visível
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // Ajuste o threshold para melhor detecção de "centralizado"
-            // Por exemplo, você pode verificar se está mais de 50% visível
             if (entry.intersectionRatio > 0.5) {
                 setActiveProject(entry.target.id);
             }
