@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+
 import React, { useState, useEffect, useRef } from 'react';
 import Carddetails from "./cardDetails.jsx"
 import './useCardFeatures.css'; // Crie ou atualize este CSS
@@ -44,12 +45,11 @@ const Projects = [
 
 function DynamicTimeline({ sectionId, navtexts }) {
   const [activeProject, setActiveProject] = useState(Projects[0].id); // Começa com o primeiro projeto ativo
-  const [carddetails, setCardDetails] = useState(false); 
+  const [carddetails, setCardDetails] = useState(null); 
   const itemRefs = useRef([]); // Para armazenar referências a cada item da timeline
 
-  const HangledDetails = () => {
-    setCardDetails(!carddetails)
-    console.log("DETALHES DO PROJETOS")
+  const HangledDetails = (project) => {
+    setCardDetails(project)
   }
 
   // Adiciona um ref para cada item da timeline
@@ -106,6 +106,7 @@ function DynamicTimeline({ sectionId, navtexts }) {
 
   return (
     <section className="page-wrapper-3" id={sectionId}>
+      <h1>{navtexts[2]}</h1>
       <div className="section-timeline-2">
         <div className="container-left"> {/* Nova div para a navegação esquerda */}
           <div className="timeline_nav">
@@ -123,10 +124,9 @@ function DynamicTimeline({ sectionId, navtexts }) {
               <div className="timeline_item" key={project.id} id={project.id} ref={(el) => (itemRefs.current[index] = el)} >
                 <div className="timeline_right_content">
                   <p>{project.description}</p>
-                  <img src={project.image} alt={project.title} onClick={() => HangledDetails()}/>
+                  <img src={project.image} alt={project.title} onClick={() => HangledDetails(project)}/>
                       {carddetails && (
-                        <Carddetails>
-                        </Carddetails>
+                        <Carddetails carddetails={carddetails} onClose={() => setCardDetails(null)}> </Carddetails>
                       )
                     }
                     <div className="timeline_tech_roles"> {/* Para os "Roles" / Techs */}

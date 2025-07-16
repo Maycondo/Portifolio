@@ -4,24 +4,47 @@
     position: fixed;
     display: flex;
     justify-content: end;
-    align-self: end;
+    align-self: center;
     top: 0;
     left: 0;
     background: rgba(1, 1, 1, 0.4);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.9px);
-    -webkit-backdrop-filter: blur(6.9px);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
     z-index: 1000;
 }
 
-.card-details {
-    height: 96%;
+.card-details-project {
+    height: 98%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
     position: relative;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
-    top: 6rem;
-    background-color: rgb(204, 204, 204);
+    top: 5rem;
+    left: 0%;
+    background: var(--Backgtound-fundo-Color);
     display: flex;
 
+}
+
+.card-button-close {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.close-button {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 2rem;
+    font-size: 25px;
+    font-weight: 900;
+    background: var(--Backgtound-fundo-Color);
+    border: none;
 }
