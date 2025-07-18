@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
-
-
-
-import "./carddetails.css"
+import "./carddetails.css";
+import { GrPrevious } from "react-icons/gr";
+import { GrNext } from "react-icons/gr";
 import { AiOutlineClose } from "react-icons/ai";
 
 
@@ -20,7 +19,9 @@ export default function Carddetails ({carddetails, onClose}) {
                 </div>
                 <h2>{carddetails.title}</h2>
                 <div className="card-image">
-
+                    <button><GrPrevious /></button>
+                    <img src={carddetails.image} alt={carddetails.title} />
+                    <button><GrNext/></button>
                 </div>
             </div>
         </div>

@@ -38,11 +38,7 @@ export default function Main({ texts, navtexts, handleLanguageChange }) {
                 <InfiniteSlider />
             </section>
 
-            <CardFeatures
-                texts={texts}
-                navtexts={navtexts}
-                handleLanguageChange={handleLanguageChange}
-            />
+            <CardFeatures texts={texts} navtexts={navtexts} handleLanguageChange={handleLanguageChange} />
         </main>
     );
 }

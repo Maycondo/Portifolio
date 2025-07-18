@@ -41,6 +41,7 @@
       --Color-buttins-border-top-footer: #ffffff;
       --Color-text-buttons-foote-hover: #ffffff;
       --Color-text-buttons-foote: #272525;
+      --Color-button-close-carddeltails: #eeeeee;
   }
 
   .ModeDark {
@@ -72,6 +73,7 @@
     --Color-text-buttons-foote: #eeeeee;
     --Color-text-buttons-foote-hover: #272525;
     --Color-buttins-border-top-footer: #272525;
+    --Color-button-close-carddeltails: #272525;
 }
 
 

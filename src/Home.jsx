@@ -96,13 +96,7 @@ export default function Home() {
                         </nav>
                 <section className="Painel-1">
                     <div className="Container-Title">
-                        <BlurText
-                            className="Portfólio"
-                            text={Portfólio}
-                            delay={200}
-                            animateBy="words"
-                            direction="top"
-                            onAnimationComplete={handleAnimationComplete}></BlurText> 
+                        <BlurText className="Portfólio" text={Portfólio} delay={200} animateBy="words" direction="top" onAnimationComplete={handleAnimationComplete}></BlurText> 
                         <div className="Container-Text">
                             <ButtonLow></ButtonLow>
                         </div>

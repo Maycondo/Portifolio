@@ -25,7 +25,6 @@
     left: 0%;
     background: var(--Backgtound-fundo-Color);
     display: flex;
-
 }
 
 .card-button-close {
@@ -38,13 +37,15 @@
 .close-button {
     height: 50px;
     width: 50px;
+    border-radius: 50%;
     display: flex;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     padding: 0.5rem;
+    color: var(--Color-button-close-carddeltails);
     margin: 2rem;
     font-size: 25px;
     font-weight: 900;
-    background: var(--Backgtound-fundo-Color);
+    background-color: var(--Color-texte-portifolio);
     border: none;
 }

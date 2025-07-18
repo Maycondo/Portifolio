@@ -1,4 +1,3 @@
-
 .page-wrapper-3 {
   width: 100%;
   background-color: var(--Backgtound-fundo-Color);
@@ -6,6 +5,10 @@
   flex-direction: column;
   margin: 2rem 0;
   min-height: 200vh; 
+}
+
+.page-wrapper-3 h1 {
+  display: none;
 }
 
 .section-timeline-2 {
