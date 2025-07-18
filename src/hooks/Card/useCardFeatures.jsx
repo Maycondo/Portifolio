@@ -54,7 +54,7 @@ function DynamicTimeline({ sectionId, navtexts }) {
   useEffect(() => {
     const intervalId = setInterval (() => {
       setIndeximagen((prevIndex => (prevIndex + 1) % allimagens.length));
-    }, 5000);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, [allimagens.length])
