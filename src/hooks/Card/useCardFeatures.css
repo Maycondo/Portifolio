@@ -92,12 +92,13 @@
 }
 
 .timeline_right_content img {
-  width: 100%;
+  width: 700px;
   height: auto;
-  margin: 1rem 0;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: zoom-in;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 1rem;
   cursor: pointer;
+  position: relative;
 }
 
 .timeline_right_content img:hover {

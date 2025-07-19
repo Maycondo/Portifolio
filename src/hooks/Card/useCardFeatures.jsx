@@ -4,6 +4,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Carddetails from "./cardDetails.jsx"
+import { motion, AnimatePresence } from 'framer-motion';
 import './useCardFeatures.css'; // Crie ou atualize este CSS
 import { image } from 'framer-motion/client';
 
@@ -129,23 +130,32 @@ function DynamicTimeline({ sectionId, navtexts }) {
 
         <div className="container-right"> {/* Nova div para o conteúdo da direita */}
           <div className="timeline_component">
-            {Projects.map((project, index) => (
-              <div className="timeline_item" key={project.id} id={project.id} ref={(el) => (itemRefs.current[index] = el)} >
-                <div className="timeline_right_content">
-                  <p>{project.description}</p>
-                  <img src={allimagens[indexImagen]} alt={project.title}  onClick={() => setCardDetails({ image: allimagens[indexImagen] })}/>
-                      {carddetails && (
-                        <Carddetails carddetails={carddetails} onClose={() => setCardDetails(null)}> </Carddetails>
-                      )
-                    }
-                    <div className="timeline_tech_roles"> {/* Para os "Roles" / Techs */}
-                    {project.tech.map((tech, techIndex) => (
-                      <span key={techIndex} className="timeline_tech_item">{tech}</span>
-                    ))}
+            {Projects.map((project, index) => {
+              const currentImages = project.image;
+              return (
+                <div className="timeline_item" key={project.id} id={project.id} ref={(el) => (itemRefs.current[index] = el)} >
+                  <div className="timeline_right_content">
+                    <p>{project.description}</p>
+                        <AnimatePresence mode="wait">
+                        <motion.img key={currentImages[indexImagen % currentImages.length]} src={currentImages[indexImagen % currentImages.length]} alt={`Imagem ${indexImagen}`} className="timeline_image" initial={{ x: -300, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 300, opacity: 0 }} transition={{ duration: 0.6 }}
+                          onClick={() =>
+                            setCardDetails({ image: currentImages[indexImagen % currentImages.length] })
+                          }
+                        />
+                    </AnimatePresence>
+                        {carddetails && (
+                          <Carddetails carddetails={carddetails} onClose={() => setCardDetails(null)}> </Carddetails>
+                        )
+                      }
+                      <div className="timeline_tech_roles"> {/* Para os "Roles" / Techs */}
+                      {project.tech.map((tech, techIndex) => (
+                        <span key={techIndex} className="timeline_tech_item">{tech}</span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
