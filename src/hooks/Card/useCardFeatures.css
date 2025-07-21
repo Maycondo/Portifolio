@@ -91,18 +91,24 @@
   color: var(--Color-Texto-pequeno);
 }
 
+.timeline_image_container {
+  width: 100%;
+  display: flex;
+  margin-top: 2rem;
+}
+
 .timeline_right_content img {
   width: 700px;
-  height: auto;
+  max-height: auto;
   object-fit: cover;
   border-radius: 12px;
   margin-top: 1rem;
   cursor: pointer;
   position: relative;
 }
-
 .timeline_right_content img:hover {
-  transform: scale(1.04);
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
 }
 
 .timeline_right_content .timeline_tech_roles {

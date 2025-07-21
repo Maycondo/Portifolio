@@ -55,7 +55,7 @@ function DynamicTimeline({ sectionId, navtexts }) {
   useEffect(() => {
     const intervalId = setInterval (() => {
       setIndeximagen((prevIndex => (prevIndex + 1) % allimagens.length));
-    }, 4000);
+    }, 6000);
 
     return () => clearInterval(intervalId);
   }, [allimagens.length])
@@ -136,18 +136,20 @@ function DynamicTimeline({ sectionId, navtexts }) {
                 <div className="timeline_item" key={project.id} id={project.id} ref={(el) => (itemRefs.current[index] = el)} >
                   <div className="timeline_right_content">
                     <p>{project.description}</p>
-                        <AnimatePresence mode="wait">
-                        <motion.img key={currentImages[indexImagen % currentImages.length]} src={currentImages[indexImagen % currentImages.length]} alt={`Imagem ${indexImagen}`} className="timeline_image" initial={{ x: -300, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 300, opacity: 0 }} transition={{ duration: 0.6 }}
-                          onClick={() =>
-                            setCardDetails({ image: currentImages[indexImagen % currentImages.length] })
-                          }
-                        />
-                    </AnimatePresence>
+                      <div className='timeline_image_container'>
+                          <AnimatePresence mode="wait">
+                            <motion.img key={currentImages[indexImagen % currentImages.length]} src={currentImages[indexImagen % currentImages.length]} alt={`Imagem ${indexImagen}`} className="timeline_image" initial={{ x: -300, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 300, opacity: 0 }} transition={{ duration: 0.6 }}
+                              onClick={() =>
+                                setCardDetails({ image: currentImages[indexImagen % currentImages.length] })
+                              }
+                            />
+                        </AnimatePresence>
+                      </div>
                         {carddetails && (
-                          <Carddetails carddetails={carddetails} onClose={() => setCardDetails(null)}> </Carddetails>
+                          <Carddetails carddetails={carddetails} allimagens={allimagens} onClose={() => setCardDetails(null)}> </Carddetails>
                         )
                       }
-                      <div className="timeline_tech_roles"> {/* Para os "Roles" / Techs */}
+                      <div className="timeline_tech_roles"> {}
                       {project.tech.map((tech, techIndex) => (
                         <span key={techIndex} className="timeline_tech_item">{tech}</span>
                       ))}

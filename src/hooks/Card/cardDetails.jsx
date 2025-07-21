@@ -5,7 +5,7 @@ import { GrNext } from "react-icons/gr";
 import { AiOutlineClose } from "react-icons/ai";
 
 
-export default function Carddetails ({carddetails, onClose}) {
+export default function Carddetails ({carddetails, onClose,}) {
 
     if(!carddetails) return null;
 
