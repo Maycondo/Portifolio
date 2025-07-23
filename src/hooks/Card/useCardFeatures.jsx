@@ -15,7 +15,10 @@ const Projects = [
     id: 'Bot Discord',
     title: 'Bot Discord',
     description: 'Criação de um bot interativo para gerenciar servidores do Discord. Implementação da biblioteca discord.py para permitir a interação com API Discord. O bot oferece comandos personalizados para moderar e organizar servidores do Discord Responde os usuários com comandos pre-definidos, tornando a interações com usuários mais fluida...',
-    image: ['https://tecdn.b-cdn.net/img/new/standard/city/044.webp', 'https://tecdn.b-cdn.net/img/new/standard/city/043.webp','https://tecdn.b-cdn.net/img/new/standard/city/042.webp'], // Placeholder
+    image: [
+      'https://tecdn.b-cdn.net/img/new/standard/city/044.webp', 
+      'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
+      'https://tecdn.b-cdn.net/img/new/standard/city/042.webp'], // Placeholder
     tech: ['Python', 'Node.js', 'Discord.js', 'API Integration'],
   },
 
@@ -23,7 +26,10 @@ const Projects = [
     id: 'MyBooks',
     title: 'MyBooks ',
     description: 'My-Books é um site onde vou cadastrar todos os livros que estou lendo. Em cada cadastro, haverá uma breve descrição do livro e algumas opiniões pessoais sobre aspectos abordados na leitura. Também haverá uma seção de favoritos, onde serão exibidos todos os livros que marquei como favoritos..',
-    image: ['https://tecdn.b-cdn.net/img/new/standard/city/044.webp', 'https://tecdn.b-cdn.net/img/new/standard/city/043.webp','https://tecdn.b-cdn.net/img/new/standard/city/042.webp'],
+    image: [
+      'https://tecdn.b-cdn.net/img/new/standard/city/044.webp', 
+      'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
+      'https://tecdn.b-cdn.net/img/new/standard/city/042.webp'],
     tech: ['HTML', 'CSS', 'JavaScript', 'React'],
   },
    
@@ -31,7 +37,10 @@ const Projects = [
     id: 'Web Books',
     title: 'Web Books',
     description: 'O iBooks é um projeto pessoal desenvolvido para consolidar e demonstrar minhas habilidades em desenvolvimento web. Ele faz requisições à API do Google Books para obter informações detalhadas sobre livros, incluindo autores, descrições, avaliações e capas. Os usuários podem criar uma lista personalizada de favoritos para acessar seus livros preferidos.',
-    image: ['https://tecdn.b-cdn.net/img/new/standard/city/044.webp', 'https://tecdn.b-cdn.net/img/new/standard/city/043.webp','https://tecdn.b-cdn.net/img/new/standard/city/042.webp'],
+    image: [
+      'https://tecdn.b-cdn.net/img/new/standard/city/044.webp', 
+      'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
+      'https://tecdn.b-cdn.net/img/new/standard/city/042.webp'],
     tech: ['HTML', 'CSS', 'JavaScript', 'React'],
   },
 
@@ -39,7 +48,10 @@ const Projects = [
     id: 'Spotify',
     title: 'Spotify Gmone',
     description: 'Spotify Gmone é um projeto que visa criar uma plataforma de streaming de música semelhante ao Spotify, mas com um toque único. O nome "Gmone" é uma combinação de "Gnome" e "Music", refletindo a inspiração no ambiente de desktop Gnome. O projeto utiliza tecnologias modernas para oferecer uma experiência de usuário envolvente e intuitiva.',
-    image: ['https://tecdn.b-cdn.net/img/new/standard/city/044.webp', 'https://tecdn.b-cdn.net/img/new/standard/city/043.webp','https://tecdn.b-cdn.net/img/new/standard/city/042.webp'],
+    image: [
+      'https://tecdn.b-cdn.net/img/new/standard/city/044.webp', 
+      'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
+      'https://tecdn.b-cdn.net/img/new/standard/city/042.webp'],
     tech: ['C#', "ASP.NET Core", "Entity Framework Core", ]
   },
 
@@ -146,7 +158,7 @@ function DynamicTimeline({ sectionId, navtexts }) {
                         </AnimatePresence>
                       </div>
                         {carddetails && (
-                          <Carddetails carddetails={carddetails} allimagens={allimagens} onClose={() => setCardDetails(null)}> </Carddetails>
+                          <Carddetails carddetails={carddetails} Projects={Projects} onClose={() => setCardDetails(null)}> </Carddetails>
                         )
                       }
                       <div className="timeline_tech_roles"> {}

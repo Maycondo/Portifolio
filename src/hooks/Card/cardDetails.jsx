@@ -1,13 +1,32 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 import "./carddetails.css";
-import { GrPrevious } from "react-icons/gr";
-import { GrNext } from "react-icons/gr";
+import { GrPrevious, GrNext } from "react-icons/gr";
 import { AiOutlineClose } from "react-icons/ai";
 
+export default function Carddetails({ carddetails, Projects, onClose }) {
+    if (!carddetails) return null;
 
-export default function Carddetails ({carddetails, onClose,}) {
+    const allImages = Projects.image || [];
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-    if(!carddetails) return null;
+    useEffect(() => {
+        setCurrentIndex(0); // Resetar índice ao abrir um novo card
+    }, [Projects.image]);
+
+    const handleNextImage = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % allImages.length);
+    };
+
+    const handlePreviousImage = () => {
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? allImages.length - 1 : prevIndex - 1
+        );
+    };
+
+    console.log("Projects.image:", Projects.image);
+    console.log("imagem atual:", allImages[currentIndex]);
 
     return (
         <div className="card-backdrop-filter">
@@ -17,15 +36,19 @@ export default function Carddetails ({carddetails, onClose,}) {
                         <AiOutlineClose />
                     </button>
                 </div>
-                <h2>{carddetails.title}</h2>
+                <h2>{Projects.title}</h2>
                 <div className="card-container">
-                    <button><GrPrevious /></button>
-                        <div className="card-image-container">
-                            <img id="imagem-project" src={carddetails.image} alt={carddetails.title} />
-                        </div>
-                    <button><GrNext/></button>
+                    <button className="previous-imagem" onClick={handlePreviousImage}>
+                        <GrPrevious />
+                    </button>
+                    <div className="card-image-container">
+                        <img id="imagem-project" src={allImages[currentIndex]} alt={Projects.title} />
+                    </div>
+                    <button className="next-imagem" onClick={handleNextImage}>
+                        <GrNext />
+                    </button>
                 </div>
             </div>
         </div>
-    )
+    );
 }
