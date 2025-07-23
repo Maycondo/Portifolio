@@ -28,7 +28,7 @@
 }
 
 .card-button-close {
-    height: 10%;
+    height: 5%;
     width: 100%;
     display: flex;
     justify-content: end;
@@ -50,10 +50,29 @@
     border: none;
 }
 
-.card-image {
+.card-container {
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.card-image-container {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
     align-items: start;
+}
+
+#imagem-project {
+    top: 10%;
+    max-height: 900px;
+    max-width: 900px;
+    cursor: none;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: none;
 }

@@ -18,9 +18,11 @@ export default function Carddetails ({carddetails, onClose,}) {
                     </button>
                 </div>
                 <h2>{carddetails.title}</h2>
-                <div className="card-image">
+                <div className="card-container">
                     <button><GrPrevious /></button>
-                    <img src={carddetails.image} alt={carddetails.title} />
+                        <div className="card-image-container">
+                            <img id="imagem-project" src={carddetails.image} alt={carddetails.title} />
+                        </div>
                     <button><GrNext/></button>
                 </div>
             </div>
