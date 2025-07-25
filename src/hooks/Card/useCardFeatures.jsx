@@ -158,13 +158,13 @@ function DynamicTimeline({ sectionId, navtexts }) {
                         </AnimatePresence>
                       </div>
                         {carddetails && (
-                          <Carddetails carddetails={carddetails} Projects={Projects} onClose={() => setCardDetails(null)}> </Carddetails>
+                          <Carddetails carddetails={carddetails} onClose={() => setCardDetails(null)}> </Carddetails>
                         )
                       }
                       <div className="timeline_tech_roles"> {}
-                      {project.tech.map((tech, techIndex) => (
-                        <span key={techIndex} className="timeline_tech_item">{tech}</span>
-                      ))}
+                        {project.tech.map((tech, techIndex) => (
+                          <span key={techIndex} className="timeline_tech_item">{tech}</span>
+                        ))}
                     </div>
                   </div>
                 </div>
