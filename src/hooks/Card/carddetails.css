@@ -50,6 +50,14 @@
     border: none;
 }
 
+.name-projetc {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--Color-texte-portifolio);
+    margin: 1rem 0rem;
+    text-align: center;
+}
+
 .card-container {
     height: 100%;
     width: 100%;
@@ -60,7 +68,7 @@
 
 .card-image-container {
     height: 100%;
-    width: auto;
+    width: 50rem;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -80,14 +88,13 @@
 
 #imagem-project {
     top: 10%;
-    max-height: 900px;
-    max-width: 900px;
+    height: 480px;
+    width: 720px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: none;
 }
-
 
 .next-imagem {
     height: 100%;

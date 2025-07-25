@@ -152,7 +152,7 @@ function DynamicTimeline({ sectionId, navtexts }) {
                           <AnimatePresence mode="wait">
                             <motion.img key={currentImages[indexImagen % currentImages.length]} src={currentImages[indexImagen % currentImages.length]} alt={`Imagem ${indexImagen}`} className="timeline_image" initial={{ x: -300, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 300, opacity: 0 }} transition={{ duration: 0.6 }}
                               onClick={() =>
-                                setCardDetails({ image: currentImages[indexImagen % currentImages.length] })
+                                setCardDetails(project)
                               }
                             />
                         </AnimatePresence>

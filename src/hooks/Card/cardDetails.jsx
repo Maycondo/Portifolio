@@ -33,18 +33,13 @@ export default function Carddetails({ carddetails, onClose }) {
                         <AiOutlineClose />
                     </button>
                 </div>
-                <h2>{carddetails.title}</h2>
+                <h2 className="name-projetc">{carddetails.title}</h2>
                 <div className="card-container">
                     <button className="previous-imagem" onClick={handlePreviousImage}>
                         <GrPrevious />
                     </button>
                     <div className="card-image-container">
-                        <img
-                            id="imagem-project"
-                            src={allImages[currentIndex]}
-                            alt={carddetails.title}
-                            style={{ maxWidth: "100%", maxHeight: "300px", objectFit: "cover" }}
-                        />
+                        <img id="imagem-project" src={allImages[currentIndex]} alt={carddetails.title} />
                     </div>
                     <button className="next-imagem" onClick={handleNextImage}>
                         <GrNext />
