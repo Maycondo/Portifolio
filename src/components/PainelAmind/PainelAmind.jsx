@@ -28,7 +28,7 @@ export default function Socialmidias() {
                             <path d="M502.3 190.8L327.4 338.2c-20.4 17.5-54.5 17.5-74.9 0L9.7 190.8A48 48 0 0 1 0 152V80c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v72a48 48 0 0 1-9.7 38.8zM48 208v224c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48V208L281.6 361.6c-20.4 17.5-54.5 17.5-74.9 0L48 208z"/>
                         </svg>
                     </a>
-                    <a className="socialContainer containerFour" href="/curriculo.pdf" target="_blank" rel="noopener noreferrer">
+                    <a className="socialContainer containerFour" href="https://drive.google.com/file/d/1jFuYr06zjVcjmiQaYE6U_RYTku_L0k1m/view" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 384 512" className="socialSvg curriculoSvg">
                             <path d="M224 136V0H24C10.8 0 0 10.8 0 24v464c0 13.3 10.8 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 304H96v-32h192v32zm0-64H96v-32h192v32zm-64-96c0 35.3-28.7 64-64 64s-64-28.7-64-64 28.7-64 64-64 64 28.7 64 64zm96-114.5V128h-88V40h6.1c6.4 0 12.5 2.5 17 7l57.9 57.5c4.5 4.5 7 10.6 7 17z"/>
                         </svg>

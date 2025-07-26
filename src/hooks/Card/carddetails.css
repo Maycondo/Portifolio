@@ -70,8 +70,9 @@
     height: 100%;
     width: 50rem;
     display: flex;
-    justify-content: center;
-    align-items: start;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .previous-imagem {
@@ -87,7 +88,6 @@
 }
 
 #imagem-project {
-    top: 10%;
     height: 480px;
     width: 720px;
     object-fit: cover;
@@ -106,5 +106,13 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.card-project-sites {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
