@@ -20,6 +20,8 @@ const Projects = [
       'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
       'https://tecdn.b-cdn.net/img/new/standard/city/042.webp'], // Placeholder
     tech: ['Python', 'Node.js', 'Discord.js', 'API Integration'],
+    github: 'https://github.com/Maycondo/DiscordBot',
+    site: 'https://discord.com/api/oauth2/authorize?client_id=1234567890&permissions=8&scope=bot',
   },
 
   {
@@ -31,6 +33,8 @@ const Projects = [
       'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
       'https://tecdn.b-cdn.net/img/new/standard/city/042.webp'],
     tech: ['HTML', 'CSS', 'JavaScript', 'React'],
+    github: 'https://github.com/Maycondo/My-Books',
+    site: 'https://my-books-wheat.vercel.app/',
   },
    
   {
@@ -42,6 +46,8 @@ const Projects = [
       'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
       'https://tecdn.b-cdn.net/img/new/standard/city/042.webp'],
     tech: ['HTML', 'CSS', 'JavaScript', 'React'],
+    github: 'https://github.com/Maycondo/WebIBooks',
+    site: 'https://web-ibooks.vercel.app/',
   },
 
   {
@@ -52,7 +58,9 @@ const Projects = [
       'https://tecdn.b-cdn.net/img/new/standard/city/044.webp', 
       'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
       'https://tecdn.b-cdn.net/img/new/standard/city/042.webp'],
-    tech: ['C#', "ASP.NET Core", "Entity Framework Core", ]
+    tech: ['C#', "ASP.NET Core", "Entity Framework Core", ],
+    github: 'https://github.com/Maycondo/SpotifyMiniPanel',
+    site: 'https://spotifygmone.azurewebsites.net/',
   },
 
 ];
