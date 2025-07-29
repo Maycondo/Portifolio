@@ -6,6 +6,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Carddetails from "./cardDetails.jsx"
 import { motion, AnimatePresence } from 'framer-motion';
 import './useCardFeatures.css'; // Crie ou atualize este CSS
+
 import { image } from 'framer-motion/client';
 
 // Exemplo de array de projetos (usando IDs únicos)
@@ -132,6 +133,11 @@ function DynamicTimeline({ sectionId, navtexts }) {
    
   const currentProjectDetails = Projects.find(p => p.id === activeProject);
 
+  // Função para fechar o Carddetails
+  const handleClose = () => {
+    setCardDetails(null);
+  };
+
 
   return (
     <section className="page-wrapper-3" id={sectionId}>
@@ -165,10 +171,11 @@ function DynamicTimeline({ sectionId, navtexts }) {
                             />
                         </AnimatePresence>
                       </div>
-                        {carddetails && (
-                          <Carddetails carddetails={carddetails} onClose={() => setCardDetails(null)}> </Carddetails>
-                        )
-                      }
+                   <AnimatePresence mode="wait">
+                      {carddetails && (
+                        <Carddetails carddetails={carddetails} onClose={handleClose} />
+                      )}
+                    </AnimatePresence>
                       <div className="timeline_tech_roles"> {}
                         {project.tech.map((tech, techIndex) => (
                           <span key={techIndex} className="timeline_tech_item">{tech}</span>
