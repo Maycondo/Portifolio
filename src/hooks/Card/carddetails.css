@@ -68,7 +68,7 @@
 
 .card-image-container {
     height: 100%;
-    width: 50rem;
+    width: 60rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -88,8 +88,9 @@
 }
 
 #imagem-project {
-    height: 480px;
-    width: 720px;
+    height: 550px;
+    width: 1000px;
+    position: relative;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
