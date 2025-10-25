@@ -30,17 +30,31 @@ const Projects = [
     title: 'MyBooks ',    
     description: 'My-Books é um site onde vou cadastrar todos os livros que estou lendo. Em cada cadastro, haverá uma breve descrição do livro e algumas opiniões pessoais sobre aspectos abordados na leitura. Também haverá uma seção de favoritos, onde serão exibidos todos os livros que marquei como favoritos..',
     image: [
-      'https://imgur.com/a/QYAauNf', 
-      'https://media.licdn.com/dms/image/v2/D5622AQE_0w6upMDCuQ/feedshare-shrink_2048_1536/B56ZbYsAb9H4As-/0/1747392138498?e=1762387200&v=beta&t=Q1jnFaMS-HkW8JxJCGhnybkcGWmnbSngVy0XsaShWqA',
+      'https://media.licdn.com/dms/image/v2/D5622AQFWUTYeFlwmng/feedshare-shrink_2048_1536/B56ZocSCF6KAAw-/0/1761411081900?e=1762992000&v=beta&t=XhIwwRxR-GZUkZep_8QE7dlimpgkJYDbiukitrcRmD8',
+      'https://media.licdn.com/dms/image/v2/D5622AQGejg3EmbJXwQ/feedshare-shrink_2048_1536/B56ZocSCGWJ4A0-/0/1761411081679?e=1762992000&v=beta&t=Hex6TbXX5DTvWg4pDsSL-M4oHPTwn82krOHcoy6AxGM',
+      'https://media.licdn.com/dms/image/v2/D5622AQGbB1ZfpQB36A/feedshare-shrink_2048_1536/B56ZocSCHYJkAw-/0/1761411081784?e=1762992000&v=beta&t=da5wuZJAThzRMpotpipEU3-S4IBO4USJkX1eUTbp0Kc',
+      'https://media.licdn.com/dms/image/v2/D5622AQHTvbExf2qIjg/feedshare-shrink_2048_1536/B56ZocSCGwIcA0-/0/1761411081478?e=1762992000&v=beta&t=mhuFJxRg0CS_e8o7gxmRhJF6Md1nnShy3v03a10xUNY',
       'https://media.licdn.com/dms/image/v2/D5622AQEm6iRtO3lMMA/feedshare-shrink_2048_1536/B56ZbYsAeMHgAo-/0/1747392138895?e=1762387200&v=beta&t=MsEgz_KJ7fdNr91H_8DiEYjI7WToJsMpAR5jz3m-vdI',
       'https://media.licdn.com/dms/image/v2/D5622AQG_7Yl2VpzT1A/feedshare-shrink_2048_1536/B56ZbYsAb2H4As-/0/1747392138935?e=1762387200&v=beta&t=6RiJzL532cLDHFe1Gg7k-4Jbm5whRvXNrYZAJluKPm0',
       'https://media.licdn.com/dms/image/v2/D5622AQHt3yYZaUEq1Q/feedshare-shrink_2048_1536/B56ZbYsAb0GoAo-/0/1747392138959?e=1762387200&v=beta&t=swvSxQoCRBfsQMslF_RW8sj1MkeJm7aWiEjm7RMOHcg'
     ],
-    tech: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Express', 'MongoDB'  ],
+    tech: ['HTML', 'CSS', 'JavaScript', 'React', "Boostrap", 'Tailwind'  ],
     github: 'https://github.com/Maycondo/My-Books',
     site: 'https://my-books-wheat.vercel.app/',
+  },  
+
+  {
+    id: 'API de Books',
+    title: 'API de Books',
+    description: 'Desenvolvimento de uma API RESTful para gerenciamento de uma coleção de livros. A API permite operações CRUD (Create, Read, Update, Delete) em livros, incluindo atributos como título, autor, gênero e ano de publicação. Implementação utilizando Node.js com Express e banco de dados MongoDB para armazenamento dos dados.',
+    image: [
+      'https://tecdn.b-cdn.net/img/new/standard/city/044.webp', 
+      'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
+      'https://tecdn.b-cdn.net/img/new/standard/city/042.webp'],
+    tech: ['Node.js', 'Express', 'MongoDB', 'RESTful API'],
+    github: '',
   },
-   
+  
   {
     id: 'Web Books',
     title: 'Web Books',
