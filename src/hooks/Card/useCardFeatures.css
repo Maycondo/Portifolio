@@ -35,12 +35,12 @@
 .timeline_nav {
   display: flex;
   flex-direction: column;
-  gap: 10rem; 
+  gap: 7rem; 
   text-align: right; 
 }
 
 .timeline_nav_item {
-  font-size: clamp(2rem, 3vw, 3.5rem);
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 900;
   color: #555;
   cursor: pointer;

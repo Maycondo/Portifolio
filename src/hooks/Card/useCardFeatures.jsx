@@ -164,7 +164,7 @@ function DynamicTimeline({ sectionId, navtexts }) {
         <div className="container-left"> {/* Nova div para a navegação esquerda */}
           <div className="timeline_nav">
             {Projects.map((project) => (
-              <h2 key={project.id} className={`timeline_nav_item ${activeProject === project.id ? 'active' : ''}`} onClick={() => scrollToProject(project.id)} >
+              <h2 key={project.id} className={`timeline_nav_item ${activeProject === project.id ? 'active' : ' '}`} onClick={() => scrollToProject(project.id)} >
                 {project.title}
               </h2>
             ))}
