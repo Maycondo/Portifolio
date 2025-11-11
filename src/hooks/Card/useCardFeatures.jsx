@@ -34,9 +34,6 @@ const Projects = [
       'https://media.licdn.com/dms/image/v2/D5622AQGejg3EmbJXwQ/feedshare-shrink_2048_1536/B56ZocSCGWJ4A0-/0/1761411081679?e=1762992000&v=beta&t=Hex6TbXX5DTvWg4pDsSL-M4oHPTwn82krOHcoy6AxGM',
       'https://media.licdn.com/dms/image/v2/D5622AQGbB1ZfpQB36A/feedshare-shrink_2048_1536/B56ZocSCHYJkAw-/0/1761411081784?e=1762992000&v=beta&t=da5wuZJAThzRMpotpipEU3-S4IBO4USJkX1eUTbp0Kc',
       'https://media.licdn.com/dms/image/v2/D5622AQHTvbExf2qIjg/feedshare-shrink_2048_1536/B56ZocSCGwIcA0-/0/1761411081478?e=1762992000&v=beta&t=mhuFJxRg0CS_e8o7gxmRhJF6Md1nnShy3v03a10xUNY',
-      'https://media.licdn.com/dms/image/v2/D5622AQEm6iRtO3lMMA/feedshare-shrink_2048_1536/B56ZbYsAeMHgAo-/0/1747392138895?e=1762387200&v=beta&t=MsEgz_KJ7fdNr91H_8DiEYjI7WToJsMpAR5jz3m-vdI',
-      'https://media.licdn.com/dms/image/v2/D5622AQG_7Yl2VpzT1A/feedshare-shrink_2048_1536/B56ZbYsAb2H4As-/0/1747392138935?e=1762387200&v=beta&t=6RiJzL532cLDHFe1Gg7k-4Jbm5whRvXNrYZAJluKPm0',
-      'https://media.licdn.com/dms/image/v2/D5622AQHt3yYZaUEq1Q/feedshare-shrink_2048_1536/B56ZbYsAb0GoAo-/0/1747392138959?e=1762387200&v=beta&t=swvSxQoCRBfsQMslF_RW8sj1MkeJm7aWiEjm7RMOHcg'
     ],
     tech: ['HTML', 'CSS', 'JavaScript', 'React', "Boostrap", 'Tailwind'  ],
     github: 'https://github.com/Maycondo/My-Books',
@@ -90,11 +87,13 @@ function DynamicTimeline({ sectionId, navtexts }) {
   const allimagens = Projects.flatMap(project => project.image);
   const itemRefs = useRef([]); // Para armazenar referências a cada item da timeline
 
+  // Muda a imagem a cada 6 segundos
   useEffect(() => {
     const intervalId = setInterval (() => {
       setIndeximagen((prevIndex => (prevIndex + 1) % allimagens.length));
     }, 6000);
 
+    // Limpa o intervalo ao desmontar o componente
     return () => clearInterval(intervalId);
   }, [allimagens.length])
 
@@ -179,9 +178,12 @@ function DynamicTimeline({ sectionId, navtexts }) {
                 <div className="timeline_item" key={project.id} id={project.id} ref={(el) => (itemRefs.current[index] = el)} >
                   <div className="timeline_right_content">
                     <p>{project.description}</p>
+                    {/* Imagem com animação */}
                       <div className='timeline_image_container'>
                           <AnimatePresence mode="wait">
-                            <motion.img key={currentImages[indexImagen % currentImages.length]} src={currentImages[indexImagen % currentImages.length]} alt={`Imagem ${indexImagen}`} className="timeline_image" initial={{ x: -300, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 300, opacity: 0 }} transition={{ duration: 0.6 }}
+                            <motion.img key={currentImages[indexImagen % currentImages.length]} 
+                            src={currentImages[indexImagen % currentImages.length]} 
+                            alt={`Imagem ${indexImagen}`} className="timeline_image" initial={{ x: -300, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 300, opacity: 0 }} transition={{ duration: 0.6 }}
                               onClick={() =>
                                 setCardDetails(project)
                               }
