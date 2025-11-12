@@ -45,11 +45,11 @@ const Projects = [
     title: 'API de Books',
     description: 'Desenvolvimento de uma API RESTful para gerenciamento de uma coleção de livros. A API permite operações CRUD (Create, Read, Update, Delete) em livros, incluindo atributos como título, autor, gênero e ano de publicação. Implementação utilizando Node.js com Express e banco de dados MongoDB para armazenamento dos dados.',
     image: [
-      'https://tecdn.b-cdn.net/img/new/standard/city/044.webp', 
-      'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
+      'https://media.licdn.com/dms/image/v2/D5622AQHXDxmtKZ5AgQ/feedshare-shrink_2048_1536/B56Zc9eUlPH8Ao-/0/1749083049459?e=1764806400&v=beta&t=AJREqgWYfwFMVBl35nVi-LFChu_tV3ixE4xywHLY9kU', 
+      'https://media.licdn.com/dms/image/v2/D5622AQGkkPLZqpN6rw/feedshare-shrink_2048_1536/B56Zc9eUlhH8Ao-/0/1749083049189?e=1764806400&v=beta&t=vpe4jex1OCl9SBhPNQ438CWgGrGqqXCmnN9zhZ-UTqE',
       'https://tecdn.b-cdn.net/img/new/standard/city/042.webp'],
     tech: ['Node.js', 'Express', 'MongoDB', 'RESTful API'],
-    github: '',
+    github: 'https://github.com/Maycondo/Books_API',
   },
   
   {
