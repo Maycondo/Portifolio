@@ -7,7 +7,14 @@ import Carddetails from "./cardDetails.jsx"
 import { motion, AnimatePresence } from 'framer-motion';
 import './useCardFeatures.css'; // Crie ou atualize este CSS
 
-import { image } from 'framer-motion/client';
+// Imgens do projetos
+import MyBooks1 from '../../imagens/Projetos/My_Books/MyBooks1.png';
+import MyBooks2 from '../../imagens/Projetos/My_Books/MyBooks2.png';
+import MyBooks3 from '../../imagens/Projetos/My_Books/MyBooks3.png';
+import MyBooks4 from '../../imagens/Projetos/My_Books/MyBooks4.png';
+import MyBooks5 from '../../imagens/Projetos/My_Books/MyBooks5.png';  
+
+
 
 // Exemplo de array de projetos (usando IDs únicos)
 const Projects = [
@@ -16,10 +23,7 @@ const Projects = [
     id: 'Bot Discord',
     title: 'Bot Discord',
     description: 'Criação de um bot interativo para gerenciar servidores do Discord. Implementação da biblioteca discord.py para permitir a interação com API Discord. O bot oferece comandos personalizados para moderar e organizar servidores do Discord Responde os usuários com comandos pre-definidos, tornando a interações com usuários mais fluida...',
-    image: [
-      'https://tecdn.b-cdn.net/img/new/standard/city/044.webp', 
-      'https://tecdn.b-cdn.net/img/new/standard/city/043.webp',
-      'https://tecdn.b-cdn.net/img/new/standard/city/042.webp'], // Placeholder
+    image: [ MyBooks1,  MyBooks2, MyBooks3, ], // Placeholder
     tech: ['Python', 'Node.js', 'Discord.js', 'API Integration'],
     github: 'https://github.com/Maycondo/DiscordBot',
     site: 'https://discord.com/api/oauth2/authorize?client_id=1234567890&permissions=8&scope=bot',
@@ -29,12 +33,7 @@ const Projects = [
     id: 'MyBooks',
     title: 'MyBooks ',    
     description: 'My-Books é um site onde vou cadastrar todos os livros que estou lendo. Em cada cadastro, haverá uma breve descrição do livro e algumas opiniões pessoais sobre aspectos abordados na leitura. Também haverá uma seção de favoritos, onde serão exibidos todos os livros que marquei como favoritos..',
-    image: [
-      'https://media.licdn.com/dms/image/v2/D5622AQFWUTYeFlwmng/feedshare-shrink_2048_1536/B56ZocSCF6KAAw-/0/1761411081900?e=1762992000&v=beta&t=XhIwwRxR-GZUkZep_8QE7dlimpgkJYDbiukitrcRmD8',
-      'https://media.licdn.com/dms/image/v2/D5622AQGejg3EmbJXwQ/feedshare-shrink_2048_1536/B56ZocSCGWJ4A0-/0/1761411081679?e=1762992000&v=beta&t=Hex6TbXX5DTvWg4pDsSL-M4oHPTwn82krOHcoy6AxGM',
-      'https://media.licdn.com/dms/image/v2/D5622AQGbB1ZfpQB36A/feedshare-shrink_2048_1536/B56ZocSCHYJkAw-/0/1761411081784?e=1762992000&v=beta&t=da5wuZJAThzRMpotpipEU3-S4IBO4USJkX1eUTbp0Kc',
-      'https://media.licdn.com/dms/image/v2/D5622AQHTvbExf2qIjg/feedshare-shrink_2048_1536/B56ZocSCGwIcA0-/0/1761411081478?e=1762992000&v=beta&t=mhuFJxRg0CS_e8o7gxmRhJF6Md1nnShy3v03a10xUNY',
-    ],
+    image: [ MyBooks1,  MyBooks2, MyBooks3, MyBooks4, MyBooks5 ],
     tech: ['HTML', 'CSS', 'JavaScript', 'React', "Boostrap", 'Tailwind'  ],
     github: 'https://github.com/Maycondo/My-Books',
     site: 'https://my-books-wheat.vercel.app/',
