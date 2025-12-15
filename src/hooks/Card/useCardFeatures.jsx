@@ -12,7 +12,11 @@ import MyBooks1 from '../../imagens/Projetos/My_Books/MyBooks1.png';
 import MyBooks2 from '../../imagens/Projetos/My_Books/MyBooks2.png';
 import MyBooks3 from '../../imagens/Projetos/My_Books/MyBooks3.png';
 import MyBooks4 from '../../imagens/Projetos/My_Books/MyBooks4.png';
-import MyBooks5 from '../../imagens/Projetos/My_Books/MyBooks5.png';  
+import MyBooks5 from '../../imagens/Projetos/My_Books/MyBooks5.png';
+
+import ApiBooks1 from '../../imagens/Projetos/API_Books/ApiBooks1.png';
+import ApiBooks2 from '../../imagens/Projetos/API_Books/ApiBooks2.png';
+import ApiBooks3 from '../../imagens/Projetos/API_Books/ApiBooks3.png';
 
 
 
@@ -43,10 +47,7 @@ const Projects = [
     id: 'API de Books',
     title: 'API de Books',
     description: 'Desenvolvimento de uma API RESTful para gerenciamento de uma coleção de livros. A API permite operações CRUD (Create, Read, Update, Delete) em livros, incluindo atributos como título, autor, gênero e ano de publicação. Implementação utilizando Node.js com Express e banco de dados MongoDB para armazenamento dos dados.',
-    image: [
-      'https://media.licdn.com/dms/image/v2/D5622AQHXDxmtKZ5AgQ/feedshare-shrink_2048_1536/B56Zc9eUlPH8Ao-/0/1749083049459?e=1764806400&v=beta&t=AJREqgWYfwFMVBl35nVi-LFChu_tV3ixE4xywHLY9kU', 
-      'https://media.licdn.com/dms/image/v2/D5622AQGkkPLZqpN6rw/feedshare-shrink_2048_1536/B56Zc9eUlhH8Ao-/0/1749083049189?e=1764806400&v=beta&t=vpe4jex1OCl9SBhPNQ438CWgGrGqqXCmnN9zhZ-UTqE',
-      'https://tecdn.b-cdn.net/img/new/standard/city/042.webp'],
+    image: [ ApiBooks1, ApiBooks2, ApiBooks3 ],
     tech: ['Node.js', 'Express', 'MongoDB', 'RESTful API'],
     github: 'https://github.com/Maycondo/Books_API',
   },
@@ -178,14 +179,12 @@ function DynamicTimeline({ sectionId, navtexts }) {
                   <div className="timeline_right_content">
                     <p>{project.description}</p>
                     {/* Imagem com animação */}
-                      <div className='timeline_image_container'>
+                      <div className='timeline_image_container'>  
                           <AnimatePresence mode="wait">
                             <motion.img key={currentImages[indexImagen % currentImages.length]} 
                             src={currentImages[indexImagen % currentImages.length]} 
                             alt={`Imagem ${indexImagen}`} className="timeline_image" initial={{ x: -300, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 300, opacity: 0 }} transition={{ duration: 0.6 }}
-                              onClick={() =>
-                                setCardDetails(project)
-                              }
+                              onClick={() => setCardDetails(project) }
                             />
                         </AnimatePresence>
                       </div>

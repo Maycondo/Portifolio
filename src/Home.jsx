@@ -42,7 +42,7 @@ export default function Home() {
     const { texts, navtexts, setLinguagem } = LanguageSwitch(); // Hook para troca de linguagem
     const [selectedLanguage, setSelectedLanguage] = useState('PT'); // Estado da linguagem selecionada
     const sectionId = selectedLanguage === "PT" ? 'inicio' : 'home'; // Determina o ID da seção com base na linguagem
-    const [theme, setTheme] = useState('ModeLight');  // Estado do tema (claro ou escuro)
+    const [theme, setTheme] = useState('ModeDark');  // Estado do tema (claro ou escuro)
     const loading = useLoader(2000); // Utiliza o hook de carregamento com delay de 2000ms
 
 
