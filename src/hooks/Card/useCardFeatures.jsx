@@ -19,7 +19,6 @@ import ApiBooks2 from '../../imagens/Projetos/API_Books/ApiBooks2.png';
 import ApiBooks3 from '../../imagens/Projetos/API_Books/ApiBooks3.png';
 
 
-
 // Exemplo de array de projetos (usando IDs únicos)
 const Projects = [
 

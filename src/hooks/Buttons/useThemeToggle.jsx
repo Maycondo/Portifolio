@@ -19,7 +19,6 @@ const alternarModo = () => {
     });
 }
 
-
 return (    
     <div className="Botao_Modo" >
         <button type='button' onClick={alternarModo} style={{fontSize: '17px'}}>
