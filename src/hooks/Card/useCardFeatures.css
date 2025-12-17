@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   margin: 2rem 0;
-  min-height: 200vh; 
+  min-height: 200vh;
 }
 
 .page-wrapper-3 h1 {
@@ -15,28 +15,25 @@
   display: flex;
   width: 100%;
   max-width: 1400px;
-  margin: 0 auto; 
-  position: relative; 
+  margin: 0 auto;
+  position: relative;
 }
 
-/* Coluna da esquerda (Navegação) */
 .container-left {
-  height: 100vh; 
-  width: 30%; 
+  width: 30%;
   display: flex;
-  justify-content: space-around; 
-  padding-right: 50px; 
-  position: sticky; 
-  top: 100px; 
-  height: fit-content; 
-  align-self: flex-start; 
+  justify-content: space-around;
+  padding-right: 50px;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
 }
 
 .timeline_nav {
   display: flex;
   flex-direction: column;
-  gap: 7rem; 
-  text-align: right; 
+  gap: 7rem;
+  text-align: right;
 }
 
 .timeline_nav_item {
@@ -48,79 +45,73 @@
 }
 
 .timeline_nav_item.active {
-  color: var(--Color-Texto-pequeno); 
+  color: var(--Color-Texto-pequeno);
 }
 
 .container-right {
-  width: 70%; 
-  padding-left: 50px; 
-  position: relative; 
+  width: 70%;
+  padding-left: 50px;
+  position: relative;
 }
 
 .timeline_component {
   display: flex;
   flex-direction: column;
-  gap: 15rem; 
-  position: relative; 
+  gap: 15rem;
 }
 
 .timeline_item {
   display: flex;
   background-color: var(--Color-Card-Background);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 4rem;
   box-shadow: var(--Box-Shadow);
   min-height: 600px;
   align-items: center;
   justify-content: center;
-}
+  transition: box-shadow 0.3s ease;
+} 
 
 .timeline_right_content {
   width: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  align-items: flex-start; 
-  border-radius: 10px;
+  align-items: flex-start;
 }
 
 .timeline_right_content p {
   font-size: clamp(1.5rem, 2vw, 1.9rem);
   font-weight: 400;
-  margin: 1rem 0;
+  margin-bottom: 2rem;
   color: var(--Color-Texto-pequeno);
 }
 
 .timeline_image_container {
   width: 100%;
+  height: 400px;
   display: flex;
-  margin-top: 2rem;
+  align-items: center;
+  overflow: hidden; /* FUNDAMENTAL */
 }
 
-.timeline_right_content img {
+.timeline_image {
   width: 700px;
-  max-height: auto;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 12px;
-  margin-top: 1rem;
   cursor: pointer;
-  position: relative;
+  will-change: transform, opacity; /* animação suave */
 }
 
-.timeline_right_content img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease-in-out;
-}
-
-.timeline_right_content .timeline_tech_roles {
+.timeline_tech_roles {
   display: flex;
-  margin: 2rem 0rem;
+  margin: 2rem 0 1rem;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-bottom: 1rem; 
 }
 
-.timeline_right_content .timeline_tech_item {
+.timeline_tech_item {
   font-size: clamp(1rem, 2vw, 1.2rem);
   font-weight: 800;
   background: var(--Backgtound-color-nav);
@@ -129,62 +120,62 @@
   color: var(--Color-Texto-pequeno);
 }
 
-
 .section-timeline-2::before {
-  content: '';
+  content: "";
   position: absolute;
-  left: calc(30% + 25px); 
+  left: calc(30% + 25px);
   top: 0;
   bottom: 0;
   width: 3px;
   background-color: var(--Color-Texto-pequeno);
-  z-index: 1; 
+  z-index: 1;
 }
 
 @media (max-width: 991px) {
   .section-timeline-2 {
-    flex-direction: column; 
-    align-items: center; 
+    flex-direction: column;
+    align-items: center;
   }
 
   .container-left,
   .container-right {
-    width: 100%; 
-    padding: 0 1rem; 
-    position: static; 
+    width: 100%;
+    padding: 0 1rem;
+    position: static;
   }
 
   .timeline_nav {
-    flex-direction: row; 
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 2rem;
     text-align: center;
   }
-  
+
   .timeline_nav_item {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
 
-  .section-timeline-2::before,
-  .timeline_item::before,
-  .timeline_item::after {
+  .section-timeline-2::before {
     display: none;
   }
 
   .timeline_item {
-    padding: 2rem; 
-    margin-bottom: 2rem; 
-    min-height: auto; 
+    padding: 2rem;
+    min-height: auto;
   }
 
   .timeline_right_content {
-    align-items: center; 
+    align-items: center;
     text-align: center;
   }
 
-  .timeline_right_content .timeline_tech_roles {
-    justify-content: center; 
+  .timeline_tech_roles {
+    justify-content: center;
+  }
+
+  .timeline_image {
+    width: 100%;
   }
 }
