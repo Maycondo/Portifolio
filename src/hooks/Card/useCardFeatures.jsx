@@ -39,7 +39,7 @@ const Projects = [
     image: [ MyBooks1,  MyBooks2, MyBooks3, MyBooks4, MyBooks5 ],
     tech: ['HTML', 'CSS', 'JavaScript', 'React', "Boostrap", 'Tailwind'  ],
     github: 'https://github.com/Maycondo/My-Books',
-    site: 'https://my-books-wheat.vercel.app/',
+    site: 'https://my-books-lyart-seven.vercel.app/',
   },  
 
   {
