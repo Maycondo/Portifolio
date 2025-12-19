@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, } from 'react';
 
 
 // Importando os componentes necessários
@@ -29,8 +29,8 @@ const useLoader = (delay) => {
 
 
 
-const Name = "Michael {}"; // Nome do portfólio, pode ser alterado conforme necessário
-const Portfólio = "Portfólio"; // Nome do portfólio, pode ser alterado
+const PORTFOLIO_NAME = "Michael {}"; // Nome do portfólio, pode ser alterado conforme necessário
+const PORTFOLIO_TITLE = "Portfólio"; // Nome do portfólio, pode ser alterado
 
 
 const handleAnimationComplete = () => {
@@ -42,8 +42,11 @@ export default function Home() {
     const { texts, navtexts, setLinguagem } = LanguageSwitch(); // Hook para troca de linguagem
     const [selectedLanguage, setSelectedLanguage] = useState('PT'); // Estado da linguagem selecionada
     const sectionId = selectedLanguage === "PT" ? 'inicio' : 'home'; // Determina o ID da seção com base na linguagem
-    const [theme, setTheme] = useState('ModeDark');  // Estado do tema (claro ou escuro)
     const loading = useLoader(2000); // Utiliza o hook de carregamento com delay de 2000ms
+    const [theme, setTheme] = useState(() => {
+        const savedTheme = localStorage.getItem('theme');
+        return savedTheme ? JSON.parse(savedTheme) : 'ModeDark';
+    });  // Estado do tema (claro ou escuro)
 
 
     // Função para trocar a linguagem
@@ -58,13 +61,21 @@ export default function Home() {
     };
 
     // Função para estilizar o botão de linguagem
-    const CorStyle = (linguagem) => {
-        return linguagem === selectedLanguage
-        ? theme === 'ModeLight'
-            ? { color: 'black' } // Cor preta para o tema claro
-            : { color: 'white' } // Cor branca para o tema escuro
-        : { color: '#a3a3a3' }; // Cor cinza para linguagens não selecionadas
-    };
+    const CorStyle = (linguagem) => { 
+        return linguagem === 
+        selectedLanguage ? theme === 'ModeLight' 
+            ? { color: 'black' } 
+            : { color: 'white' } 
+        : { color: '#a3a3a3' };
+     };
+
+     useEffect(() => {
+        document.body.className = theme;
+    }, [theme]);
+
+    useEffect(() => {
+        localStorage.setItem('theme', JSON.stringify(theme));
+    }, [theme]);
 
     // Exibe o loader enquanto o estado `loading` for `true`
     if (loading) {
@@ -75,9 +86,9 @@ export default function Home() {
         <>
         <header className="App-header" id={sectionId} >
                 <section className="Barra_top" >
-                        <h1 id="Name">{Name}</h1>                      
+                        <h1 id="Name">{PORTFOLIO_NAME}</h1>                      
                     <div className='Container-Buttons'>
-                        <ThemeToggle onThemeChange={ handleThemeChange }/>
+                        <ThemeToggle theme={theme} onThemeChange={ handleThemeChange }/>
                             <div className="lingua">
                                 <button  className="lingua__button"  style={CorStyle('PT')}  onClick={() => handleLanguageChange('PT')}>PT</button>
                                 <button  className="lingua__button"  style={CorStyle('EN')}  onClick={() => handleLanguageChange('EN')}>EN</button>
@@ -96,7 +107,7 @@ export default function Home() {
                         </nav>
                 <section className="Painel-1">
                     <div className="Container-Title">
-                        <BlurText className="Portfólio" text={Portfólio} delay={200} animateBy="words" direction="top" onAnimationComplete={handleAnimationComplete}></BlurText> 
+                        <BlurText className="Portfólio" text={PORTFOLIO_TITLE} delay={200} animateBy="words" direction="top" onAnimationComplete={handleAnimationComplete}></BlurText> 
                         <div className="Container-Text">
                             <ButtonLow></ButtonLow>
                         </div>
@@ -104,7 +115,7 @@ export default function Home() {
                 </section>
                 <PainelAdmin texts={texts} handleLanguageChange={handleLanguageChange} ></PainelAdmin>
         </header>
-            <Main  texts={texts}  navtexts={navtexts} handleLanguageChange={selectedLanguage} ></Main>
-            <Footer texts={texts} handleLanguageChange={selectedLanguage} ></Footer>
+            <Main  texts={texts}  navtexts={navtexts} language={selectedLanguage} ></Main>
+            <Footer texts={texts} language={selectedLanguage} ></Footer>
         </>
     )}

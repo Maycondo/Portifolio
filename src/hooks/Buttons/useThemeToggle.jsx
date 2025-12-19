@@ -10,7 +10,7 @@ const ModeDark = <i className="bi bi-moon-fill"></i>;
 
 
 const alternarModo = () => {
-    setogleTheme((prevState) => {
+    setogleTheme((prevState) => {   
         const NewState = prevState === 'ModeLight' ? 'ModeDark' : 'ModeLight';
         document.body.classList.remove(prevState); // Remove a classe anterior do body
         document.body.classList.add(NewState);    // Adiciona a nova classe ao body
