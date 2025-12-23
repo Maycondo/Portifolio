@@ -48,7 +48,7 @@ export default function Home() {
         return savedTheme ? JSON.parse(savedTheme) : 'ModeDark';
     });  // Estado do tema (claro ou escuro)
 
-
+    
     // Função para trocar a linguagem
     const handleLanguageChange = (linguagem) => {
         setLinguagem(linguagem); // Atualiza a linguagem no hook personalizado
