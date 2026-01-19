@@ -79,6 +79,7 @@ const Projects = [
 
 ];
 
+// Componente principal da timeline dinâmica
 function DynamicTimeline({ sectionId, navtexts }) {
   const [activeProject, setActiveProject] = useState(Projects[0].id); // Começa com o primeiro projeto ativo
   const [carddetails, setCardDetails] = useState(null); 

@@ -12,6 +12,7 @@ export default function LanguageSwitch(initialLinguagem = 'PT') {
     const navTextsPt = ['INICIO', 'SOBRE', 'PROJETOS', 'CONTATOS'];
     const navTextsEn = ['HOME', 'ABOUT', 'PROJECTS', 'CONTACTS'];
 
+    // Definição dos textos em português
     const textsPT = {
       text_footer: `TEM UM PROJETO EM MENTE?`,
       text_footer_button: `VOLTAR AO TOPO`,
@@ -22,6 +23,7 @@ export default function LanguageSwitch(initialLinguagem = 'PT') {
         Minha jornada no mundo da programação é marcada por um compromisso constante com a aprendizagem e o crescimento. Sempre em busca de aprimorar minhas habilidades, estou determinado a elevar o padrão e entregar resultados que façam a diferença.`,
     };
 
+    // Definição dos textos em inglês
     const textsEN = {
       text_footer: `DO YOU HAVE A PROJECT IN MIND?`,
       text_footer_button: `BACK TO TOP`,
