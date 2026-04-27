@@ -80,8 +80,9 @@ const Projects = [
 ];
 
 // Componente principal da timeline dinâmica
-function DynamicTimeline({ sectionId, navtexts }) {
+function DynamicTimeline({ navtexts, handleLanguageChange }) {
   const [activeProject, setActiveProject] = useState(Projects[0].id); // Começa com o primeiro projeto ativo
+  const sectionId = handleLanguageChange === "PT" ? 'projetos' : 'projects'; // Determina o ID da seção com base na linguagem
   const [carddetails, setCardDetails] = useState(null); 
   const [indexImagen , setIndeximagen] = useState(0)
   const allimagens = Projects.flatMap(project => project.image);

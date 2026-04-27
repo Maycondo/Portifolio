@@ -99,9 +99,9 @@ export default function Home() {
                         <nav>               
                             <ul className="Narve">
                                 {navtexts.map((item, index) => (
-                                <li key={index}>
-                                    <a href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}>{item}</a>
-                                </li>
+                                    <li key={index}>
+                                        <a href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}>{item}</a>
+                                    </li>
                                 ))}
                             </ul>
                         </nav>
