@@ -6,7 +6,7 @@ import Main from './components/Main/index.jsx';
 import Footer from './components/Footer/index.jsx';
 import Loader from './components/Loader/index.jsx';
 import PainelAdmin from './components/PainelAmind/PainelAmind.jsx';
-import BlurText from './hooks/ AnimationText/BlurText.jsx';
+import BlurText from './hooks/AnimationText/BlurText.jsx';
 import ButtonLow from './hooks/Low/index.jsx';
 
 // Importando os hooks personalizados para troca de tema e linguagem
