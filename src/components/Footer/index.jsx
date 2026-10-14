@@ -5,8 +5,8 @@ import ButtonTop from '../../hooks/Top/index.jsx'
 import './style.css'
 
 
-export default function Footer( {texts, handleLanguageChange} ){
-    const sectionId = handleLanguageChange === "PT" ? 'contatos' : 'contacts';
+export default function Footer( {texts, language} ){
+    const sectionId = language === "PT" ? 'contatos' : 'contacts';
     const [getyear, setGetyear] = useState(0);
 
     useEffect(() => {

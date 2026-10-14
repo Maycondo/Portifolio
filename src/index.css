@@ -2,16 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Josefin Sans", sans-serif;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  } 
+}
 
   .ModeLight {
       --Color-texte-portifolio: #242323;

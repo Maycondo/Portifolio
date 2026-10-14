@@ -9,6 +9,7 @@ import PainelAdmin from './components/PainelAmind/PainelAmind.jsx';
 import BlurText from './hooks/AnimationText/BlurText.jsx';
 import ButtonLow from './hooks/Low/index.jsx';
 
+
 // Importando os hooks personalizados para troca de tema e linguagem
 import ThemeToggle from './hooks/Buttons/useThemeToggle.jsx';
 import ButtonToggle from './hooks/Buttons/useNavButtonToggle.jsx';
@@ -29,7 +30,7 @@ const useLoader = (delay) => {
 
 
 
-const PORTFOLIO_NAME = "Michael {}"; // Nome do portfólio, pode ser alterado conforme necessário
+const PORTFOLIO_NAME = "Maycon {}"; // Nome do portfólio, pode ser alterado conforme necessário
 const PORTFOLIO_TITLE = "Portfólio"; // Nome do portfólio, pode ser alterado
 
 
@@ -98,11 +99,20 @@ export default function Home() {
                 </section> 
                         <nav>               
                             <ul className="Narve">
-                                {navtexts.map((item, index) => (
-                                    <li key={index}>
-                                        <a href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}>{item}</a>
-                                    </li>
-                                ))}
+                                {navtexts.map((item, index) => {
+                                    const sectionIds =
+                                        selectedLanguage === "PT"
+                                            ? ["inicio", "sobre", "projetos", "contatos"]
+                                            : ["home", "about", "projects", "contacts"];
+
+                                    return (
+                                        <li key={sectionIds[index]}>
+                                            <a href={`#${sectionIds[index]}`}>
+                                                {item}
+                                            </a>
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </nav>
                 <section className="Painel-1">
