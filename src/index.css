@@ -196,11 +196,9 @@ header {
   min-height: 4rem;
   margin: 0 auto;
   padding: 0 1rem;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   border-radius: 15px;
   background-color: var(--Backgtound-color-nav);
   transition: background-color 300ms;
@@ -410,6 +408,7 @@ header {
   .Narve {
     width: 88%;
     min-height: 3.5rem;
+    width: min(90%, 1400px);
   }
 
   .Painel-1 {

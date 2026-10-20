@@ -37,10 +37,12 @@
     align-items: center;
   }
   
-
+  /* ==========================================
+     ESTilos Base (Mobile First / Padrão)
+     ================================---------- */
   .Nav_animetion {
     height: 100%;
-    width: 25%;
+    width: 100%; /* Ocupa a tela toda em celulares */
     z-index: 1;
     background-color: var(--Backgtound-color-nav-animetion);
     position: fixed;
@@ -49,37 +51,88 @@
   } 
 
   .Nav_animetion nav {
-    height: 75%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    justify-content: space-evenly;
-    align-items: end;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
   }
 
   .Nav_animetion ul {
-    height: 70%;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: column;
     text-decoration: none;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
   }
 
   .Nav_animetion ul a {
-    margin: 0 18rem;
+    margin: 0; /* Remove margens fixas problemáticas */
     text-decoration: none;
     color: white;
-    font-size: 30px;
-    font-weight: 900;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
   }
 
   .Nav_animetion .Botao_Modo {
-    margin: 2rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
+  /* ==========================================
+     Tablets (Largura maior ou igual a 768px)
+     ========================================== */
+  @media (min-width: 768px) {
+    .Nav_animetion {
+      width: 50%; /* Ocupa metade da tela em tablets */
+    }
 
+    .Nav_animetion ul a {
+      font-size: 28px;
+    }
+  }
+
+  /* ==========================================
+     Desktops (Largura maior ou igual a 1024px)
+     ========================================== */
+  @media (min-width: 1024px) {
+    .Nav_animetion {
+      width: 30%; /* Largura confortável para notebooks */
+    }
+
+    .Nav_animetion nav {
+      height: 75%;
+      align-items: end;
+      justify-content: space-evenly;
+    }
+
+    .Nav_animetion ul {
+      height: 70%;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    .Nav_animetion ul a {
+      font-size: 30px;
+      font-weight: 900;
+    }
+  }
+
+  /* ==========================================
+     Telas Grandes / Ultrawide (>= 1440px)
+     ========================================== */
+  @media (min-width: 1440px) {
+    .Nav_animetion {
+      width: 25%; /* Volta ao seu tamanho original planejado */
+    }
+  }
