@@ -3,93 +3,117 @@
 @tailwind utilities;
 
 
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+   ========================================= */
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-  .ModeLight {
-      --Color-texte-portifolio: #242323;
-      --Color-button-Light-Dark: #242323;
-      --Backgtound-fundo-Color: #f3f2f2;
-      --Backgtound-color-nav: #e0e0e0;
-      --Backgtound-color-nav-animetion: #e0e0e0;
-      --Color-nav-a: #a3a3a3;
-      --Color-nav-animetino: #242323;
-      --Color-nav-a-houve: #181818;
-      --Color-buttom-br-en: #e0e0e0;
-      --Color-texto: #242424;
-      --Color-icons-redes: #242424;
-      --Backgtound-cards-icons-houver: #919191;
-      --Color-Texto-pequeno: #242323;
-      --Backgtound-cards-icons: #e0e0e0;
-      --Color-icons-a: #ffffff;
-      --Backgtound-a-Icons: #1f1e1e;
-      --Backgtound-button-low: #1a1919;
-      --Color-card--skills: #e0e0e0;
-      --Color-about--text: #242424;
-      --Color-traço--nav-2: #242424;
-      --Backgtound-color-card-projetcs: #e0e0e0;
-      --Color-icons--projetcs: #242424;
-      --Color-texto-footer-h1: #e0e0e0;
-      --Color-buttons-footer: #272525;
-      --Color-buttins-border-top-footer: #ffffff;
-      --Color-text-buttons-foote-hover: #ffffff;
-      --Color-text-buttons-foote: #272525;
-      --Color-button-close-carddeltails: #eeeeee;
-  }
-
-  .ModeDark {
-    --Color-texte-portifolio: #eeeeee;
-    --Color-button-Light-Dark: #f7f7f7;
-    --Backgtound-fundo-Color: #1b1b1b;
-    --Backgtound-color-nav: #272525;
-    --Backgtound-color-nav-animetion: #272525;
-    --Color-nav-a: #ebebeb;
-    --Color-nav-animetino: #f7f7f7;
-    --Color-nav-a-houve: #979797;
-    --Color-buttom-br-en: #686868;
-    --Color-texto: #eeeeee;
-    --Color-icons-redes: #eeeeee;
-    --Color-Texto-pequeno: #eeeeee;
-    --Backgtound-cards-icons: #272525;
-    --Backgtound-cards-icons-houver: #535353;
-    --Color-icons-a: #272525;
-    --Backgtound-a-Icons: #eeeeee;
-    --Backgtound-button-low: #eeeeee;
-    --Color-button-low-i: #272727;
-    --Color-card--skills: #e0e0e0;
-    --Color-about--text: #eeeeee;
-    --Color-traço--nav-2: #eeeeee;
-    --Backgtound-color-card-projetcs: #272525;
-    --Color-icons--projetcs: #eeeeee;
-    --Color-texto-footer-h1: #272525;
-    --Color-buttons-footer: #eeeeee;
-    --Color-text-buttons-foote: #eeeeee;
-    --Color-text-buttons-foote-hover: #272525;
-    --Color-buttins-border-top-footer: #272525;
-    --Color-button-close-carddeltails: #272525;
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: clip;
 }
 
+/* =========================================
+   TEMA CLARO
+   ========================================= */
+
+.ModeLight {
+  --Color-texte-portifolio: #242323;
+  --Color-button-Light-Dark: #242323;
+  --Backgtound-fundo-Color: #f3f2f2;
+  --Backgtound-color-nav: #e0e0e0;
+  --Backgtound-color-nav-animetion: #e0e0e0;
+  --Color-nav-a: #a3a3a3;
+  --Color-nav-animetino: #242323;
+  --Color-nav-a-houve: #181818;
+  --Color-buttom-br-en: #e0e0e0;
+  --Color-texto: #242424;
+  --Color-icons-redes: #242424;
+  --Backgtound-cards-icons-houver: #919191;
+  --Color-Texto-pequeno: #242323;
+  --Backgtound-cards-icons: #e0e0e0;
+  --Color-icons-a: #ffffff;
+  --Backgtound-a-Icons: #1f1e1e;
+  --Backgtound-button-low: #1a1919;
+  --Color-card--skills: #e0e0e0;
+  --Color-about--text: #242424;
+  --Color-traço--nav-2: #242424;
+  --Backgtound-color-card-projetcs: #e0e0e0;
+  --Color-icons--projetcs: #242424;
+  --Color-texto-footer-h1: #e0e0e0;
+  --Color-buttons-footer: #272525;
+  --Color-buttins-border-top-footer: #ffffff;
+  --Color-text-buttons-foote-hover: #ffffff;
+  --Color-text-buttons-foote: #272525;
+  --Color-button-close-carddeltails: #eeeeee;
+}
+
+/* =========================================
+   TEMA ESCURO
+   ========================================= */
+
+.ModeDark {
+  --Color-texte-portifolio: #eeeeee;
+  --Color-button-Light-Dark: #f7f7f7;
+  --Backgtound-fundo-Color: #1b1b1b;
+  --Backgtound-color-nav: #272525;
+  --Backgtound-color-nav-animetion: #272525;
+  --Color-nav-a: #ebebeb;
+  --Color-nav-animetino: #f7f7f7;
+  --Color-nav-a-houve: #979797;
+  --Color-buttom-br-en: #686868;
+  --Color-texto: #eeeeee;
+  --Color-icons-redes: #eeeeee;
+  --Color-Texto-pequeno: #eeeeee;
+  --Backgtound-cards-icons: #272525;
+  --Backgtound-cards-icons-houver: #535353;
+  --Color-icons-a: #272525;
+  --Backgtound-a-Icons: #eeeeee;
+  --Backgtound-button-low: #eeeeee;
+  --Color-button-low-i: #272727;
+  --Color-card--skills: #e0e0e0;
+  --Color-about--text: #eeeeee;
+  --Color-traço--nav-2: #eeeeee;
+  --Backgtound-color-card-projetcs: #272525;
+  --Color-icons--projetcs: #eeeeee;
+  --Color-texto-footer-h1: #272525;
+  --Color-buttons-footer: #eeeeee;
+  --Color-text-buttons-foote: #eeeeee;
+  --Color-text-buttons-foote-hover: #272525;
+  --Color-buttins-border-top-footer: #272525;
+  --Color-button-close-carddeltails: #272525;
+}
+
+/* =========================================
+   HEADER
+   ========================================= */
 
 header {
-  height: 100vh;
+  position: relative;
   width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   background-color: var(--Backgtound-fundo-Color);
-  transition: all 300ms;
-   background: var(--Backgtound-fundo-Color);
+
   --gap: 5em;
   --line: 1px;
   --color: rgba(94, 94, 94, 0.2);
-  background-image: linear-gradient(
+
+  background-image:
+    linear-gradient(
       -90deg,
       transparent calc(var(--gap) - var(--line)),
       var(--color) calc(var(--gap) - var(--line) + 1px),
@@ -101,118 +125,174 @@ header {
       var(--color) calc(var(--gap) - var(--line) + 1px),
       var(--color) var(--gap)
     );
+
   background-size: var(--gap) var(--gap);
-  
+  transition: background-color 300ms;
 }
-  
+
+
+/* =========================================
+   BARRA SUPERIOR
+   ========================================= */
+
 .Barra_top {
-  height: 5rem;
+  position: relative;
+  z-index: 10;
   width: 100%;
+  min-height: 5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 1rem 2rem;
+  gap: 1rem;
 }
 
 #Name {
-  margin: 2rem;
-  font-size: clamp(2rem, 10vw, 1.5rem);
+  margin: 0;
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
   font-weight: 900;
   color: var(--Color-texte-portifolio);
-  transition: all 300ms;
+  white-space: nowrap;
+  transition: color 300ms;
 }
 
 .Botao_Modo button {
   font-size: 17px;
   color: var(--Color-button-Light-Dark);
-  transition: all 300ms;
+  transition: color 300ms;
 }
 
 .Container-Buttons {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-content: center;
-  gap: clamp(1rem, 3vw, 2rem);
-  width: auto;   
-  margin: 2rem;
-  display: flex;
+  gap: clamp(0.75rem, 2vw, 2rem);
+  width: auto;
+  margin: 0;
 }
 
 .lingua {
   display: flex;
   justify-content: center;
-  align-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.75rem;
 }
-  
+
 .lingua button {
   font-size: 15px;
   font-weight: bold;
   color: var(--Color-buttom-br-en);
-  transition: all 300ms;
+  transition: color 300ms;
 }
 
+/* =========================================
+   NAVEGAÇÃO DESKTOP E TABLET
+   ========================================= */
+
 .Narve {
-  height: 4rem;
-  margin: 0rem 25rem;
+  position: relative;
+  z-index: 10;
+  width: min(90%, 900px);
+  min-height: 4rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+
   display: flex;
-  border-radius: 15px;
   justify-content: space-around;
   align-items: center;
+
+  border-radius: 15px;
   background-color: var(--Backgtound-color-nav);
-  transition: all 300ms;
+  transition: background-color 300ms;
 }
-  
+
 .Narve a {
   text-decoration: none;
   color: var(--Color-nav-a);
   font-weight: 700;
-  font-size: clamp(5px, 3vw, 20px); 
-  animation: reverse all 1000ms;
-  transition: all 300ms;
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  white-space: nowrap;
+  transition: color 300ms;
 }
 
 .Narve a:hover {
   color: var(--Color-nav-a-houve);
-  animation: reverse all 1000ms;
 }
 
-.Painel-1 { 
-  height: 100%;
-  width: 100%;  
+/* =========================================
+   PAINEL PRINCIPAL
+   ========================================= */
+
+.Painel-1 {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* =========================================
+   TÍTULO CENTRALIZADO
+   ========================================= */
 
 .Container-Title {
-  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-width: 0;
+  margin: 0;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
+  text-align: center;
+  pointer-events: none;
 }
 
 .Portfólio {
-  font-size: 19rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: clamp(4rem, 12vw, 12rem);
   font-weight: 900;
-  margin: 1rem;
+  line-height: 1.1;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   color: var(--Color-texte-portifolio);
-  transition: all 300ms;
+  overflow-wrap: anywhere;
+  transition: color 300ms;
 }
+
+/* =========================================
+   CONTEÚDO PESSOAL
+   ========================================= */
 
 .Container-Text {
   width: 100%;
+  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-  
+
 .Painel-Perso {
-  height: 100%;
   width: 100%;
-  margin: 4rem;
+  min-width: 0;
+  min-height: 100%;
+  margin: 0;
+  padding: 2rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -220,60 +300,67 @@ header {
 }
 
 .Container-Image {
-  height: 13%;
   width: 100%;
-  left: 0;
-  top: 0;
+  height: auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  justify-content: space-around;
 }
-   
+
 #Imagem-User {
-  width: 12%;
-  border-radius: 50%;
-  display: flex;
+  width: clamp(100px, 12vw, 180px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+
+  display: block;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 #Animetion-text {
-  text-align: center;
-  margin: 2rem 0rem;
+  margin: 2rem 0;
   font-size: clamp(1.7rem, 5vw, 8rem);
   font-weight: 900;
+  text-align: center;
+  overflow-wrap: anywhere;
+
   color: var(--Color-Texto-pequeno);
-  transition: all 300ms;
+  transition: color 300ms;
 }
 
-#Animetion-text:after {
-  content: '|';
+#Animetion-text::after {
+  content: "|";
   margin-left: 8px;
   opacity: 1;
-  animation: pisca .7s infinite;
+  animation: pisca 0.7s infinite;
 }
 
-@keyframes pisca{
-0%, 100% {
-  opacity: 1;
-}
-50% {
-   opacity: 0;
-}
+@keyframes pisca {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .Container-discrition {
-  max-width: 100%;
+  width: 100%;
+  max-width: 900px;
+  margin: 1rem auto;
+
   display: flex;
   flex-direction: column;
-  margin: 1rem 1rem;
 }
 
 .painel-textos {
-  height: 20%;
   width: 100%;
+  height: auto;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -281,234 +368,275 @@ header {
 }
 
 #Texto-mini {
-  height: auto;
   width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  padding: 1rem;
+
   display: flex;
   align-items: center;
-  margin: 2rem 3rem;
+
   text-align: center;
-  font-size: clamp(1.1rem, 2.5vw, 2rem);
+  font-size: clamp(1rem, 2vw, 2rem);
+  line-height: 1.6;
+
   color: var(--Color-Texto-pequeno);
-  border-right: solid 5px var(--Color-Texto-pequeno);
-  border-left: solid 5px var(--Color-Texto-pequeno);
-  transition: all 300ms;
+  border-right: 3px solid var(--Color-Texto-pequeno);
+  border-left: 3px solid var(--Color-Texto-pequeno);
+
+  transition: color 300ms;
 }
-  
+
 .Social-Midias {
-  height: 100%;
   width: 100%;
+  height: auto;
+
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-@media (max-width: 480px) {
-.Container-Title {
-  height: 100%;
-  width: 100%;
-  margin: 0%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+/* =========================================
+   TABLETS: 769px ATÉ 1200px
+   ========================================= */
 
-.Container-discrition {
-  width: 100%;
-  max-width: 90%;
-  margin: 0rem 0.5rem;
-  align-items: center;
-}
-
-.Barra_top {
-  display: flex;
-  padding: 0.5rem;
-}
-
-#Name {
-  font-size: 1.1rem;
-  display: flex;
-}
-
-.Portfólio {
-  font-size: 4rem;
-  margin: 0.5rem;
-}
-
-.Container-Buttons {
-  display: flex;
-  gap: 0.8rem,;
-}
-
-.Botao_Modo {
-  display: flex;
-  justify-content: center;
-  margin: 0rem 1.5rem;
-}
-
-.Narve {
-  display: none;
-}
-
-.Nav_animetion {
-  height: 100%;
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 1000;
-}
-
-.Nav_animetion nav a {
-
-  text-decoration: none;
-  margin: 0.5rem;
-  transition: all 300ms;
-}
-
-.Painel-Perso {
-  height: 100%; 
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 0.5rem;
-}
-
-.Conteiner-Image {
-  height: 100%;
-  width: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.Imagem-Perso {
-  height: 100%;
-  width: 100%;
-  display: flex;
-}
-
-#Imagem-User {
-  height: 225px;
-  width: 210px;
-  border-radius: 10%;
-}
-
-.Social-Midias {
-  height: auto;
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-#Texto-mini {
-  height: auto;
-  width: 100%;
-  display: flex;
-  margin: 0.5rem 0rem;
-  align-items: center;
-}
-
-#Founder{
-  font-size: 1.2rem;
-  margin: 0.5rem 0rem;
-}
-
-#Email {
-  font-size: 1.2rem;
-  margin: 0.5rem 0rem;
-}
-
-#Pequeno-Texto {
-  font-size: 1.7rem;
-  margin: 0.5rem 0rem;
-}
-
-.Discrição-Perso {
-  font-size: 1.2rem;
-  margin: 0.5rem;
-  display: flex;
-  flex-wrap: wrap-reverse;
-}
-
-.Social-Midias {
-  margin-right: 1rem;
-}
-
-.Imagem-Perso {
-  height: 4rem;
-  width: 70%;
-  margin: 3 auto; 
-}
-
-#Imagem-User {
-  max-width: 65%; 
-  height: auto; 
-}
-   
+@media (min-width: 769px) and (max-width: 1200px) {
+  .Barra_top {
+    padding: 1rem 4%;
   }
 
+  .Narve {
+    width: 88%;
+    min-height: 3.5rem;
+  }
 
- @media (max-width: 768px) {
+  .Painel-1 {
+    min-height: 0;
+  }
 
-.Imagem-Perso {
-   width: 70%; 
+  .Container-Title {
+    padding: 1rem 3%;
+  }
+
+  .Portfólio {
+    font-size: clamp(5rem, 10vw, 9rem);
+  }
+
+  .Painel-Perso {
+    padding: 1.5rem 4%;
+  }
+
+  .Container-discrition {
+    max-width: 760px;
+  }
+
+  #Texto-mini {
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+  }
 }
 
-#Imagem-User {
-  max-width: 80%; 
+/* =========================================
+   CELULARES GRANDES: 481px ATÉ 768px
+   ========================================= */
 
-.Top-barra {
-  flex-direction: column;
-  height: auto; 
+@media (min-width: 481px) and (max-width: 768px) {
+  header {
+    min-height: 100svh;
+    height: auto;
+  }
+
+  .Barra_top {
+    min-height: 4.5rem;
+    padding: 1rem;
+  }
+
+  #Name {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .Container-Buttons {
+    gap: 0.75rem;
+  }
+
+  .lingua {
+    gap: 0.5rem;
+  }
+
+  .lingua button {
+    font-size: 0.8rem;
+  }
+
+  .Narve {
+    width: 94%;
+    min-height: 3.5rem;
+    margin: 0.5rem auto;
+  }
+
+  .Narve a {
+    font-size: clamp(0.75rem, 2vw, 1rem);
+  }
+
+  .Painel-1 {
+    flex: 1;
+  }
+
+  .Container-Title {
+    padding: 1rem;
+  }
+
+  .Portfólio {
+    font-size: clamp(3.5rem, 11vw, 6rem);
+  }
+
+  .Painel-Perso {
+    padding: 1.5rem;
+    align-items: center;
+  }
+
+  #Imagem-User {
+    width: 160px;
+  }
+
+  #Animetion-text {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  #Texto-mini {
+    font-size: 1.1rem;
+  }
+
+  .Social-Midias {
+    align-items: center;
+  }
 }
 
-.div_buttons {
-  width: 100%;
-  flex-direction: column;
-  margin: 1rem;
+/* =========================================
+   CELULARES: ATÉ 480px
+   ========================================= */
+
+@media (max-width: 480px) {
+  header {
+    min-height: 100svh;
+    height: auto;
+  }
+
+  .Barra_top {
+    min-height: 4rem;
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  #Name {
+    font-size: clamp(0.9rem, 4.5vw, 1.2rem);
+  }
+
+  .Container-Buttons {
+    gap: 0.5rem;
+  }
+
+  .Botao_Modo button,
+  .lingua button {
+    font-size: 0.8rem;
+  }
+
+  .lingua {
+    gap: 0.4rem;
+  }
+
+  .Narve {
+    display: none;
+  }
+
+  .Painel-1 {
+    flex: 1;
+    min-height: calc(100svh - 4rem);
+  }
+
+  .Container-Title {
+    padding: 1rem 0.5rem;
+  }
+
+  .Portfólio {
+    font-size: clamp(2.2rem, 11vw, 3.5rem);
+    line-height: 1.1;
+    white-space: normal;
+  }
+
+  .Painel-Perso {
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .Container-Image {
+    gap: 0.75rem;
+  }
+
+  #Imagem-User {
+    width: min(35vw, 140px);
+  }
+
+  #Animetion-text {
+    font-size: clamp(1.3rem, 6vw, 2rem);
+    margin: 1rem 0;
+  }
+
+  .Container-discrition {
+    margin: 0;
+  }
+
+  #Texto-mini {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .Social-Midias {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
 }
 
-.Painel-1 {
-  flex-direction: column;
-}
+/* =========================================
+   CELULARES MUITO PEQUENOS
+   ========================================= */
 
-.Discrição-Perso, .Imagem-Perso {
-  width: 100%;
-}
+@media (max-width: 360px) {
+  .Barra_top {
+    padding: 0.5rem;
+  }
 
-#Pequeno-Texto {
-  font-size: 0.9rem; 
-}
+  #Name {
+    font-size: 0.85rem;
+  }
 
-#Name-Perso, #Portifolio {
-  font-size: 40px;
-}
+  .Container-Buttons {
+    gap: 0.35rem;
+  }
 
-.Narve {
-  margin: 0 1rem;
-}
-}
+  .lingua {
+    gap: 0.25rem;
+  }
 
- @media (max-width: 1024px) {
-.Imagem-Perso {
-  width: 60%; 
-}
-  
-.Painel-1 {
-  flex-direction: column; 
-}
+  .lingua button {
+    font-size: 0.7rem;
+  }
 
-.Discrição-Perso {
-  width: 100%;
-}
+  .Portfólio {
+    font-size: clamp(2rem, 10vw, 2.8rem);
+  }
 
-.Imagem-Perso {
-  width: 100%;
+  .Painel-Perso {
+    padding: 0.75rem;
+  }
 
+  #Texto-mini {
+    font-size: 0.9rem;
+  }
 }
-}}
