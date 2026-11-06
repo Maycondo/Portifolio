@@ -1,90 +1,197 @@
+
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from "react";
-import UseWindowSize from "./useWindowSize";
-import './style.css';
 
-export default function ButtonToggle({ navtexts = [], CorStyle = () => ({ color: "black" }), handleLanguageChange, handleThemeChange }) {
+import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
-    const [showNav, setShowNav] = useState(false); // Controla a visibilidade da barra de navegação
-    const [showFirstDiv, setShowFirstDiv] = useState(false); // Controla o estado da animação do botão (os "traços")
-    const [navAnimation, setNavAnimation] = useState(false)
+import ThemeToggle from "../Buttons/useThemeToggle";
+import "./style.css";
 
+const EASE = [0.25, 0.8, 0.25, 1];
 
-    useEffect(() => {
-        const traço1 = document.getElementById('Traço-1');
-        const traço2 = document.getElementById('Traço-2');
+const SECTION_IDS = {
+  PT: ["inicio", "sobre", "projetos", "contatos"],
+  EN: ["home", "about", "projects", "contacts"],
+};
 
-        if (showFirstDiv) {
-            traço1.style.transform = 'rotate(50deg) translate(5px, 5px)';
-            traço2.style.transform = 'rotate(-47deg) translate(5px, -5px)';
-        } else {
-            traço1.style.transform = 'rotate(0) translate(0, 0)';
-            traço2.style.transform = 'rotate(0) translate(0, 0)';
-            
-        }
-    }, [showFirstDiv]);
+export default function PyramidMenu({
+  language,
+  navtexts = [],
+  CorStyle = () => ({}),
+  handleLanguageChange = () => {},
+  handleThemeChange = () => {},
+}) {
+  const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const reciarNav = () => {
-        if (!showNav && showFirstDiv )  {
-            setShowFirstDiv(false); // Fecha o botão de navegação se a navegação estiver oculta
-        }
+  const btn = useRef(null);
+  const firstLink = useRef(null);
+
+  const reduce = useReducedMotion();
+
+  const lang = String(language || "PT").trim().toUpperCase();
+
+  const ids = SECTION_IDS[lang] || SECTION_IDS.PT;
+
+  // Itens da navegação
+  const items = navtexts
+    .map((label, i) => ({
+      label,
+      id: ids[i],
+    }))
+    .filter((item) => item.id);
+
+  const close = () => setOpen(false);
+
+  // Verifica se o componente está montado
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Controle do teclado e scroll
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === "Escape") {
+        setOpen(false);
+        btn.current?.focus();
+      }
     };
 
-    const handleClick = () => {
-        setShowFirstDiv(prev => !prev); // Alterna o estado de animação do botão (abre/fecha)
+    document.addEventListener("keydown", onKey);
+
+    document.body.style.overflow = open ? "hidden" : "";
+
+    const timer = open
+      ? setTimeout(() => firstLink.current?.focus(), 500)
+      : null;
+
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+
+      if (timer) clearTimeout(timer);
     };
+  }, [open]);
 
-    const toggleNav = () => {
-        setNavAnimation(!navAnimation);
-    };
-        
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 100) {
-                setShowNav(true); // Exibe a navegação ao rolar mais de 100px
-                reciarNav(); // Restaura a animação do botão
-            } else {
-                setShowNav(false); // Oculta a navegação quando a rolagem é menor que 100px
-                reciarNav();
-                setNavAnimation(false)
-            }
-        };
-        window.addEventListener('scroll', handleScroll); // Adiciona o listener de scroll
-    
-        return () => {
-            window.removeEventListener('scroll', handleScroll); // Limpa o listener de scroll ao desmontar
-        };
-    }, [reciarNav, showFirstDiv, showNav]);
-    
+  // Duração das animações
+  const duration = reduce ? 0 : 0.5;
 
+  // Animação do painel
+  const panel = {
+    hidden: {
+      x: "100%",
+    },
 
-    return (
-        <>
-            <div className={showNav ? 'nav-show' : 'nav-hide'}>
-                <button onClick={() => { handleClick(); toggleNav(); } } style={{ border: 'none', background: 'none', padding: 0 }}>
-                    <div id="Traço-1" style={{
-                        width: '60px',
-                        height: '13px',
-                        margin: '2px 0',
-                        borderRadius: '10px',
-                        transition: 'transform 0.3s ease',
-                    }}>
-                    </div>
-                    <div id="Traço-2" style={{
-                        width: '60px',
-                        height: '13px',
-                        margin: '2px 0',
-                        borderRadius: '10px',
-                        transition: 'transform 0.3s ease',
-                    }}>
-                    </div>
-                </button>
+    show: {
+      x: "0%",
+      transition: {
+        duration,
+        ease: EASE,
+        when: "beforeChildren",
+        staggerChildren: reduce ? 0 : 0.08,
+        staggerDirection: -1,
+      },
+    },
+
+    exit: {
+      x: "-100%",
+      transition: {
+        duration,
+        ease: EASE,
+      },
+    },
+  };
+
+  // Animação dos elementos
+  const rise = {
+    hidden: {
+      opacity: 0,
+      y: reduce ? 0 : 40,
+    },
+
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration,
+        ease: EASE,
+      },
+    },
+  };
+
+  if (!mounted) return null;
+
+  return createPortal(
+    <div className={`pm-root ${open ? "pm-open" : ""}`}>
+
+      {/* ==================================
+          BOTÃO HAMBURGUER
+      ================================== */}
+      <button ref={btn} type="button" className="pm-btn" aria-label={open ? "Fechar menu" : "Abrir menu"} aria-expanded={open} aria-controls="pm-nav" onClick={() => setOpen((previous) => !previous)} >
+        <span className="pm-line" />
+        <span className="pm-line" />
+        <span className="pm-line" />
+      </button>
+      {/* ==================================
+          PAINEL DE NAVEGAÇÃO
+      ================================== */}
+      <AnimatePresence>
+        {open && (
+            <motion.div
+              key="pm-overlay"
+              id="pm-nav"
+              className="Nav_animation-wrapper"
+              variants={panel}
+              initial={{clipPath: "circle(0px at calc(100% - 61px) 36px)  ",}}
+              animate={{clipPath: "circle(150vmax at calc(100% - 61px) 36px)  ",}}
+              exit={{clipPath: "circle(0px at calc(100% - 61px) 36px) ",}}
+              transition={{duration: 0.8,ease: [0.76, 0, 0.24, 1],}}
+              aria-label="Navegação principal"
+            >   
+            <div className="Nav_animetion">
+
+              {/* NAVEGAÇÃO */}
+              <nav aria-label="Navegação principal">
+                <ul className="pm-list">
+
+                  {items.map((item, i) => (
+                    <motion.li className="pm-item" key={item.id} variants={rise} >
+                      <a ref={i === 0 ? firstLink : null} className="pm-link" href={`#${item.id}`} onClick={close}
+                        style={{
+                          "--w": `${30 + (70 * i) / Math.max(items.length - 1, 1)}%`,
+                          "--t": `${(100 * i) / Math.max(items.length - 1, 1)}%`,
+                        }}
+                      >
+                        {item.label}
+                      </a>
+                    </motion.li>
+                  ))}
+
+                </ul>
+              </nav>
+
+              {/* ==================================
+                  TEMA E IDIOMA
+              ================================== */}
+              <motion.div className="pm-tools" variants={rise} >
+                <ThemeToggle theme={undefined} onThemeChange={handleThemeChange} />
+               <div className="lingua">
+                  {["PT", "EN"].map((code) => (
+                    <button key={code} type="button" className="lingua__button" style={CorStyle(code)} aria-pressed={lang === code} onClick={() => handleLanguageChange(code)} >
+                      {code}
+                    </button>
+                  ))}
+                </div>
+
+              </motion.div>
+
             </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-            { navAnimation &&
-            <UseWindowSize navtexts={navtexts}  CorStyle={CorStyle}  handleLanguageChange={handleLanguageChange}  handleThemeChange={handleThemeChange}>            </UseWindowSize> } 
-
-        </>
-    );
+    </div>,
+    document.body
+  );
 }

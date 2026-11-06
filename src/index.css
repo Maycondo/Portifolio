@@ -1,11 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-/* =========================================
+/* ==========================================
    CONFIGURAÇÕES GERAIS
-   ========================================= */
+========================================== */
 
 html {
   scroll-behavior: smooth;
@@ -21,27 +16,27 @@ html {
 body {
   width: 100%;
   min-height: 100vh;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
-/* =========================================
+/* ==========================================
    TEMA CLARO
-   ========================================= */
+========================================== */
 
 .ModeLight {
   --Color-texte-portifolio: #242323;
   --Color-button-Light-Dark: #242323;
   --Backgtound-fundo-Color: #f3f2f2;
-  --Backgtound-color-nav: #e0e0e0;
+  --Backgtound-color-nav: #e5e5e5;
   --Backgtound-color-nav-animetion: #e0e0e0;
-  --Color-nav-a: #a3a3a3;
+  --Color-nav-a: #777777;
   --Color-nav-animetino: #242323;
   --Color-nav-a-houve: #181818;
-  --Color-buttom-br-en: #e0e0e0;
+  --Color-buttom-br-en: #777777;
   --Color-texto: #242424;
   --Color-icons-redes: #242424;
   --Backgtound-cards-icons-houver: #919191;
-  --Color-Texto-pequeno: #242323;
+  --Color-Texto-pequeno: #555555;
   --Backgtound-cards-icons: #e0e0e0;
   --Color-icons-a: #ffffff;
   --Backgtound-a-Icons: #1f1e1e;
@@ -57,11 +52,14 @@ body {
   --Color-text-buttons-foote-hover: #ffffff;
   --Color-text-buttons-foote: #272525;
   --Color-button-close-carddeltails: #eeeeee;
+  --Hero-grid: rgba(70, 70, 70, 0.13);
+  --Hero-border: rgba(70, 70, 70, 0.22);
+  --Hero-card: #ffffff;
 }
 
-/* =========================================
+/* ==========================================
    TEMA ESCURO
-   ========================================= */
+========================================== */
 
 .ModeDark {
   --Color-texte-portifolio: #eeeeee;
@@ -72,10 +70,10 @@ body {
   --Color-nav-a: #ebebeb;
   --Color-nav-animetino: #f7f7f7;
   --Color-nav-a-houve: #979797;
-  --Color-buttom-br-en: #686868;
+  --Color-buttom-br-en: #aaaaaa;
   --Color-texto: #eeeeee;
   --Color-icons-redes: #eeeeee;
-  --Color-Texto-pequeno: #eeeeee;
+  --Color-Texto-pequeno: #bdbdbd;
   --Backgtound-cards-icons: #272525;
   --Backgtound-cards-icons-houver: #535353;
   --Color-icons-a: #272525;
@@ -93,549 +91,631 @@ body {
   --Color-text-buttons-foote-hover: #272525;
   --Color-buttins-border-top-footer: #272525;
   --Color-button-close-carddeltails: #272525;
+  --Hero-grid: rgba(220, 220, 220, 0.09);
+  --Hero-border: rgba(220, 220, 220, 0.22);
+  --Hero-card: #272525;
 }
 
-/* =========================================
-   HEADER
-   ========================================= */
+/* ==========================================
+   CABEÇALHO E FUNDO QUADRICULADO
+========================================== */
 
-header {
+.App-header {
   position: relative;
+  isolation: isolate;
   width: 100%;
   min-height: 100vh;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   background-color: var(--Backgtound-fundo-Color);
-
-  --gap: 5em;
-  --line: 1px;
-  --color: rgba(94, 94, 94, 0.2);
-
   background-image:
-    linear-gradient(
-      -90deg,
-      transparent calc(var(--gap) - var(--line)),
-      var(--color) calc(var(--gap) - var(--line) + 1px),
-      var(--color) var(--gap)
-    ),
-    linear-gradient(
-      0deg,
-      transparent calc(var(--gap) - var(--line)),
-      var(--color) calc(var(--gap) - var(--line) + 1px),
-      var(--color) var(--gap)
-    );
+    linear-gradient(90deg, var(--Hero-grid) 1px, transparent 1px),
+    linear-gradient(0deg, var(--Hero-grid) 1px, transparent 1px);
 
-  background-size: var(--gap) var(--gap);
+  background-size: 55px 55px;
+  overflow: hidden;
   transition: background-color 300ms;
 }
 
-
-/* =========================================
+/* ==========================================
    BARRA SUPERIOR
-   ========================================= */
+========================================== */
 
 .Barra_top {
   position: relative;
-  z-index: 10;
+  z-index: 20;
   width: 100%;
-  min-height: 5rem;
+  min-height: 60px;
+  padding: 1% 6%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  gap: 1rem;
+  align-items: center;
 }
 
-#Name {
-  margin: 0;
-  font-size: clamp(1.2rem, 2.5vw, 2rem);
+#Portfólio-name {
+  font-size: clamp(1.4rem, 4vh, 6rem);
   font-weight: 900;
   color: var(--Color-texte-portifolio);
   white-space: nowrap;
-  transition: color 300ms;
-}
-
-.Botao_Modo button {
-  font-size: 17px;
-  color: var(--Color-button-Light-Dark);
-  transition: color 300ms;
 }
 
 .Container-Buttons {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: clamp(0.75rem, 2vw, 2rem);
-  width: auto;
-  margin: 0;
+  justify-content: flex-end;
+  gap: 22px;
+}
+
+.Botao_Modo button {
+  font-size: 17px;
+  color: var(--Color-button-Light-Dark);
+  transition: 300ms;
 }
 
 .lingua {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  gap: 10px;
 }
 
 .lingua button {
-  font-size: 15px;
-  font-weight: bold;
+  border: none;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
   color: var(--Color-buttom-br-en);
-  transition: color 300ms;
+  transition: 300ms;
 }
 
-/* =========================================
-   NAVEGAÇÃO DESKTOP E TABLET
-   ========================================= */
+.lingua button:hover {
+  color: var(--Color-texte-portifolio);
+}
+
+/* ==========================================
+   MENU HAMBÚRGUER
+========================================== */
+
+.Navegação-principal {
+  display: none;
+}
 
 .Narve {
+  display: none;
+}
+
+#menuToggle {
   position: relative;
-  z-index: 10;
-  width: min(90%, 900px);
-  min-height: 4rem;
-  margin: 0 auto;
-  padding: 0 1rem;
+  z-index: 100;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  border-radius: 15px;
-  background-color: var(--Backgtound-color-nav);
-  transition: background-color 300ms;
+  justify-content: center;
 }
 
-.Narve a {
-  text-decoration: none;
-  color: var(--Color-nav-a);
-  font-weight: 700;
-  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
-  white-space: nowrap;
-  transition: color 300ms;
-}
-
-.Narve a:hover {
-  color: var(--Color-nav-a-houve);
-}
-
-/* =========================================
-   PAINEL PRINCIPAL
-   ========================================= */
+/* ==========================================
+   PAINEL CENTRAL
+========================================== */
 
 .Painel-1 {
   position: relative;
   flex: 1;
   width: 100%;
-  min-width: 0;
-  min-height: 0;
-
+  min-height: 650px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-/* =========================================
-   TÍTULO CENTRALIZADO
-   ========================================= */
 
 .Container-Title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 100%;
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  width: min(70%, 1680px);
+  max-width: 1680px;
   height: auto;
   min-width: 0;
-  margin: 0;
-  padding: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
-  text-align: center;
-  pointer-events: none;
+  gap: 75px;
+  text-align: left;
+  pointer-events: auto;
 }
 
-.Portfólio {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  font-size: clamp(4rem, 12vw, 12rem);
-  font-weight: 900;
-  line-height: 1.1;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  color: var(--Color-texte-portifolio);
-  overflow-wrap: anywhere;
-  transition: color 300ms;
-}
+/* ==========================================
+   APRESENTAÇÃO
+========================================== */
 
-/* =========================================
-   CONTEÚDO PESSOAL
-   ========================================= */
-
-.Container-Text {
+.Hero-Content {
   width: 100%;
   min-width: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-}
-
-.Painel-Perso {
-  width: 100%;
-  min-width: 0;
-  min-height: 100%;
-  margin: 0;
-  padding: 2rem;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.Container-Image {
-  width: 100%;
-  height: auto;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-#Imagem-User {
-  width: clamp(100px, 12vw, 180px);
-  height: auto;
-  aspect-ratio: 1 / 1;
-
-  display: block;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-#Animetion-text {
-  margin: 2rem 0;
-  font-size: clamp(1.7rem, 5vw, 8rem);
-  font-weight: 900;
-  text-align: center;
-  overflow-wrap: anywhere;
-
-  color: var(--Color-Texto-pequeno);
-  transition: color 300ms;
-}
-
-#Animetion-text::after {
-  content: "|";
-  margin-left: 8px;
-  opacity: 1;
-  animation: pisca 0.7s infinite;
-}
-
-@keyframes pisca {
-  0%, 100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
-
-.Container-discrition {
-  width: 100%;
-  max-width: 900px;
-  margin: 1rem auto;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.painel-textos {
-  width: 100%;
-  height: auto;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#Texto-mini {
-  width: 100%;
-  height: auto;
-  margin: 1rem 0;
-  padding: 1rem;
-
-  display: flex;
-  align-items: center;
-
-  text-align: center;
-  font-size: clamp(1rem, 2vw, 2rem);
-  line-height: 1.6;
-
-  color: var(--Color-Texto-pequeno);
-  border-right: 3px solid var(--Color-Texto-pequeno);
-  border-left: 3px solid var(--Color-Texto-pequeno);
-
-  transition: color 300ms;
-}
-
-.Social-Midias {
-  width: 100%;
-  height: auto;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: flex-start;
   align-items: flex-start;
 }
 
-/* =========================================
-   TABLETS: 769px ATÉ 1200px
-   ========================================= */
+/* DISPONIBILIDADE */
 
-@media (min-width: 769px) and (max-width: 1200px) {
-  .Barra_top {
-    padding: 1rem 4%;
-  }
+.Hero-Available {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+  background: var(--Backgtound-color-nav);
+  border-radius: 30px;
+  color: var(--Color-texte-portifolio);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
 
-  .Narve {
-    width: 88%;
-    min-height: 3.5rem;
-    width: min(90%, 1400px);
-  }
+.Hero-Available span {
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+  background: #16c784;
+  border-radius: 50%;
+}
 
-  .Painel-1 {
-    min-height: 0;
-  }
+/* NOME */
 
+.Portfólio {
+  width: 100%;
+  max-width: 600px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(4.5rem, 8vw, 7rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -5px;
+  text-align: left;
+  color: var(--Color-texte-portifolio);
+  overflow-wrap: normal;
+  word-break: normal;
+  transition: color 300ms;
+}
+
+/* PROFISSÃO */
+
+.Hero-Profession {
+  margin-top: 25px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.7;
+  color: var(--Color-Texto-pequeno);
+}
+
+/* DESCRIÇÃO */
+
+.Hero-Description {
+  width: 100%;
+  max-width: 490px;
+  margin-top: 18px;
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--Color-Texto-pequeno);
+}
+
+/* ==========================================
+   BUTTON LOW
+========================================== */
+
+.Container-Text {
+  position: relative;
+  top: -8rem;
+  right: 10rem;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  pointer-events: auto;
+}
+
+/* ==========================================
+   ESTATÍSTICAS
+========================================== */
+
+.Hero-Stats {
+  width: 100%;
+  max-width: 470px;
+  margin-top: 38px;
+  padding-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 35px;
+  border-top: 1px solid var(--Hero-border);
+}
+
+.Hero-Stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Hero-Stats strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 27px;
+  font-weight: 900;
+  color: var(--Color-texte-portifolio);
+}
+
+.Hero-Stats span {
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--Color-Texto-pequeno);
+}
+
+/* ==========================================
+   FOTO
+========================================== */
+
+.Hero-Image-Container {
+  position: relative;
+  width: 100%;
+  max-width: 390px;
+  justify-self: center;
+}
+
+.Hero-Image-Frame {
+  position: absolute;
+  top: -14px;
+  left: 14px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--Color-texte-portifolio);
+  border-radius: 13px;
+}
+
+.Hero-Image {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 0.85;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  filter: grayscale(100%);
+}
+
+/* ==========================================
+   CARTÃO FLUTUANTE
+========================================== */
+
+.Hero-Image-Badge {
+  position: absolute;
+  z-index: 3;
+  bottom: -4px;
+  left: -50px;
+  min-width: 200px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: var(--Hero-card);
+  color: var(--Color-texte-portifolio);
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+}
+
+.Hero-Image-Badge strong {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--Color-texte-portifolio);
+}
+
+.Hero-Image-Badge span {
+  font-size: 10px;
+  color: var(--Color-Texto-pequeno);
+}
+
+/* ==========================================
+   TECNOLOGIAS
+========================================== */
+
+.Hero-Technologies {
+  position: relative;
+  width: 100%;
+  min-height: 60px;
+  padding: 18px 4%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: var(--Backgtound-color-nav);
+  border-top: 1px solid var(--Hero-border);
+  border-bottom: 1px solid var(--Hero-border);
+  color: var(--Color-Texto-pequeno);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.Hero-Technologies span {
+  white-space: nowrap;
+}
+
+/* ==========================================
+   REDES SOCIAIS
+========================================== */
+
+.Social-Midias {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.Social-Midias a {
+  color: var(--Color-icons-redes);
+  transition: 300ms;
+}
+
+.Social-Midias a:hover {
+  transform: translateY(-3px);
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
   .Container-Title {
-    padding: 1rem 3%;
+    width: 92%;
+    gap: 40px;
   }
 
   .Portfólio {
-    font-size: clamp(5rem, 10vw, 9rem);
+    font-size: clamp(4rem, 7.5vw, 6rem);
   }
 
-  .Painel-Perso {
-    padding: 1.5rem 4%;
+  .Hero-Image-Container {
+    max-width: 320px;
   }
 
-  .Container-discrition {
-    max-width: 760px;
-  }
-
-  #Texto-mini {
-    font-size: clamp(1rem, 1.8vw, 1.3rem);
+  .Hero-Stats {
+    gap: 20px;
   }
 }
 
-/* =========================================
-   CELULARES GRANDES: 481px ATÉ 768px
-   ========================================= */
+/* ==========================================
+   CELULARES GRANDES
+========================================== */
 
 @media (min-width: 481px) and (max-width: 768px) {
-  header {
-    min-height: 100svh;
-    height: auto;
-  }
-
-  .Barra_top {
-    min-height: 4.5rem;
-    padding: 1rem;
-  }
-
-  #Name {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-  }
-
   .Container-Buttons {
-    gap: 0.75rem;
-  }
-
-  .lingua {
-    gap: 0.5rem;
-  }
-
-  .lingua button {
-    font-size: 0.8rem;
-  }
-
-  .Narve {
-    width: 94%;
-    min-height: 3.5rem;
-    margin: 0.5rem auto;
-  }
-
-  .Narve a {
-    font-size: clamp(0.75rem, 2vw, 1rem);
-  }
-
-  .Painel-1 {
-    flex: 1;
-  }
-
-  .Container-Title {
-    padding: 1rem;
-  }
-
-  .Portfólio {
-    font-size: clamp(3.5rem, 11vw, 6rem);
-  }
-
-  .Painel-Perso {
-    padding: 1.5rem;
-    align-items: center;
-  }
-
-  #Imagem-User {
-    width: 160px;
-  }
-
-  #Animetion-text {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-  }
-
-  #Texto-mini {
-    font-size: 1.1rem;
-  }
-
-  .Social-Midias {
-    align-items: center;
-  }
-}
-
-/* =========================================
-   CELULARES: ATÉ 480px
-   ========================================= */
-
-@media (max-width: 480px) {
-  header {
-    min-height: 100svh;
-    height: auto;
-  }
-
-  .Barra_top {
-    min-height: 4rem;
-    padding: 0.75rem;
-    gap: 0.5rem;
-  }
-
-  #Name {
-    font-size: clamp(0.9rem, 4.5vw, 1.2rem);
-  }
-
-  .Container-Buttons {
-    gap: 0.5rem;
-  }
-
-  .Botao_Modo button,
-  .lingua button {
-    font-size: 0.8rem;
-  }
-
-  .lingua {
-    gap: 0.4rem;
-  }
-
-  .Narve {
     display: none;
   }
 
+  .App-header {
+    min-height: 100svh;
+  }
+
+  .Barra_top {
+    min-height: 75px;
+    padding: 0 4%;
+  }
+
   .Painel-1 {
-    flex: 1;
-    min-height: calc(100svh - 4rem);
+    min-height: auto;
   }
 
   .Container-Title {
-    padding: 1rem 0.5rem;
+    width: 90%;
+
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+    padding: 45px 0;
+  }
+
+  .Hero-Content {
+    align-items: center;
+    text-align: center;
   }
 
   .Portfólio {
-    font-size: clamp(2.2rem, 11vw, 3.5rem);
-    line-height: 1.1;
-    white-space: normal;
+    font-size: clamp(4rem, 12vw, 6rem);
+    text-align: center;
   }
 
-  .Painel-Perso {
-    padding: 1rem;
-    align-items: center;
+  .Hero-Profession {
+    font-size: 10px;
+    letter-spacing: 1px;
   }
 
-  .Container-Image {
-    gap: 0.75rem;
+  .Hero-Description {
+    font-size: 14px;
   }
 
-  #Imagem-User {
-    width: min(35vw, 140px);
-  }
-
-  #Animetion-text {
-    font-size: clamp(1.3rem, 6vw, 2rem);
-    margin: 1rem 0;
-  }
-
-  .Container-discrition {
-    margin: 0;
-  }
-
-  #Texto-mini {
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .Social-Midias {
-    flex-direction: row;
-    flex-wrap: wrap;
+  .Container-Text {
     justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem;
+  }
+
+  .Hero-Stats {
+    justify-content: center;
+    gap: 25px;
+  }
+
+  .Hero-Image-Container {
+    width: 65%;
+    max-width: 330px;
+  }
+
+  .Hero-Technologies {
+    justify-content: center;
+    gap: 20px;
   }
 }
 
-/* =========================================
-   CELULARES MUITO PEQUENOS
-   ========================================= */
+/* ==========================================
+   CELULARES
+========================================== */
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
+  .Container-Buttons {
+    display: none;
+  }
+
+  .App-header {
+    min-height: 100svh;
+    height: auto;
+  }
+
   .Barra_top {
-    padding: 0.5rem;
+    min-height: 65px;
+    padding: 0 16px;
+    gap: 10px;
   }
 
   #Name {
-    font-size: 0.85rem;
+    font-size: 1.1rem;
   }
 
   .Container-Buttons {
-    gap: 0.35rem;
+    gap: 10px;
   }
 
   .lingua {
-    gap: 0.25rem;
+    gap: 6px;
   }
 
   .lingua button {
-    font-size: 0.7rem;
+    font-size: 10px;
+  }
+
+  .Painel-1 {
+    min-height: auto;
+  }
+
+  .Container-Title {
+    width: 90%;
+
+    grid-template-columns: 1fr;
+
+    gap: 50px;
+    padding: 45px 0;
+  }
+
+  .Hero-Content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .Hero-Available {
+    font-size: 8px;
+    padding: 9px 12px;
+    margin-bottom: 25px;
   }
 
   .Portfólio {
-    font-size: clamp(2rem, 10vw, 2.8rem);
+    font-size: clamp(3.3rem, 13vw, 4.7rem);
+    line-height: 0.95;
+    letter-spacing: -3px;
+    text-align: center;
   }
 
-  .Painel-Perso {
-    padding: 0.75rem;
+  .Hero-Profession {
+    font-size: 9px;
+    letter-spacing: 1px;
+    margin-top: 20px;
   }
 
-  #Texto-mini {
-    font-size: 0.9rem;
+  .Hero-Description {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .Container-Text {
+    justify-content: center;
+  }
+
+  .Hero-Stats {
+    justify-content: center;
+    gap: 18px;
+    margin-top: 30px;
+  }
+
+  .Hero-Stats strong {
+    font-size: 21px;
+  }
+
+  .Hero-Stats span {
+    font-size: 9px;
+  }
+
+  .Hero-Image-Container {
+    width: 78%;
+    max-width: 300px;
+  }
+
+  .Hero-Image-Badge {
+    bottom: -6px;
+    left: -50px;
+    min-width: 170px;
+    padding: 12px 15px;
+  }
+
+  .Hero-Technologies {
+    justify-content: center;
+    padding: 15px 10px;
+    gap: 15px;
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+}
+
+/* ==========================================
+   CELULARES PEQUENOS
+========================================== */
+
+@media (max-width: 360px) {
+  .Barra_top {
+    padding: 0 10px;
+  }
+
+  #Name {
+    font-size: 1rem;
+  }
+
+  .Container-Buttons {
+    gap: 7px;
+  }
+
+  .Portfólio {
+    font-size: 3.1rem;
+  }
+
+  .Hero-Available {
+    font-size: 7px;
+  }
+
+  .Hero-Profession {
+    font-size: 8px;
+  }
+
+  .Hero-Stats {
+    gap: 12px;
+  }
+
+  .Hero-Stats strong {
+    font-size: 19px;
+  }
+
+  .Hero-Stats span {
+    font-size: 8px;
+  }
+
+  .Hero-Image-Container {
+    width: 82%;
   }
 }

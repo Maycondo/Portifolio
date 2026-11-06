@@ -4,8 +4,7 @@ import { useState, useEffect } from 'react';
 // Componentes principais
 import Main from './components/Main/index.jsx';
 import Footer from './components/Footer/index.jsx';
-import Loader from './components/Loader/index.jsx';
-import PainelAdmin from './components/PainelAmind/PainelAmind.jsx';
+
 
 // Animações e botões
 import BlurText from './hooks/AnimationText/BlurText.jsx';
@@ -15,10 +14,9 @@ import ButtonLow from './hooks/Low/index.jsx';
 import ThemeToggle from './hooks/Buttons/useThemeToggle.jsx';
 import ButtonToggle from './hooks/Buttons/useNavButtonToggle.jsx';
 import LanguageSwitch from './hooks/useLanguageSwitch.jsx';
+import ImageProfessional from './imagens/ImageProfessional.jpg'
 
-// Identidade do portfólio
-const PORTFOLIO_NAME = 'Maycon {}';
-const PORTFOLIO_TITLE = 'Portfólio';
+
 
 // IDs das seções conforme o idioma
 const SECTION_IDS = {
@@ -26,24 +24,9 @@ const SECTION_IDS = {
   EN: ['home', 'about', 'projects', 'contacts'],
 };
 
-// Controla o tempo de carregamento
-const useLoader = (delay) => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, delay);
-
-    return () => clearTimeout(timer);
-  }, [delay]);
-
-  return loading;
-};
 
 export default function Home() {
   const { texts, navtexts, setLinguagem } = LanguageSwitch();
-
   const [selectedLanguage, setSelectedLanguage] = useState('PT');
 
   const [theme, setTheme] = useState(() => {
@@ -59,7 +42,7 @@ export default function Home() {
     }
   });
 
-  const loading = useLoader(2000);
+
 
   // Padroniza o idioma selecionado
   const langFormatted = String(selectedLanguage)
@@ -91,7 +74,6 @@ export default function Home() {
   const CorStyle = (language) => {
     const isSelected =
       String(language).trim().toUpperCase() === langFormatted;
-
     if (!isSelected) {
       return { color: '#a3a3a3' };
     }
@@ -107,65 +89,34 @@ export default function Home() {
     localStorage.setItem('theme', JSON.stringify(theme));
   }, [theme]);
 
-  // Exibe o carregamento inicial
-  if (loading) {
-    return <Loader />;
-  }
+
 
   return (
     <>
-      <header
-        className="App-header"
-        id={sectionIds[0]}
-      >
+      <header className="App-header" id={sectionIds[0]} >
         <section className="Barra_top">
-          <h1 id="Name">{PORTFOLIO_NAME}</h1>
-
+          <h1 id="Portfólio-name">Portfólio</h1>
           <div className="Container-Buttons">
-            <ThemeToggle
-              theme={theme}
-              onThemeChange={handleThemeChange}
-            />
-
+            <ThemeToggle theme={theme} onThemeChange={handleThemeChange} />
             <div className="lingua">
-              <button
-                type="button"
-                className="lingua__button"
-                style={CorStyle('PT')}
-                aria-pressed={langFormatted === 'PT'}
-                onClick={() => handleLanguageChange('PT')}
-              >
+              <button type="button" className="lingua__button" style={CorStyle('PT')} aria-pressed={langFormatted === 'PT'} 
+              onClick={() => handleLanguageChange('PT')} >
                 PT
               </button>
-
-              <button
-                type="button"
-                className="lingua__button"
-                style={CorStyle('EN')}
-                aria-pressed={langFormatted === 'EN'}
-                onClick={() => handleLanguageChange('EN')}
-              >
+              <button type="button" className="lingua__button" style={CorStyle('EN')} aria-pressed={langFormatted === 'EN'} 
+              onClick={() => handleLanguageChange('EN')} >
                 EN
               </button>
             </div>
-
-            <ButtonToggle
-              language={langFormatted}
-              navtexts={navtexts}
-              CorStyle={CorStyle}
-              handleLanguageChange={handleLanguageChange}
-              handleThemeChange={handleThemeChange}
-            />
+            <ButtonToggle language={langFormatted} navtexts={navtexts} CorStyle={CorStyle} handleLanguageChange={handleLanguageChange} handleThemeChange={handleThemeChange} />
           </div>
         </section>
 
-        <nav aria-label="Navegação principal">
+        <nav aria-label="Navegação-principal">
           <ul className="Narve">
             {navtexts.map((item, index) => {
               const sectionId = sectionIds[index];
-
               if (!sectionId) return null;
-
               return (
                 <li key={sectionId}>
                   <a href={`#${sectionId}`}>
@@ -177,38 +128,57 @@ export default function Home() {
           </ul>
         </nav>
 
-        <section className="Painel-1">
-          <div className="Container-Title">
-            <BlurText
-              className="Portfólio"
-              text={PORTFOLIO_TITLE}
-              delay={200}
-              animateBy="words"
-              direction="top"
-            />
-
-            <div className="Container-Text">
-              <ButtonLow />
+          <section className="Painel-1">
+            <div className="Container-Title">
+              <div className="Hero-Content">
+                <span className="Hero-Available">
+                  <span></span>
+                  DISPONÍVEL PARA NOVOS PROJETOS
+                </span>
+                <BlurText className="Portfólio" text="Maycon Douglas" delay={200} animateBy="words" direction="top" />
+                <span className="Hero-Profession">
+                  DESENVOLVEDOR FULL STACK · REACT · NODE.JS · PYTHON · JAVA
+                </span>
+                <p className="Hero-Description">
+                  Olá, sou Maycon. Desenvolvedor Full Stack, apaixonado
+                  por tecnologia e pela criação de aplicações web modernas,
+                  responsivas e eficientes. Transformo ideias em soluções digitais.
+                </p>
+                {/* MANTENDO SEU COMPONENTE ORIGINAL */}
+                <div className="Hero-Stats">
+                  <div>
+                    <strong>4+</strong>
+                    <span>anos de experiência</span>
+                  </div>
+                  <div>
+                    <strong>Full Stack</strong>
+                    <span>desenvolvimento</span>
+                  </div>
+                  <div>
+                    <strong>React</strong>
+                    <span>tecnologia principal</span>
+                  </div>
+                </div>
+              </div>
+            {/* IMAGEM */}    
+            <div className="Hero-Image-Container">
+              <div className="Hero-Image-Frame"></div>
+              <img src={ImageProfessional} alt="Maycon Douglas" className="Hero-Image" />
+              <div className="Hero-Image-Badge">
+                <strong>Full Stack Developer</strong>
+                <span>React · Node.js · Python · Java</span>
+              </div>
             </div>
+            
           </div>
-        </section>
-
-        <PainelAdmin
-          texts={texts}
-          handleLanguageChange={handleLanguageChange}
-        />
+        </section>  
+            <div className="Container-Text">
+               <ButtonLow />
+            </div>
       </header>
 
-      <Main
-        texts={texts}
-        navtexts={navtexts}
-        language={langFormatted}
-      />
-
-      <Footer
-        texts={texts}
-        language={langFormatted}
-      />
+        <Main texts={texts} navtexts={navtexts} language={langFormatted} />
+        <Footer texts={texts} language={langFormatted} />
     </>
   );
 }

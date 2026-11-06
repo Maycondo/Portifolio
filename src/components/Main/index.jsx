@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 import CardFeatures from '../../hooks/Card/useCardFeatures.jsx';
-import InfiniteSlider from '../SliderInfinito/index.jsx';
+
 import ScrollReveal from '../../hooks/ScrollReveal.js/ScrollReveal.jsx';
 
 import './style.css';
@@ -48,7 +48,6 @@ export default function Main({ texts, navtexts, language }) {
             </motion.div>
 
             <section className="Tecnologias">
-                <InfiniteSlider />
             </section>
 
             <CardFeatures
