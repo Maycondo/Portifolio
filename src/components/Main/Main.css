@@ -134,9 +134,16 @@ main {
   border-right: none;
 }
 
+.Stats-Icon-about {
+    font-size: 16px;
+    color: #a5a5a5;
+    margin-bottom: 3px;
+    transition: color 0.3s ease;
+}
+
 .Hero-Stats-about strong {
   display: block;
-  font-size: clamp(3.5rem, 6vw, 3rem) !important;
+  font-size: clamp(2rem, 6vw, 3rem) !important;
   font-weight: 800;
   line-height: 1;
   color: var(--Color-texte-portifolio);
@@ -147,6 +154,10 @@ main {
   font-size: inherit !important;
   font-weight: inherit;
   line-height: inherit;
+}
+
+.Hero-Stats-about span {
+  color: var(--Color-texte-portifolio);
 }
 
 @media (max-width: 600px) {

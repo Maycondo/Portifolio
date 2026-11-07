@@ -2,7 +2,8 @@
 import { useState, useEffect } from 'react';
 
 // Componentes principais
-import Main from './components/Main/index.jsx';
+import Main from './components/Main/Main.jsx';
+import WhathouldIdo from './components/Cards/WhathouldIdo.jsx'
 import Footer from './components/Footer/index.jsx';
 
 
@@ -95,7 +96,7 @@ export default function Home() {
   return (
     <>
       <header className="App-header" id={sectionIds[0]} >
-        <section className="Barra_top">
+        <section className="Top-bar-icons">
           <h1 id="Portfólio-name">Portfólio</h1>
           <div className="Container-Buttons">
             <ThemeToggle theme={theme} onThemeChange={handleThemeChange} />
@@ -113,7 +114,7 @@ export default function Home() {
           </div>
         </section>
 
-        <nav aria-label="Navegação-principal">
+        <nav aria-label="Project-main-navigation">
           <ul className="Narve">
             {navtexts.map((item, index) => {
               const sectionId = sectionIds[index];
@@ -129,7 +130,7 @@ export default function Home() {
           </ul>
         </nav>
 
-          <section className="Painel-1">
+          <section className="Contains-mai-photo">
             <div className="Container-Title">
               <div className="Hero-Content">
                 <span className="Hero-Available">
@@ -150,21 +151,21 @@ export default function Home() {
                       <a href="https://drive.google.com/file/u/1/d/1mcFLNN-5YQ8NDK09nTY7xV8lXwlya2uy/view?usp=drive_open" target='_blank' id="download-resume"><AiFillFilePdf/> Baixar curriculo</a>
                   </div>
                 {/* MANTENDO SEU COMPONENTE ORIGINAL */}
-                <div className="Hero-Stats">
-                  <div>
-                    <strong>4+</strong>
-                    <span>anos de experiência</span>
+                    <div className="Hero-Stats">
+                      <div>
+                        <strong>4+</strong>
+                        <span>anos de experiência</span>
+                      </div>
+                      <div>
+                        <strong>Full Stack</strong>
+                        <span>desenvolvimento</span>
+                      </div>
+                      <div>
+                        <strong>React</strong>
+                        <span>tecnologia principal</span>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <strong>Full Stack</strong>
-                    <span>desenvolvimento</span>
-                  </div>
-                  <div>
-                    <strong>React</strong>
-                    <span>tecnologia principal</span>
-                  </div>
-                </div>
-              </div>
             {/* IMAGEM */}    
             <div className="Hero-Image-Container">
               <div className="Hero-Image-Frame"></div>
@@ -183,6 +184,7 @@ export default function Home() {
       </header>
 
         <Main texts={texts} navtexts={navtexts} language={langFormatted} />
+        <WhathouldIdo language={langFormatted} />
         <Footer texts={texts} language={langFormatted} />
     </>
   );

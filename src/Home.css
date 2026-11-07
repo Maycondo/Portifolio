@@ -122,7 +122,7 @@ body {
    BARRA SUPERIOR
 ========================================== */
 
-.Barra_top {
+.Top-bar-icons {
   position: relative;
   z-index: 20;
   width: 100%;
@@ -177,7 +177,7 @@ body {
    MENU HAMBÚRGUER
 ========================================== */
 
-.Navegação-principal {
+.Project-main-navigation {
   display: none;
 }
 
@@ -197,7 +197,7 @@ body {
    PAINEL CENTRAL
 ========================================== */
 
-.Painel-1 {
+.Contains-mai-photo {
   position: relative;
   flex: 1;
   width: 100%;
@@ -539,12 +539,12 @@ body {
     min-height: 100svh;
   }
 
-  .Barra_top {
+  .Top-bar-icons {
     min-height: 75px;
     padding: 0 4%;
   }
 
-  .Painel-1 {
+  .Contains-mai-photo {
     min-height: auto;
   }
 
@@ -610,7 +610,7 @@ body {
     height: auto;
   }
 
-  .Barra_top {
+  .Top-bar-icons {
     min-height: 65px;
     padding: 0 16px;
     gap: 10px;
@@ -632,15 +632,13 @@ body {
     font-size: 10px;
   }
 
-  .Painel-1 {
+  .Contains-mai-photo {
     min-height: auto;
   }
 
   .Container-Title {
     width: 90%;
-
     grid-template-columns: 1fr;
-
     gap: 50px;
     padding: 45px 0;
   }
@@ -711,6 +709,18 @@ body {
     font-size: 9px;
     letter-spacing: 2px;
   }
+
+  .Container-Text {
+  position: relative;
+  top: -1rem;
+  right: 1rem;
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  pointer-events: auto;
+}
 }
 
 /* ==========================================
@@ -718,7 +728,7 @@ body {
 ========================================== */
 
 @media (max-width: 360px) {
-  .Barra_top {
+  .Top-bar-icons {
     padding: 0 10px;
   }
 
