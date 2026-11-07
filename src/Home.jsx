@@ -16,7 +16,8 @@ import ButtonToggle from './hooks/Buttons/useNavButtonToggle.jsx';
 import LanguageSwitch from './hooks/useLanguageSwitch.jsx';
 import ImageProfessional from './imagens/ImageProfessional.jpg'
 
-
+import { AiFillFilePdf } from "react-icons/ai";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 // IDs das seções conforme o idioma
 const SECTION_IDS = {
@@ -144,6 +145,10 @@ export default function Home() {
                   por tecnologia e pela criação de aplicações web modernas,
                   responsivas e eficientes. Transformo ideias em soluções digitais.
                 </p>
+                  <div className='Buttons-resume-projects'>
+                      <a href={`#${sectionIds[2]}`} id="View-projects">Ver projetos <AiOutlineArrowRight/></a>
+                      <a href="https://drive.google.com/file/u/1/d/1mcFLNN-5YQ8NDK09nTY7xV8lXwlya2uy/view?usp=drive_open" target='_blank' id="download-resume"><AiFillFilePdf/> Baixar curriculo</a>
+                  </div>
                 {/* MANTENDO SEU COMPONENTE ORIGINAL */}
                 <div className="Hero-Stats">
                   <div>

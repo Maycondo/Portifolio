@@ -303,6 +303,46 @@ body {
   color: var(--Color-Texto-pequeno);
 }
 
+/* */
+
+.Buttons-resume-projects {
+  display: flex;
+  margin: 1rem;
+  padding: 1rem;
+  width: 100%;
+  gap: 6rem;
+}
+
+#View-projects {
+  height: 3rem;
+  width: 12rem;
+  padding: 1rem;
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: var(--Color-button-Light-Dark);
+  color: var(--Backgtound-color-nav);
+  transition: color 300ms;
+}
+
+#download-resume {
+  height: 3rem;
+  width: 12rem;
+  padding: 1rem;
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+  border: solid 1px var(--Color-button-Light-Dark);
+  color: var(--Color-texte-portifolio);
+  transition: color 300ms;
+}
+
 /* ==========================================
    BUTTON LOW
 ========================================== */
