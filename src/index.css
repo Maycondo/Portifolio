@@ -307,13 +307,12 @@ body {
 
 .Buttons-resume-projects {
   display: flex;
-  margin: 1rem;
-  padding: 1rem;
   width: 100%;
-  gap: 6rem;
+  gap: 4rem;
 }
 
 #View-projects {
+  font-size: clamp(0.8rem, 1vw, 1.3rem);
   height: 3rem;
   width: 12rem;
   padding: 1rem;
@@ -329,11 +328,12 @@ body {
 }
 
 #download-resume {
+  font-size: clamp(0.8rem, 1vw, 1.3rem);
   height: 3rem;
   width: 12rem;
   padding: 1rem;
   display: flex;
-  gap: 0.8rem;
+  gap: 0.3rem;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -381,14 +381,13 @@ body {
 }
 
 .Hero-Stats strong {
-  font-family: "Cormorant Garamond", Georgia, serif;
   font-size: 27px;
   font-weight: 900;
   color: var(--Color-texte-portifolio);
 }
 
 .Hero-Stats span {
-  font-size: 10px;
+  font-size: 13px;
   line-height: 1.4;
   color: var(--Color-Texto-pequeno);
 }

@@ -1,16 +1,45 @@
+
 /* eslint-disable react/prop-types */
-import { motion } from 'framer-motion';
+import { motion, animate } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-import CardFeatures from '../../hooks/Card/useCardFeatures.jsx';
-
 import ScrollReveal from '../../hooks/ScrollReveal.js/ScrollReveal.jsx';
-
 import './style.css';
 
-export default function Main({ texts, navtexts, language }) {
-    
-    // Define o ID de acordo com o idioma selecionado
+import {
+    FaGithub,
+    FaLinkedinIn,
+    FaEnvelope,
+    FaFileAlt
+} from 'react-icons/fa';
+
+
+// Componente para animar os números
+function AnimatedCounter({ value, suffix = '' }) {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+        const controls = animate(0, value, {
+            duration: 2,
+            ease: 'easeOut',
+            onUpdate: (latest) => {
+                setCount(Math.round(latest));
+            }
+        });
+
+        return () => controls.stop();
+    }, [value]);
+
+    return (
+        <span>
+            {suffix}
+            {count}
+        </span>
+    );
+}
+
+export default function Main({ texts, language }) {
+
     const sectionId = language === 'PT' ? 'sobre' : 'about';
 
     const [textVariant, setTextVariant] = useState({
@@ -35,26 +64,76 @@ export default function Main({ texts, navtexts, language }) {
 
     return (
         <main className="Main" id={sectionId}>
-            <motion.div initial="hidden" animate="visible" variants={textVariant} transition={{duration: 0.8, ease: 'easeOut'}}>
-                <h1>{navtexts[1]}</h1>
-
-                <div className="ABOUT">
-                    <ScrollReveal>
-                        <p id="Text-About">
+          <ScrollReveal>
+            <section className="About-Hero">
+                <div className="Hero-Content-about">
+                    <span className="Hero-Label-about">
+                        02 — {language === 'PT' ? 'SOBRE MIM' : 'ABOUT ME'}
+                    </span>
+                        <motion.h1 initial="hidden" animate="visible" variants={textVariant} transition={{ duration: 0.8, ease: 'easeOut' }} >
+                            {language === 'PT' ? 'Desenvolvedor que transforma ideias em soluções digitais.': 'Developer turning ideas into digital solutions.'}
+                        </motion.h1>
+                        <p className="Hero-Description-about">
                             {texts['about']}
                         </p>
-                    </ScrollReveal>
+                            <div className="icone-redes-midias">
+                                <a href="https://github.com/Maycondo" target="_blank" rel="noreferrer" aria-label="GitHub" >
+                                    <FaGithub />
+                                </a>
+                                <a href="https://www.linkedin.com/in/maycon-douglas-b97786306/" target="_blank" rel="noreferrer" aria-label="LinkedIn" >
+                                    <FaLinkedinIn />
+                                </a>
+                                <a href="mailto:SEU_EMAIL" aria-label="E-mail" >
+                                    <FaEnvelope />
+                                </a>
+                                <a href="/curriculo.pdf" target="_blank" rel="noreferrer" aria-label="Currículo" >
+                                    <FaFileAlt />
+                                </a>
+                            </div>
+                        <div className="Hero-Stats-about">
+                            <div>
+                                <strong>
+                                    <AnimatedCounter value={4} suffix="+" />
+                                </strong>
+                                <span>
+                                    {language === 'PT' ? 'anos de experiência' : 'years of experience'}
+                                </span>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    <AnimatedCounter value={10} suffix="+" />
+                                </strong>
+                                <span>
+                                    {language === 'PT'
+                                        ? 'projetos'
+                                        : 'projects'}
+                                </span>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    <AnimatedCounter value={8} suffix="+" />
+                                </strong>
+                                <span>
+                                    {language === 'PT' ? 'tecnologias' : 'technologies'}
+                                </span>
+                            </div>
+
+                            <div>
+                                <strong>
+                                    <AnimatedCounter value={15} suffix="+" />
+                                </strong>
+                                <span>
+                                    {language === 'PT'
+                                        ? 'cursos com certificado'
+                                        : 'certified courses'}
+                                </span>
+                            </div>
+                        </div>
                 </div>
-            </motion.div>
-
-            <section className="Tecnologias">
             </section>
-
-            <CardFeatures
-                texts={texts}
-                navtexts={navtexts}
-                language={language}
-            />
+            </ScrollReveal>
         </main>
     );
 }
