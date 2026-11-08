@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react';
 // Componentes principais
 import Main from './components/Main/Main.jsx';
 import WhathouldIdo from './components/Cards/WhathouldIdo.jsx'
+import EducationCourses from './components/Cards/EducationCourses.jsx';
 import Footer from './components/Footer/index.jsx';
 
 
 // Animações e botões
+import TechMarquee from './hooks/AnimationText/TechMarquee.jsx'
 import BlurText from './hooks/AnimationText/BlurText.jsx';
 import ButtonLow from './hooks/Low/index.jsx';
 
@@ -32,16 +34,20 @@ export default function Home() {
   const [selectedLanguage, setSelectedLanguage] = useState('PT');
 
   const [theme, setTheme] = useState(() => {
-    if (typeof window === 'undefined') {
-      return 'ModeDark';
-    }
+      if (typeof window === 'undefined') {
+          return 'ModeDark';
+      }
 
-    try {
-      const savedTheme = localStorage.getItem('theme');
-      return savedTheme ? JSON.parse(savedTheme) : 'ModeDark';
-    } catch {
-      return 'ModeDark';
-    }
+      try {
+          const savedTheme = localStorage.getItem('theme');
+
+          return savedTheme
+              ? JSON.parse(savedTheme)
+              : 'ModeDark';
+
+      } catch {
+          return 'ModeDark';
+      }
   });
 
 
@@ -87,10 +93,12 @@ export default function Home() {
 
   // Aplica o tema
   useEffect(() => {
-    document.body.className = theme;
+    document.body.classList.remove('ModeLight', 'ModeDark');
+
+    document.body.classList.add(theme);
+
     localStorage.setItem('theme', JSON.stringify(theme));
   }, [theme]);
-
 
 
   return (
@@ -184,7 +192,10 @@ export default function Home() {
       </header>
 
         <Main texts={texts} navtexts={navtexts} language={langFormatted} />
+        <TechMarquee/>
         <WhathouldIdo language={langFormatted} />
+        <EducationCourses language={langFormatted} />
+        <TechMarquee/>
         <Footer texts={texts} language={langFormatted} />
     </>
   );

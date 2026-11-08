@@ -96,6 +96,7 @@ export default function Main({ texts, language }) {
                         </motion.h1>
 
                         <p className="Hero-Description-about">
+
                             {texts['about']}
                         </p>
 
