@@ -26,8 +26,8 @@ main {
 /* ÁREA SOBRE MIM */
 
 .About-Hero {
-  max-width: 1680px;
-  width: min(70%, 1680px);
+  max-width: 1250px;
+  width: min(76%, 1250px);
   margin: 0 auto;
   padding: 30px 0;
   min-height: 390px;
@@ -52,6 +52,10 @@ main {
   color: var(--Color-Texto-pequeno);
   margin-bottom: 20px;
   opacity: 0.7;
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
 }
 
 .Hero-Content-about h1 {
@@ -65,6 +69,10 @@ main {
   letter-spacing: -1.5px;
   text-align: left;
   color: var(--Color-texte-portifolio);
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
 }
 
 .Hero-Description-about {
@@ -75,6 +83,9 @@ main {
   line-height: 1.8;
   text-align: start;
   color: var(--Color-about--text);
+  transition:
+    color 300ms ease,
+    transform 300ms ease;
 }
 
 .icone-redes-midias {
@@ -89,13 +100,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-
   background-color: #222;
   color: #fff;
-
   border-radius: 13px;
   text-decoration: none;
-
   font-size: 20px;
   transition:
     background-color 0.3s ease,
@@ -135,10 +143,10 @@ main {
 }
 
 .Stats-Icon-about {
-    font-size: 16px;
-    color: #a5a5a5;
-    margin-bottom: 3px;
-    transition: color 0.3s ease;
+  font-size: 16px;
+  color: #a5a5a5;
+  margin-bottom: 3px;
+  transition: color 0.3s ease;
 }
 
 .Hero-Stats-about strong {

@@ -1,27 +1,47 @@
-import { useState } from 'react';
+/* eslint-disable react/prop-types */
 
-// eslint-disable-next-line react/prop-types
-export default function ThemeToggle({ onThemeChange }) {
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const [tema, setogleTheme] = useState('ModeDark');
+export default function ThemeToggle({ theme, onThemeChange }) {
+    const [tema, setTema] = useState(theme);
 
-const ModeLight = <i className="bi bi-sun-fill"></i>;
-const ModeDark = <i className="bi bi-moon-fill"></i>;
+    useEffect(() => {
+        setTema(theme);
+    }, [theme]);
 
+    const alternarModo = () => {
+        const novoTema = tema === 'ModeDark'
+            ? 'ModeLight'
+            : 'ModeDark';
 
-const alternarModo = () => {
-    setogleTheme((prevState) => {   
-        const NewState = prevState === 'ModeLight' ? 'ModeDark' : 'ModeLight';
-        document.body.classList.remove(prevState); // Remove a classe anterior do body
-        document.body.classList.add(NewState);    // Adiciona a nova classe ao body
-        onThemeChange(NewState); // Notifica o pai sobre a mudança de tema
-        return NewState;
-    });
+        setTema(novoTema);
+        onThemeChange?.(novoTema);
+    };
+
+    return (
+        <div className="Botao_Modo">
+            <button
+                type="button"
+                onClick={alternarModo}
+                aria-label="Alternar tema"
+                title="Alternar tema"
+            >
+                <AnimatePresence mode="wait">
+                    <motion.i
+                        key={tema}
+                        className={`bi ${
+                            tema === 'ModeDark'
+                                ? 'bi-sun-fill'
+                                : 'bi-moon-fill'
+                        }`}
+                        initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+                        animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                        exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
+                        transition={{ duration: 0.3 }}
+                    />
+                </AnimatePresence>
+            </button>
+        </div>
+    );
 }
-
-return (    
-    <div className="Botao_Modo" >
-        <button type='button' onClick={alternarModo} style={{fontSize: '17px'}}>
-            {tema === 'ModeDark' ? ModeLight : ModeDark}</button>
-    </div>
-)}

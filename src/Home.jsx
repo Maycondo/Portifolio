@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 import Main from './components/Main/Main.jsx';
 import WhathouldIdo from './components/Cards/WhathouldIdo.jsx'
 import EducationCourses from './components/Cards/EducationCourses.jsx';
+import ProjectWorked from './components/Projetcs/ProjectWorked.jsx';
 import Footer from './components/Footer/index.jsx';
 
 
@@ -190,12 +191,11 @@ export default function Home() {
                <ButtonLow />
             </div>
       </header>
-
-        <Main texts={texts} navtexts={navtexts} language={langFormatted} />
         <TechMarquee/>
+        <Main texts={texts} navtexts={navtexts} language={langFormatted} />
         <WhathouldIdo language={langFormatted} />
         <EducationCourses language={langFormatted} />
-        <TechMarquee/>
+        <ProjectWorked language={langFormatted} />
         <Footer texts={texts} language={langFormatted} />
     </>
   );

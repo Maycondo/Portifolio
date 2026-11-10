@@ -138,6 +138,7 @@ body {
   font-weight: 900;
   color: var(--Color-texte-portifolio);
   white-space: nowrap;
+  transition: color 300ms;
 }
 
 .Container-Buttons {
@@ -148,9 +149,24 @@ body {
 }
 
 .Botao_Modo button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 17px;
   color: var(--Color-button-Light-Dark);
-  transition: 300ms;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: color 300ms ease;
+}
+
+.Botao_Modo button i {
+  display: inline-block;
+  transition: transform 300ms ease;
+}
+
+.Botao_Modo button:hover i {
+  transform: rotate(20deg) scale(1.15);
 }
 
 .lingua {
@@ -252,6 +268,10 @@ body {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1.2px;
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
 }
 
 .Hero-Available span {
@@ -260,6 +280,10 @@ body {
   flex-shrink: 0;
   background: #16c784;
   border-radius: 50%;
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
 }
 
 /* NOME */
@@ -278,7 +302,10 @@ body {
   color: var(--Color-texte-portifolio);
   overflow-wrap: normal;
   word-break: normal;
-  transition: color 300ms;
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
 }
 
 /* PROFISSÃO */
@@ -290,6 +317,7 @@ body {
   letter-spacing: 2px;
   line-height: 1.7;
   color: var(--Color-Texto-pequeno);
+  transition: color 300ms;
 }
 
 /* DESCRIÇÃO */
@@ -301,6 +329,7 @@ body {
   font-size: 19px;
   line-height: 1.8;
   color: var(--Color-Texto-pequeno);
+  transition: color 300ms;
 }
 
 /* */
@@ -324,7 +353,10 @@ body {
   border-radius: 10px;
   background-color: var(--Color-button-Light-Dark);
   color: var(--Backgtound-color-nav);
-  transition: color 300ms;
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
 }
 
 #download-resume {
@@ -340,7 +372,10 @@ body {
   border-radius: 10px;
   border: solid 1px var(--Color-button-Light-Dark);
   color: var(--Color-texte-portifolio);
-  transition: color 300ms;
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
 }
 
 /* ==========================================
@@ -383,7 +418,7 @@ body {
 .Hero-Stats strong {
   font-size: 27px;
   font-weight: 900;
-  color: var(--Color-texte-portifolio);
+ color: var(--Color-texte-portifolio);
 }
 
 .Hero-Stats span {
@@ -442,17 +477,27 @@ body {
   color: var(--Color-texte-portifolio);
   border-radius: 12px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
 }
 
 .Hero-Image-Badge strong {
   font-size: 12px;
   font-weight: 800;
   color: var(--Color-texte-portifolio);
+  transition:
+    color 300ms ease,
+    transform 300ms ease;
 }
 
 .Hero-Image-Badge span {
   font-size: 10px;
   color: var(--Color-Texto-pequeno);
+  transition:
+    color 300ms ease,
+    transform 300ms ease;
 }
 
 /* ==========================================
@@ -476,6 +521,10 @@ body {
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 3px;
+  transition:
+    color 300ms ease,
+    background-color 300ms ease,
+    transform 300ms ease;
 }
 
 .Hero-Technologies span {
@@ -497,6 +546,7 @@ body {
 .Social-Midias a {
   color: var(--Color-icons-redes);
   transition: 300ms;
+  
 }
 
 .Social-Midias a:hover {
@@ -711,16 +761,16 @@ body {
   }
 
   .Container-Text {
-  position: relative;
-  top: -1rem;
-  right: 1rem;
-  width: 100%;
-  min-width: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  pointer-events: auto;
-}
+    position: relative;
+    top: -1rem;
+    right: 1rem;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    pointer-events: auto;
+  }
 }
 
 /* ==========================================
