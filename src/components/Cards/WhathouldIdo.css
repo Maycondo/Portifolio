@@ -2,8 +2,8 @@
   position: relative;
   isolation: isolate;
   width: 100%;
-  min-height: 80vh;
-  min-height: 80svh;
+  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   flex-direction: column;
   background-color: var(--Backgtound-fundo-Color);

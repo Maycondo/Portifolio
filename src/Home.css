@@ -228,8 +228,8 @@ body {
   top: auto;
   left: auto;
   transform: none;
-  width: min(70%, 1680px);
-  max-width: 1680px;
+  max-width: 1250px;
+  width: min(76%, 1250px);
   height: auto;
   min-width: 0;
   margin: 0 auto;

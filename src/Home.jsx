@@ -6,7 +6,7 @@ import Main from './components/Main/Main.jsx';
 import WhathouldIdo from './components/Cards/WhathouldIdo.jsx'
 import EducationCourses from './components/Cards/EducationCourses.jsx';
 import ProjectWorked from './components/Projetcs/ProjectWorked.jsx';
-import Footer from './components/Footer/index.jsx';
+
 
 
 // Animações e botões
@@ -196,7 +196,6 @@ export default function Home() {
         <WhathouldIdo language={langFormatted} />
         <EducationCourses language={langFormatted} />
         <ProjectWorked language={langFormatted} />
-        <Footer texts={texts} language={langFormatted} />
     </>
   );
 }
