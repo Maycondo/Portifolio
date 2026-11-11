@@ -6,6 +6,7 @@ import Main from './components/Main/Main.jsx';
 import WhathouldIdo from './components/Cards/WhathouldIdo.jsx'
 import EducationCourses from './components/Cards/EducationCourses.jsx';
 import ProjectWorked from './components/Projetcs/ProjectWorked.jsx';
+import DidyouLike from './components/Cards/Didyoulike.jsx';
 
 
 
@@ -106,7 +107,7 @@ export default function Home() {
     <>
       <header className="App-header" id={sectionIds[0]} >
         <section className="Top-bar-icons">
-          <h1 id="Portfólio-name">Portfólio</h1>
+          <h1 id="Portfólio-name">Portfólio</h1>  
           <div className="Container-Buttons">
             <ThemeToggle theme={theme} onThemeChange={handleThemeChange} />
             <div className="lingua">
@@ -195,6 +196,7 @@ export default function Home() {
         <WhathouldIdo language={langFormatted} />
         <EducationCourses language={langFormatted} />
         <ProjectWorked language={langFormatted} />
+        <DidyouLike language={langFormatted}/>
     </>
   );
 }

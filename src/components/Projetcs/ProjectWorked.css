@@ -7,7 +7,7 @@
     position: relative;
     isolation: isolate;
     width: 100%;
-    min-height: 90rem;
+    min-height: 100rem;
     display: flex;
     flex-direction: column;
     padding: 90px 5%;

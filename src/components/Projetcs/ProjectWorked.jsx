@@ -59,7 +59,7 @@ const ProjectWorked = ({ language = "PT" }) => {
           description: "Site institucional editorial.",
           icon: FaBalanceScale,
           color: "dark-blue",
-          link: "",
+          link: "https://advocacia-website.vercel.app/",
           technologies: ["Next.js", "TypeScript", "Framer Motion", "CSS"],
         },
 
@@ -150,7 +150,7 @@ const ProjectWorked = ({ language = "PT" }) => {
           description: "Editorial institutional website.",
           icon: FaBalanceScale,
           color: "dark-blue",
-          link: "",
+          link: "https://advocacia-website.vercel.app/",
           technologies: ["Next.js", "TypeScript", "Framer Motion", "CSS"],
         },
 
