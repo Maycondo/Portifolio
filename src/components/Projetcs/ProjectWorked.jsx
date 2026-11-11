@@ -7,12 +7,15 @@ import ScrollReveal from "../../hooks/ScrollReveal/ScrollReveal";
 
 import {
   FiTrendingUp,
-  FiSend,
+  FiBook,
   FiExternalLink,       
   FiLink,
 } from "react-icons/fi";
 
+import { RiRobot2Line } from "react-icons/ri";
 import { FaBalanceScale } from "react-icons/fa";
+import { AiOutlineMedium } from "react-icons/ai";
+
 
 import "./ProjectWorked.css";
 
@@ -38,30 +41,44 @@ const ProjectWorked = ({ language = "PT" }) => {
         {
           id: 1,
           category: "Web",
-          year: "2025",
-          name: "Advocacia Ana Beatriz",
-          description: "Site institucional editorial.",
-          icon: FaBalanceScale,
+          year: "2022",
+          name: "Portfólio",
+          description: "Meu portfólio é um projeto pessoal desenvolvido com o objetivo de exibir minhas habilidades em desenvolvimento de aplicações web. Para garantir um desenvolvimento ágil, com carregamento rápido e builds utilizei Vite. Integração com Bootstrap e tailwaind para criar layouts modernos e responsivos. Aplicação baseada em componentes reutilizáveis",
+          icon: AiOutlineMedium,
           color: "black",
-          link: "",
-          technologies: ["Next.js", "TypeScript", "Framer Motion", "CSS"],
+          link: "https://portifolio-maycon-desenvolvedor-software.vercel.app/",
+          technologies: ["React", "HTML", "CSS", "JavaScript", "Framer Motion", "React icons"],
         },
+
 
         {
           id: 2,
           category: "Web",
           year: "2025",
-          name: "Rota Viagens",
-          description: "Reservas online de pacotes.",
-          icon: FiSend,
-          color: "blue",
+          name: "Advocacia Ana Beatriz",
+          description: "Site institucional editorial.",
+          icon: FaBalanceScale,
+          color: "dark-blue",
           link: "",
-          technologies: ["React", "Node.js", "MongoDB", "CSS"],
+          technologies: ["Next.js", "TypeScript", "Framer Motion", "CSS"],
         },
 
         {
           id: 3,
+          category: "Web",
+          year: "2023",
+          name: "My-Books",
+          description: "My-Books é um site onde vou cadastrar todos os livros que estou lendo. Em cada cadastro, haverá uma breve descrição do livro e algumas opiniões pessoais sobre aspectos abordados na leitura. Também haverá uma seção de favoritos, onde serão exibidos todos os livros que marquei como favoritos.",
+          icon: FiBook,
+          color: "blue",
+          link: "https://my-books-maycon-douglas.vercel.app/",
+          technologies: ["React", "Tailwind CSS", "Typescript", "Axios", "Framer-motion"],
+        },
+
+        {
+          id: 4,
           category: "API",
+          year: "2023",
           name: "Book API",
           description: "Uma API RESTful criada com Node.js, Express e TypeScript, utilizando Prisma ORM e MongoDB Atlas para armazenar e gerenciar dados de livros. Ideal para aplicações que precisam de um backend robusto e escalável para operações de CRUD.",
           icon: FiLink,
@@ -70,6 +87,19 @@ const ProjectWorked = ({ language = "PT" }) => {
           technologies: ["Node.js ", "TypeScript", "Prisma ORM", "MongoDB Atlas", "Dotenv"],
         },
 
+        {
+          id: 5,
+          category: "Bots",
+          name: "Discord-Bot",
+          year: "2023",
+          description: "Criação de um bot interativo para gerenciar servidores do Discord. Implementação da biblioteca discord.py para permitir a interação com API Discord. O bot oferece comandos personalizados para moderar e organizar servidores do Discord Responde os usuários com comandos pre-definidos, tornando a interações com usuários mais fluida",
+          icon: RiRobot2Line,
+          color: "gray",
+          link: "https://github.com/Maycondo/DiscordBot",
+          technologies: ["Python", "Discord.py"],
+        },
+
+
       ],
 
       featuredProject: {
@@ -77,7 +107,7 @@ const ProjectWorked = ({ language = "PT" }) => {
         year: "2025",
         name: "Painel Financeiro Nimbus",
         description:
-          "Plataforma de gestão financeira para pequenas empresas, com relatórios em tempo real e design system próprio.",
+          "Plataforma de gestão financeira para pequenas empresas, com relatórios em tempo real e design system própri",
         link: "",
         tags: ["React", "Tailwind CSS", "Figma", "Node.js"],
       },
@@ -102,38 +132,63 @@ const ProjectWorked = ({ language = "PT" }) => {
         {
           id: 1,
           category: "Web",
-          year: "2025",
-          name: "Ana Beatriz Law",
-          description: "Editorial institutional website.",
-          icon: FaBalanceScale,
+          year: "2022",
+          name: "Portfólio",
+          description: "My portfolio is a personal project developed to showcase my skills in web application development. To ensure an agile development process, fast loading times, and efficient builds, I used Vite. I integrated Bootstrap and Tailwind to create modern, responsive layouts, and the application is built using reusable components.",
+          icon: AiOutlineMedium,
           color: "black",
-          link: "",
-          technologies: ["Next.js", "TypeScript", "Framer Motion", "CSS"],
+          link: "https://portifolio-maycon-desenvolvedor-software.vercel.app/",
+          technologies: ["React", "HTML", "CSS", "JavaScript", "Framer Motion", "React icons"],
         },
+
 
         {
           id: 2,
           category: "Web",
           year: "2025",
-          name: "Travel Routes",
-          description: "Online travel package bookings.",
-          icon: FiSend,
-          color: "blue",
+          name: "Ana Beatriz Law",
+          description: "Editorial institutional website.",
+          icon: FaBalanceScale,
+          color: "dark-blue",
           link: "",
-          technologies: ["React", "Node.js", "MongoDB", "CSS"],
+          technologies: ["Next.js", "TypeScript", "Framer Motion", "CSS"],
         },
 
         {
           id: 3,
-          category: "API",
-          name: "Book API",
-          description: "",
-          icon: FiLink,
-          color: "red",
-          link: "",
-          technologies: ["Figma", "React", "JavaScript", "CSS"],
+          category: "Web",
+          year: "2023",
+          name: "My-Books",
+          description: "My-Books is a website where I will list all the books I am currently reading. Each entry will include a brief description of the book and some personal thoughts on aspects covered in the text. There will also be a favorites section, which will display all the books I have marked as favorites.",
+          icon: FiBook,
+          color: "blue",
+          link: "https://my-books-maycon-douglas.vercel.app/",
+          technologies: ["React", "Tailwind CSS", "Typescript", "Axios", "Framer-motion"],
         },
 
+        {
+          id: 4,
+          category: "API",
+          name: "Book API",
+          year: "2023",
+          description: "A RESTful API built with Node.js, Express, and TypeScript, using Prisma ORM and MongoDB Atlas to store and manage book data. Ideal for applications that require a robust and scalable backend for CRUD operations.",
+          icon: FiLink,
+          color: "red",
+          link: "https://github.com/Maycondo/Books_API",
+          technologies: ["Node.js ", "TypeScript", "Prisma ORM", "MongoDB Atlas", "Dotenv"],
+        },
+
+        {
+          id: 5,
+          category: "Bots",
+          name: "Discord-Bot",
+          year: "2023",
+          description: "Creation of an interactive bot for managing Discord servers. Implementation of the `discord.py` library to enable interaction with the Discord API. The bot provides custom commands for moderating and organizing Discord servers, and responds to users via pre-defined commands, making interactions more fluid.",
+          icon: RiRobot2Line,
+          color: "gray",
+          link: "https://github.com/Maycondo/DiscordBot",
+          technologies: ["Python", "Discord.py"],
+        },
         
       ],
 
@@ -201,13 +256,9 @@ const ProjectWorked = ({ language = "PT" }) => {
 
                     {featured.link ? (
                       <a href={featured.link} target="_blank" rel="noopener noreferrer" >
-                        {content.view}
-                        <FiExternalLink />
+                        {content.view}<FiExternalLink />
                       </a>
-                    ) : (
-                      <span className="project-coming-soon">
-                        {content.comingSoon}
-                      </span>
+                    ) : (<span className="project-coming-soon">{content.comingSoon}</span>
                     )}
                   </div>
                 </div>
@@ -227,32 +278,11 @@ const ProjectWorked = ({ language = "PT" }) => {
 
                 return (
                   <Card layout key={project.id} {...(project.link
-                      ? {
-                          href: project.link,
-                          target: "_blank",
-                          rel: "noopener noreferrer",
-                        }
+                      ? { href: project.link, target: "_blank", rel: "noopener noreferrer",}
                       : {})} className={`project-card ${project.link ? "has-link" : ""}`}
-                    initial={{
-                      opacity: 0,
-                      y: 30,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      y: 0,
-                    }}
-                    exit={{
-                      opacity: 0,
-                      scale: 0.95,
-                    }}
-                    transition={{
-                      duration: 0.4,
-                      delay: index * 0.06,
-                    }}
-                    whileHover={{
-                      y: project.link ? -5 : 0,
-                    }}
-                  >
+                      initial={{ opacity: 0, y: 30, }} animate={{ opacity: 1, y: 0, }}
+                      exit={{ opacity: 0, scale: 0.95, }} transition={{ duration: 0.4, delay: index * 0.06, }}
+                      whileHover={{y: project.link ? -5 : 0,}}>
                     {/* VISUAL */}
                     <div className={`project-card-visual ${project.color}`}>
                       <Icon />

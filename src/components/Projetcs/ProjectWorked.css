@@ -8,22 +8,15 @@
     isolation: isolate;
     width: 100%;
     min-height: 90rem;
-
     display: flex;
     flex-direction: column;
-
     padding: 90px 5%;
-
     background-color: var(--Backgtound-fundo-Color);
-
     background-image:
         linear-gradient(90deg, var(--Hero-grid) 1px, transparent 1px),
         linear-gradient(0deg, var(--Hero-grid) 1px, transparent 1px);
-
     background-size: 55px 55px;
-
     overflow: hidden;
-
     transition: background-color 300ms ease;
 }
 
@@ -32,7 +25,6 @@
     max-width: 1250px;
     margin: 0 auto;
 }
-
 
 /* =========================================
    CABEÇALHO
@@ -44,29 +36,24 @@
 
 .label-project {
     display: block;
-
     font-family: var(--font-geist-sans);
     font-size: 0.85rem;
     font-weight: 500;
-
     letter-spacing: 3px;
-
+    opacity: 0.7;
     color: var(--Color-texte-portifolio);
-
     margin-bottom: 20px;
 }
 
 .title-projects {
+    max-width: 920px;
+    margin: 0 0 18px;
     font-family: var(--font-cormorant-garamond);
-
-    font-size: clamp(2rem, 5vw, 5rem);
+    font-size: clamp(3rem, 5vw, 7rem);
     font-weight: 700;
-
-    line-height: 1.1;
+    line-height: 0.83;
     letter-spacing: -2px;
-
     color: var(--Color-texte-portifolio);
-
     margin: 0;
 }
 
@@ -79,29 +66,20 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
     gap: 8px;
-
-    margin: 35px 0 28px;
+    margin: 45px 0 28px;
 }
 
 .filter-project {
     border: 1px solid var(--Hero-grid);
-
     background: transparent;
-
     color: var(--Color-texte-portifolio);
-
     border-radius: 30px;
-
     padding: 9px 18px;
-
     font-family: var(--font-geist-sans);
     font-size: 0.68rem;
     font-weight: 500;
-
     cursor: pointer;
-
     transition: all 0.3s ease;
 }
 
@@ -113,7 +91,6 @@
 .filter-project.active {
     background: var(--Color-texte-portifolio);
     border-color: var(--Color-texte-portifolio);
-
     color: var(--Backgtound-fundo-Color);
 }
 
@@ -125,18 +102,12 @@
 .featured-project {
     width: 100%;
     min-height: 300px;
-
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     overflow: hidden;
-
     border-radius: 13px;
-
     background: #1e1e1e;
-
     margin-bottom: 25px;
-
     transition: box-shadow 0.3s ease;
 }
 
@@ -146,11 +117,9 @@
 
 .featured-visual {
     min-height: 300px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: linear-gradient(
         135deg,
         #6065ed 0%,
@@ -162,11 +131,8 @@
 .featured-visual svg {
     width: 70px;
     height: 70px;
-
     color: #dce5ff;
-
     stroke-width: 2.5px;
-
     transition: transform 0.5s ease;
 }
 
@@ -178,48 +144,34 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     padding: 35px;
-
     color: #fff;
 }
 
 .featured-badge {
     width: fit-content;
-
     background: #393939;
     color: #fff;
-
     padding: 5px 11px;
-
     border-radius: 20px;
-
     font-size: 0.6rem;
     letter-spacing: 1px;
-
     margin-bottom: 15px;
 }
 
 .featured-content h3 {
     font-family: var(--font-cormorant-garamond);
-
     font-size: clamp(1.7rem, 2.5vw, 2.4rem);
-
     margin: 0 0 10px;
-
     line-height: 1.1;
 }
 
 .featured-content p {
     color: #c4c4c4;
-
     font-family: var(--font-geist-sans);
-
     font-size: 0.78rem;
     line-height: 1.8;
-
     max-width: 430px;
-
     margin: 0;
 }
 
@@ -227,48 +179,34 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     flex-wrap: wrap;
-
     gap: 12px;
-
     margin-top: 35px;
 }
 
 .featured-tags {
     display: flex;
     flex-wrap: wrap;
-
     gap: 6px;
 }
 
 .featured-tags span {
     border: 1px solid #4b4b4b;
-
     border-radius: 20px;
-
     padding: 5px 10px;
-
     font-size: 0.6rem;
-
     color: #ddd;
 }
 
 .featured-bottom a {
     display: flex;
     align-items: center;
-
     gap: 7px;
-
     color: #fff;
-
     text-decoration: none;
-
     font-family: var(--font-geist-sans);
     font-size: 0.7rem;
-
     white-space: nowrap;
-
     transition: color 0.3s ease;
 }
 
@@ -279,7 +217,6 @@
 .featured-bottom a svg {
     width: 14px;
     height: 14px;
-
     transition: transform 0.3s ease;
 }
 
@@ -289,9 +226,7 @@
 
 .project-coming-soon {
     font-family: var(--font-geist-sans);
-
     font-size: 0.68rem;
-
     color: #aaa;
 }
 
@@ -302,13 +237,9 @@
 
 .projects-grid {
     width: 100%;
-
     display: grid;
-
     grid-template-columns: repeat(3, minmax(0, 1fr));
-
     gap: 20px;
-
     align-items: stretch;
 }
 
@@ -319,26 +250,17 @@
 
 .project-card {
     position: relative;
-
     display: flex;
     flex-direction: column;
-
     width: 100%;
     min-width: 0;
     min-height: 340px;
-
     overflow: hidden;
-
     border-radius: 12px;
-
-    background: var(--Backgtound-fundo-Color);
-
+    background: var(--Hero-card);
     border: 1px solid var(--Hero-grid);
-
     color: var(--Color-texte-portifolio);
-
     text-decoration: none;
-
     transition:
         box-shadow 0.3s ease,
         border-color 0.3s ease,
@@ -351,7 +273,6 @@
 
 .project-card.has-link:hover {
     border-color: var(--Color-texte-portifolio);
-
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.09);
 }
 
@@ -367,34 +288,26 @@
 
 .project-card-visual {
     position: relative;
-
     width: 100%;
     height: 180px;
     min-height: 180px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     overflow: hidden;
 }
 
 .project-card-visual svg {
     width: 42px;
     height: 42px;
-
     color: rgba(255, 255, 255, 0.9);
-
     stroke-width: 2.3px;
-
     transition: transform 0.4s ease;
 }
 
 .project-card.has-link:hover .project-card-visual svg {
     transform: scale(1.15) rotate(-5deg);
 }
-
-
 /* GRADIENTES */
 
 .project-card-visual.green {
@@ -409,12 +322,20 @@
     background: linear-gradient(135deg, #414141, #080808);
 }
 
+.project-card-visual.dark-blue {
+    background: linear-gradient(135deg, #0327ca, #03207c);
+}
+
 .project-card-visual.purple {
     background: linear-gradient(135deg, #e75bb5, #9025ce);
 }
 
 .project-card-visual.blue {
     background: linear-gradient(135deg, #32b9e9, #087e9f);
+}
+
+.project-card-visual.gray {
+    background: linear-gradient(135deg, #c0c4c5, #565858);
 }
 
 .project-card-visual.red {

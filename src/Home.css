@@ -312,7 +312,7 @@ body {
 
 .Hero-Profession {
   margin-top: 25px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 2px;
   line-height: 1.7;
@@ -341,7 +341,7 @@ body {
 }
 
 #View-projects {
-  font-size: clamp(0.8rem, 1vw, 1.3rem);
+  font-size: clamp(0.8rem, 1vw, 1rem);
   height: 3rem;
   width: 12rem;
   padding: 1rem;
@@ -360,7 +360,7 @@ body {
 }
 
 #download-resume {
-  font-size: clamp(0.8rem, 1vw, 1.3rem);
+  font-size: clamp(0.8rem, 1vw, 1rem);
   height: 3rem;
   width: 12rem;
   padding: 1rem;

@@ -144,34 +144,33 @@ export default function Home() {
               <div className="Hero-Content">
                 <span className="Hero-Available">
                   <span></span>
-                  DISPONÍVEL PARA NOVOS PROJETOS
+                  {langFormatted === 'PT' ? 'DISPONÍVEL PARA NOVOS PROJETOS' : 'AVAILABLE FOR NEW PROJECTS'}
                 </span>
                 <BlurText className="Portfólio" text="Maycon Douglas" delay={200} animateBy="words" direction="top" />
                 <span className="Hero-Profession">
-                  DESENVOLVEDOR FULL STACK · REACT · NODE.JS · PYTHON · JAVA
+                  {langFormatted === 'PT' ? 'DESENVOLVEDOR FULL STACK · REACT · NODE.JS · PYTHON · JAVA' : 'FULL STACK DEVELOPER · REACT · NODE.JS · PYTHON · JAVA'}
                 </span>
                 <p className="Hero-Description">
-                  Olá, sou Maycon. Desenvolvedor Full Stack, apaixonado
-                  por tecnologia e pela criação de aplicações web modernas,
-                  responsivas e eficientes. Transformo ideias em soluções digitais.
-                </p>
+                  {langFormatted === 'PT' ? 'Olá, sou Maycon. Desenvolvedor Full Stack, apaixonado por tecnologia e pela criação de aplicações web modernas,responsivas e eficientes. Transformo ideias em soluções digitais.' 
+                  : 'Hello, I’m Maycon. A Full Stack developer with a passion for technology and for creating modern, responsive, and efficient web applications. I turn ideas into digital solutions.'}
+                </p>  
                   <div className='Buttons-resume-projects'>
-                      <a href={`#${sectionIds[2]}`} id="View-projects">Ver projetos <AiOutlineArrowRight/></a>
-                      <a href="https://drive.google.com/file/u/1/d/1mcFLNN-5YQ8NDK09nTY7xV8lXwlya2uy/view?usp=drive_open" target='_blank' id="download-resume"><AiFillFilePdf/> Baixar curriculo</a>
+                      <a href={`#${sectionIds[2]}`} id="View-projects">{langFormatted === "PT" ? 'Ver projetos' : 'View projects'} <AiOutlineArrowRight/></a>
+                      <a href="https://drive.google.com/file/u/1/d/1mcFLNN-5YQ8NDK09nTY7xV8lXwlya2uy/view?usp=drive_open" target='_blank' id="download-resume"><AiFillFilePdf/>{langFormatted === "PT" ? 'Baixar curriculo' : 'Download resume'} </a>
                   </div>
                 {/* MANTENDO SEU COMPONENTE ORIGINAL */}
                     <div className="Hero-Stats">
                       <div>
                         <strong>4+</strong>
-                        <span>anos de experiência</span>
+                        <span>{langFormatted === "PT" ? 'anos de experiência' : 'years of experience'}</span>
                       </div>
                       <div>
                         <strong>Full Stack</strong>
-                        <span>desenvolvimento</span>
+                        <span>{langFormatted === "PT" ? 'desenvolvimento' : 'development'}</span>
                       </div>
                       <div>
                         <strong>React</strong>
-                        <span>tecnologia principal</span>
+                        <span>{langFormatted === "PT" ? 'tecnologia principal' : 'core technology'}</span>
                       </div>
                     </div>
                   </div>
