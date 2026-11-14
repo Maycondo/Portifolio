@@ -51,7 +51,7 @@
 
 .contact-title h1 {
   max-width: 550px;
-  font-size: clamp(3.5rem, 7vw, 5rem);
+  font-size: clamp(3.5rem, 5vw, 5rem);
   font-weight: bold;
   line-height: 0.88;
   letter-spacing: -4px;
@@ -65,7 +65,7 @@
   gap: 10px;
   padding-bottom: 7px;
   border-bottom: 1px solid #222;
-  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  font-size: clamp(1rem, 1.5vw, 1rem);
   font-weight: 700;
   color: var(--Color-texte-portifolio);
   text-decoration: none;
@@ -158,14 +158,14 @@
 
 .social-label {
   font-family: var(--font-geist-sans, sans-serif);
-  font-size: 0.61rem;
+  font-size: 0.71rem;
   font-weight: 500;
   letter-spacing: 1.5px;
   color: #858585;
 }
 
 .social-description {
-  font-size: 0.78rem;
+  font-size: 0.84rem;
   font-weight: 700;
   color: #171717;
   overflow-wrap: anywhere;
@@ -243,7 +243,7 @@
 }
 
 .form-heading p {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: #999;
   margin: 0;
 }
@@ -267,7 +267,7 @@
 
 .form-group label {
   font-family: var(--font-geist-sans, sans-serif);
-  font-size: 0.63rem;
+  font-size: 0.73rem;
   font-weight: 500;
   letter-spacing: 1.4px;
   color: #858585;
@@ -292,7 +292,7 @@
   background: transparent;
   color: #171717;
   font-family: inherit;
-  font-size: 0.78rem;
+  font-size: 0.80rem;
   transition: border-color 0.3s ease;
 }
 
@@ -334,7 +334,7 @@
   border-radius: 30px;
   background: transparent;
   color: #444;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   font-family: inherit;
   cursor: pointer;
   transition:
@@ -369,7 +369,7 @@
   background: transparent;
   color: #171717;
   font-family: inherit;
-  font-size: 0.78rem;
+  font-size: 0.80rem;
   line-height: 1.6;
   transition: border-color 0.3s ease;
 }
@@ -377,6 +377,29 @@
 /* ================================
    SUBMIT BUTTON
 ================================ */
+
+.form-status {
+  width: 100%;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--Color-texte-port);
+}
+
+.form-submit button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-submit button:disabled svg {
+  animation: sendLoading 1s linear infinite;
+}
+
+@keyframes sendLoading {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .form-submit {
   width: 100%;
@@ -398,7 +421,7 @@
   background: #202020;
   color: #fff;
   font-family: inherit;
-  font-size: 0.72rem;
+  font-size: 0.80rem;
   font-weight: 600;
   cursor: pointer;
   transition:

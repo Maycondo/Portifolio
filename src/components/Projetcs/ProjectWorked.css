@@ -73,7 +73,7 @@
     border-radius: 30px;
     padding: 9px 18px;
     font-family: var(--font-geist-sans);
-    font-size: 0.68rem;
+    font-size: 0.80rem;
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -345,10 +345,8 @@
 
 .project-card-content {
     flex: 1;
-
     display: flex;
     flex-direction: column;
-
     padding: 19px 17px 20px;
 }
 
@@ -356,23 +354,17 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     color: var(--Color-texte-portifolio);
-
     opacity: 0.65;
-
     font-family: var(--font-geist-sans);
-    font-size: 0.61rem;
-
+    font-size: 0.71rem;
     letter-spacing: 0.7px;
-
     margin-bottom: 13px;
 }
 
 .project-card-meta svg {
     width: 14px;
     height: 14px;
-
     transition: transform 0.3s ease;
 }
 
@@ -382,28 +374,19 @@
 
 .project-card-content h3 {
     font-family: var(--font-geist-sans);
-
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 650;
-
     line-height: 1.4;
-
     color: var(--Color-texte-portifolio);
-
     margin: 0 0 7px;
 }
 
 .project-card-content p {
     font-family: var(--font-geist-sans);
-
-    font-size: 0.72rem;
-
+    font-size: 0.80rem;
     color: var(--Color-texte-portifolio);
-
     opacity: 0.7;
-
     margin: 0;
-
     line-height: 1.7;
 }
 
@@ -416,9 +399,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
     gap: 7px;
-
     margin-top: auto;
     padding-top: 20px;
 }
@@ -426,19 +407,12 @@
 .project-technologies span {
     display: inline-flex;
     align-items: center;
-
     padding: 6px 10px;
-
     border: 1px solid var(--Hero-grid);
-
     border-radius: 20px;
-
     background: transparent;
-
     color: var(--Color-texte-portifolio);
-
     font-family: var(--font-geist-sans);
-
     font-size: 0.59rem;
     font-weight: 500;
 

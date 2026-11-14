@@ -103,7 +103,7 @@ export default function Main({ texts, language }) {
                             <a href="https://www.linkedin.com/in/maycon-douglas-b97786306/" target="_blank" rel="noreferrer" aria-label="LinkedIn" >
                                 <FaLinkedinIn />
                             </a>
-                            <a href="mailto:SEU_EMAIL" aria-label="E-mail" >
+                            <a href="mailto:maycondouglasniculau@gmail.com" aria-label="E-mail" >
                                 <FaEnvelope />
                             </a>
                             <a href="/curriculo.pdf" target="_blank" rel="noreferrer" aria-label="Currículo" >

@@ -1,57 +1,80 @@
 
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-
-import {
-    FiSend,
-} from 'react-icons/fi';
+import emailjs from "@emailjs/browser";
+import { FiSend } from 'react-icons/fi';
 
 
 
-const FormProject = ({isPT = "PT"}) => {
+const FormProject = ({ isPT = true }) => {
+  const [projectType, setProjectType] = useState("Site");
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState("");
 
-    const [projectType, setProjectType] = useState('Site');
+  const projectTypes = [
+    { pt: "Site", en: "Website" },
+    { pt: "App", en: "App" },
+    { pt: "Branding", en: "Branding" },
+    { pt: "UI Design", en: "UI Design" },
+    { pt: "Outro", en: "Other" },
+  ];
 
-    const projectTypes = [
-        { pt: 'Site', en: 'Website' },
-        { pt: 'App', en: 'App' },
-        { pt: 'Branding', en: 'Branding' },
-        { pt: 'UI Design', en: 'UI Design' },
-        { pt: 'Outro', en: 'Other' },
-    ];
+  const handleSubmit = async (event) => {
+    event.preventDefault();
 
+    if (isSending) return;
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    setIsSending(true);
+    setStatus("");
 
-        const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const budget = formData.get('budget');
-        const deadline = formData.get('deadline');
-        const message = formData.get('message');
+    const selectedProject = projectTypes.find(
+      (type) => type.pt === projectType
+    );
 
-        const selectedProject = projectTypes.find(
-            (type) => type.pt === projectType
-        );
-
-        const subject = encodeURIComponent(
-            `Novo projeto: ${selectedProject?.pt || projectType}`
-        );
-
-        const body = encodeURIComponent(
-            `${isPT ? 'Nome' : 'Name'}: ${name}\n` +
-            `E-mail: ${email}\n` +
-            `${isPT ? 'Projeto' : 'Project'}: ${isPT ? projectType : selectedProject?.en}\n` +
-            `${isPT ? 'Orçamento' : 'Budget'}: ${budget}\n` +
-            `${isPT ? 'Prazo' : 'Deadline'}: ${deadline}\n\n` +
-            `${isPT ? 'Mensagem' : 'Message'}:\n${message}`
-        );
-
-        window.location.href =
-            `mailto:maycondoulasniculau@gmail.com?subject=${subject}&body=${body}`;
+    const templateParams = {
+      from_name: formData.get("name"),
+      reply_to: formData.get("email"),
+      project_type: isPT
+        ? selectedProject.pt
+        : selectedProject.en,
+      budget: formData.get("budget"),
+      deadline: formData.get("deadline"),
+      message: formData.get("message"),
     };
+
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams, 
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      setStatus(
+        isPT
+          ? "Mensagem enviada com sucesso! Obrigado pelo contato."
+          : "Message sent successfully! Thank you for contacting me."
+      );
+
+      form.reset();
+      setProjectType("Site");
+
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+
+      setStatus(
+        isPT
+          ? "Não foi possível enviar sua mensagem. Tente novamente."
+          : "Unable to send your message. Please try again."
+      );
+
+    } finally {
+      setIsSending(false);
+    }
+  };
 
 
   return (
@@ -139,17 +162,25 @@ const FormProject = ({isPT = "PT"}) => {
           <label htmlFor="contact-message">
             {isPT ? "MENSAGEM" : "MESSAGE"}
           </label>
-
           <textarea id="contact-message" name="message" placeholder={
             isPT ? "Descreva sua ideia..." : "Describe your idea..."}
             required
           />
         </div>
 
+        {/* STATUS */}
+        { status && (
+          <p className="form-status" role="status" aria-live="polite">
+            {status}
+          </p>
+        )}
+
         {/* BOTÃO */}
         <div className="form-submit">
-          <button type="submit">
-            {isPT ? "Enviar mensagem" : "Send message"}
+          <button type="submit" disabled={isSending}>
+            {isSending   
+              ? isPT ? "Enviando..." : "Sending..."
+              : isPT ? "Enviar mensagem" : "Send message"}
             <FiSend />
           </button>
         </div>
@@ -159,7 +190,7 @@ const FormProject = ({isPT = "PT"}) => {
 };
 
 FormProject.propTypes = {
-    isPT: PropTypes.string,
+  isPT: PropTypes.bool,
 };
 
 

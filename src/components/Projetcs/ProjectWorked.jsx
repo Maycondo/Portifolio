@@ -5,12 +5,12 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import ScrollReveal from "../../hooks/ScrollReveal/ScrollReveal";
 
-import {
-  FiTrendingUp,
-  FiBook,
-  FiExternalLink,       
-  FiLink,
-} from "react-icons/fi";
+  import {
+    FiTrendingUp,
+    FiBook,
+    FiExternalLink,       
+    FiLink,
+  } from "react-icons/fi";
 
 import { RiRobot2Line } from "react-icons/ri";
 import { FaBalanceScale } from "react-icons/fa";
