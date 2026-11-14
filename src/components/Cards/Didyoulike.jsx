@@ -14,7 +14,7 @@ const DidyyouLike = ({ language = 'PT' }) => {
                         <h1>{language === 'PT' ? 'Gostou do que viu? Vamos criar o proximo juntos.' : 'Did you like what you saw? Let’s create the next one together.'}</h1>
                     </div>
                     <div className="Buttons-didyyou-contatec">
-                        <a href="Get-in-touch" id="Get-in-touch">{language === "PT" ? 'Entrar em contato' : 'Get in touch'} <AiOutlineArrowRight/></a>
+                        <a href="https://wa.me/82988172684" target="_blank"id="Get-in-touch">{language === "PT" ? 'Entrar em contato' : 'Get in touch'} <AiOutlineArrowRight/></a>
                     </div>
                 </div>
             </ScroollReveal>
