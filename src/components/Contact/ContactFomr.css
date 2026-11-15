@@ -129,7 +129,7 @@
 .social-card:hover {
   transform: translateX(5px);
   border-color: #bcbcbc;
-  background: #fafafa;
+  border-color: var(--Color-texte-portifolio);
 }
 
 .social-icon {
@@ -139,8 +139,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #202020;
-  color: #fff;
+  background: var(--Color-texte-portifolio);
+  border-color: var(--Color-texte-portifolio);
+  color: var(--Backgtound-fundo-Color);
   border-radius: 9px;
   font-size: 1.1rem;
   transition: background 0.3s ease;
@@ -167,32 +168,8 @@
 .social-description {
   font-size: 0.84rem;
   font-weight: 700;
-  color: #171717;
+  color: var(--Color-texte-portifolio);
   overflow-wrap: anywhere;
-}
-
-/* LOCALIZAÇÃO */
-
-.location-card {
-  background: #202020;
-  border-color: #202020;
-}
-
-.location-card .social-icon {
-  background: #454545;
-}
-
-.location-card .social-label {
-  color: #aaa;
-}
-
-.location-card .social-description {
-  color: #fff;
-}
-
-.location-card:hover {
-  background: #333;
-  border-color: #333;
 }
 
 .location-card:hover .social-icon {
@@ -225,8 +202,8 @@
 .containe-form {
   width: 100%;
   padding: 35px;
-  background: #fff;
-  border: 1px solid #e8e8e8;
+  background: var(--Hero-card);
+  border: 1px solid var(--Hero-grid);
   border-radius: 15px;
 }
 
@@ -238,7 +215,7 @@
   font-size: clamp(1.4rem, 2vw, 1.8rem);
   font-weight: bold;
   line-height: 1.2;
-  color: #171717;
+  color: var(--Color-texte-portifolio);
   margin: 0 0 7px;
 }
 
@@ -270,7 +247,7 @@
   font-size: 0.73rem;
   font-weight: 500;
   letter-spacing: 1.4px;
-  color: #858585;
+  color: var(--Color-texte-portifolio);
 }
 
 .form-row {
@@ -290,9 +267,9 @@
   border-bottom: 1px solid #d5d5d5;
   border-radius: 0;
   background: transparent;
-  color: #171717;
+  color: var(--Color-texte-portifolio);
   font-family: inherit;
-  font-size: 0.80rem;
+  font-size: 0.8rem;
   transition: border-color 0.3s ease;
 }
 
@@ -343,14 +320,10 @@
     border-color 0.3s ease;
 }
 
-.project-option:hover {
-  border-color: #222;
-}
-
 .project-option.active {
-  background: #202020;
-  color: #fff;
-  border-color: #202020;
+  background: var(--Color-texte-portifolio);
+  border-color: var(--Color-texte-portifolio);
+  color: var(--Backgtound-fundo-Color);
 }
 
 /* ================================
@@ -369,7 +342,7 @@
   background: transparent;
   color: #171717;
   font-family: inherit;
-  font-size: 0.80rem;
+  font-size: 0.8rem;
   line-height: 1.6;
   transition: border-color 0.3s ease;
 }
@@ -416,12 +389,12 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  border: 1px solid #202020;
+  border: 1px solid var(--Color-texte-portifolio);
   border-radius: 8px;
-  background: #202020;
-  color: #fff;
+  background: var(--Color-texte-portifolio);
+  color: var(--Backgtound-fundo-Color);
   font-family: inherit;
-  font-size: 0.80rem;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   transition:
@@ -432,7 +405,7 @@
 
 .form-submit button:hover {
   background: transparent;
-  color: #202020;
+  color: var(--Color-texte-portifolio);
   transform: translateY(-3px);
 }
 

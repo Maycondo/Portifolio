@@ -148,7 +148,8 @@ export default function Home() {
                   <span></span>
                   {langFormatted === 'PT' ? 'DISPONÍVEL PARA NOVOS PROJETOS' : 'AVAILABLE FOR NEW PROJECTS'}
                 </span>
-                <BlurText className="Portfólio" text="Maycon Douglas" delay={200} animateBy="words" direction="top" />
+                <BlurText className="name-profission" text="Maycon" delay={200} animateBy="words" direction="top" />
+                <BlurText className="surname-profission" text="Douglas" delay={200} animateBy="words" direction="top" />
                 <span className="Hero-Profession">
                   {langFormatted === 'PT' ? 'DESENVOLVEDOR FULL STACK · REACT · NODE.JS · PYTHON · JAVA' : 'FULL STACK DEVELOPER · REACT · NODE.JS · PYTHON · JAVA'}
                 </span>
