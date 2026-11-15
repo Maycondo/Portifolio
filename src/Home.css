@@ -633,7 +633,7 @@ body {
     text-align: center;
   }
 
-  .Portfólio {
+  .name-profission {
     font-size: clamp(4rem, 12vw, 6rem);
     text-align: center;
   }
@@ -725,7 +725,7 @@ body {
     margin-bottom: 25px;
   }
 
-  .Portfólio {
+  .name-profission {
     font-size: clamp(3.3rem, 13vw, 4.7rem);
     line-height: 0.95;
     letter-spacing: -3px;
@@ -800,7 +800,7 @@ body {
 
 @media (max-width: 360px) {
   .surname-profission {
-    padding: 0 6rem;
+    padding: 0 4rem;
   }
 
   .Top-bar-icons {
@@ -815,7 +815,7 @@ body {
     gap: 7px;
   }
 
-  .Portfólio {
+  .name-profission {
     font-size: 3.1rem;
   }
 
