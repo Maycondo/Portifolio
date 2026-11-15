@@ -16,14 +16,9 @@
 }
 
 .content-main {
-  max-width: 1250px;
-  width: min(76%, 1250px);
-  margin: 0 auto;
-  padding: 30px 0;
-  min-height: 390px;
-  gap: 60px;
-  align-items: start;
-  box-sizing: border-box;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
 }
 
 .content-texs-contact {
@@ -419,7 +414,8 @@
 
 @media (max-width: 1000px) {
   .content-man-contact {
-    padding: 90px 6%;
+    min-height: auto;
+    padding: 80px 5%;
   }
 
   .icons-contact-form {
@@ -479,7 +475,7 @@
 
 @media (max-width: 450px) {
   .content-man-contact {
-    padding: 65px 0%;
+    padding: 65px 15px;
   }
 
   .contact-title h1 {
