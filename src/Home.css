@@ -800,9 +800,6 @@ body {
 ========================================== */
 
 @media (max-width: 360px) {
-  .surname-profission {
-    padding: 0 4rem;
-  }
 
   .Top-bar-icons {
     padding: 0 10px;
