@@ -239,7 +239,7 @@
   color: var(--pm-text);
   text-decoration: none;
   text-transform: uppercase;
-  font-size: clamp(2.5rem, 7vw, 9rem);
+  font-size: clamp(4rem, 9vw, 9rem);
   font-weight: 900;
   line-height: 1.3;
   border-bottom: 1px solid transparent;
@@ -356,7 +356,8 @@
   }
 
   .pm-link {
-    font-size: clamp(2.3rem, 10vw, 4rem);
+    font-size: clamp(4rem, 10vw, 4rem);
+
   }
 
   .lingua__button {

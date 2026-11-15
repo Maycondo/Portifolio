@@ -432,13 +432,11 @@
 
     .container-projects-main {
         min-height: auto;
-
         padding: 80px 5%;
     }
 
     .projects-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-
         gap: 18px;
     }
 
@@ -456,21 +454,20 @@
 
 }
 
-
 /* =========================================
-   MOBILE
+   MOBILE E TABLETS PEQUENOS
 ========================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
     .container-projects-main {
         min-height: auto;
-
         padding: 65px 20px;
     }
 
     .container-projects {
         width: 100%;
+        max-width: 100%;
     }
 
     .label-project {
@@ -479,35 +476,34 @@
     }
 
     .title-projects {
-        font-size: clamp(3rem, 12vw, 3.8rem);
-
+        font-size: clamp(2.7rem, 10vw, 3.8rem);
         letter-spacing: -1px;
     }
 
     /* FILTROS */
 
     .projects-filters {
+        display: flex;
+        flex-wrap: wrap;
         gap: 7px;
-
         margin: 28px 0 22px;
     }
 
     .filter-project {
         padding: 8px 13px;
-
         font-size: 0.62rem;
     }
 
-    /* DESTAQUE */
+    /* PROJETO EM DESTAQUE */
 
     .featured-project {
         grid-template-columns: 1fr;
-
         margin-bottom: 18px;
+        width: 100%;
     }
 
     .featured-visual {
-        min-height: 190px;
+        min-height: 180px;
     }
 
     .featured-visual svg {
@@ -516,8 +512,7 @@
     }
 
     .featured-content {
-        min-height: 250px;
-
+        min-height: auto;
         padding: 23px;
     }
 
@@ -526,90 +521,120 @@
     }
 
     .featured-content p {
-        font-size: 0.72rem;
+        font-size: 0.75rem;
+        line-height: 1.8;
     }
 
     .featured-bottom {
         margin-top: 25px;
     }
 
-    /* GRID */
+    /* GRID DE PROJETOS */
 
     .projects-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-
-        gap: 12px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+        width: 100%;
     }
 
     /* CARDS */
 
     .project-card {
-        min-height: 320px;
+        width: 100%;
+        min-width: 0;
+        min-height: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
     }
 
+    /* IMAGEM */
+
     .project-card-visual {
-        height: 135px;
-        min-height: 135px;
+        width: 100%;
+        height: clamp(150px, 42vw, 190px);
+        min-height: 150px;
+        flex-shrink: 0;
     }
 
     .project-card-visual svg {
-        width: 34px;
-        height: 34px;
+        width: 42px;
+        height: 42px;
     }
 
+    /* CONTEÚDO */
+
     .project-card-content {
-        padding: 13px 11px 15px;
+        width: 100%;
+        min-height: auto;
+        padding: 17px 13px 16px;
+        box-sizing: border-box;
     }
 
     .project-card-meta {
-        font-size: 0.52rem;
-        margin-bottom: 9px;
+        font-size: 0.58rem;
+        margin-bottom: 10px;
     }
 
     .project-card-content h3 {
-        font-size: 0.8rem;
+        font-size: 0.95rem;
+        margin-bottom: 9px;
     }
 
     .project-card-content p {
-        font-size: 0.63rem;
+        font-size: 0.72rem;
+        line-height: 1.8;
     }
 
+    /* TECNOLOGIAS */
+
     .project-technologies {
-        gap: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
         padding-top: 15px;
     }
 
     .project-technologies span {
-        font-size: 0.51rem;
-
-        padding: 5px 7px;
+        font-size: 0.58rem;
+        padding: 6px 9px;
     }
 
 }
 
 
 /* =========================================
-   TELAS MUITO PEQUENAS
+   CELULARES PEQUENOS
 ========================================= */
 
 @media (max-width: 380px) {
 
+    .container-projects-main {
+        padding: 55px 15px;
+    }
+
     .projects-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 15px;
     }
 
     .project-card {
-        min-height: 300px;
+        width: 100%;
+        min-height: auto;
     }
 
     .project-card-visual {
-        height: 160px;
-        min-height: 160px;
+        height: 155px;
+        min-height: 155px;
+    }
+
+    .project-card-content {
+        padding: 15px 12px;
     }
 
     .featured-bottom {
         align-items: flex-start;
-
         flex-direction: column;
     }
 
