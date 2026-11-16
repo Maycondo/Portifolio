@@ -8,7 +8,7 @@ import EducationCourses from './components/Cards/EducationCourses.jsx';
 import ProjectWorked from './components/Projetcs/ProjectWorked.jsx';
 import DidyouLike from './components/Cards/Didyoulike.jsx';
 import ContactFomr from './components/Contact/ContactForm.jsx';
-
+import Footer from './components/Footer/Footer.jsx'
 
 
 // Animações e botões
@@ -200,6 +200,7 @@ export default function Home() {
         <ProjectWorked language={langFormatted} />
         <DidyouLike language={langFormatted}/>
         <ContactFomr language={langFormatted}/>
+        <Footer language={langFormatted} />
     </>
   );
 }

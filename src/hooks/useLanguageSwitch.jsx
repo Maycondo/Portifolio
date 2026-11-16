@@ -16,9 +16,6 @@ const navTextsEn = [
 ];
 
 const textsPT = {
-  text_footer: 'TEM UM PROJETO EM MENTE?',
-  text_footer_button: 'VOLTAR AO TOPO',
-
   about: `
     Tenho experiência no desenvolvimento de interfaces modernas,
     responsivas e interativas com React, além de trabalhar no back-end
@@ -31,9 +28,6 @@ const textsPT = {
 };
 
 const textsEN = {
-  text_footer: 'DO YOU HAVE A PROJECT IN MIND?',
-  text_footer_button: 'BACK TO TOP',
-
   about: `
     I have experience developing modern, responsive, and interactive
     interfaces with React, as well as working on the back end with
