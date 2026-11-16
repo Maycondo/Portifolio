@@ -2,21 +2,25 @@
    CONFIGURAÇÕES GERAIS
 ========================================== */
 
-html {
-  scroll-behavior: smooth;
-}
 
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   font-family: "Josefin Sans", sans-serif;
 }
 
+html,
 body {
   width: 100%;
-  min-height: 100vh;
+  max-width: 100%;
+  margin: 0;
   overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
 }
 
 /* ==========================================

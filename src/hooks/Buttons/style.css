@@ -1,7 +1,7 @@
 
 /* ==========================================
    MODO CLARO
-   ========================================== */
+========================================== */
 
 .ModeLight {
   --Color-texte-portifolio: #242323;
@@ -15,7 +15,8 @@
   --pm-ink: #242323;
   --pm-text: #242323;
   --pm-night: #f3f2f2;
-  --pm-line: rgba(36, 35, 35, 0.25);
+  --pm-line: rgba(36, 35, 35, 0.18);
+  --pm-muted: #999999;
 
   /* Botão */
   --pm-button-border: #242323;
@@ -34,7 +35,7 @@
 
 /* ==========================================
    MODO ESCURO
-   ========================================== */
+========================================== */
 
 .ModeDark {
   --Color-texte-portifolio: #eeeeee;
@@ -48,7 +49,8 @@
   --pm-ink: #eeeeee;
   --pm-text: #eeeeee;
   --pm-night: #252323;
-  --pm-line: rgba(238, 238, 238, 0.25);
+  --pm-line: rgba(238, 238, 238, 0.18);
+  --pm-muted: #999999;
 
   /* Botão */
   --pm-button-border: #eeeeee;
@@ -67,7 +69,7 @@
 
 /* ==========================================
    CONFIGURAÇÕES DO DOCUMENTO
-   ========================================== */
+========================================== */
 
 .pm-root {
   position: fixed;
@@ -77,8 +79,8 @@
 }
 
 /* ==========================================
-   BOTÃO HAMBURGUER
-   ========================================== */
+   BOTÃO HAMBÚRGUER
+========================================== */
 
 .pm-btn {
   position: fixed;
@@ -109,7 +111,7 @@
 
 /* ==========================================
    LINHAS DO BOTÃO
-   ========================================== */
+========================================== */
 
 .pm-line {
   position: absolute;
@@ -171,7 +173,7 @@
 
 /* ==========================================
    WRAPPER DO MENU
-   ========================================== */
+========================================== */
 
 .Nav_animation-wrapper {
   position: fixed;
@@ -183,19 +185,20 @@
   overflow: hidden;
   isolation: isolate;
   pointer-events: auto;
-  transform: translate(0px, 0px);
+  background-color: var(--Backgtound-color-nav-animetion);
+  color: var(--pm-text);
 }
 
 /* ==========================================
    PAINEL PRINCIPAL
-   ========================================== */
+========================================== */
 
 .Nav_animetion {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  padding: 110px 1rem 40px var(--pm-gutter);
+  padding: 110px var(--pm-gutter) 35px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -206,8 +209,8 @@
 }
 
 /* ==========================================
-   NAVEGAÇÃO
-   ========================================== */
+   NAVEGAÇÃO PRINCIPAL
+========================================== */
 
 .Nav_animetion nav {
   width: 100%;
@@ -217,58 +220,113 @@
   width: 100%;
   list-style: none;
   margin: 0;
-  padding: 0.75rem 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   border-top: 1px solid var(--pm-line);
-  border-bottom: 1px solid var(--pm-line);
 }
+
+/* ==========================================
+   ITENS
+========================================== */
 
 .pm-item {
   width: 100%;
+  border-bottom: 1px solid var(--pm-line);
 }
 
 /* ==========================================
    LINKS
-   ========================================== */
+========================================== */
 
 .pm-link {
-  display: inline-block;
-  padding: 0.02em 0;
-  color: var(--pm-text);
+  position: relative;
+  width: 100%;
+  min-height: 82px;
+  padding: 8px 0;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) 28px;
+  align-items: center;
+  color: var(--pm-muted);
   text-decoration: none;
   text-transform: uppercase;
-  font-size: clamp(4rem, 9vw, 9rem);
-  font-weight: 900;
-  line-height: 1.3;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.25s;
+  transition: color 0.3s ease;
 }
+
+/* Numeração */
+
+.pm-number {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--pm-muted);
+}
+
+/* Texto */
+
+.pm-label {
+  font-size: clamp(2rem, 7vw, 10rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  color: inherit;
+  transition:
+    transform 0.35s var(--pm-ease),
+    color 0.3s ease;
+}
+
+/* Ícones */
+
+.pm-icon {
+  width: 20px;
+  height: 20px;
+  justify-self: end;
+  color: var(--pm-muted);
+  stroke-width: 2;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* ==========================================
+   HOVER
+========================================== */
 
 .pm-link:hover,
 .pm-link:focus-visible {
-  border-bottom-color: currentColor;
+  color: var(--pm-text);
   outline: none;
+}
+
+.pm-link:hover .pm-label {
+  transform: translateX(5px);
+}
+
+.pm-link:hover .pm-icon {
+  color: var(--pm-text);
+  transform: translateX(-2px);
 }
 
 /* ==========================================
    TEMA E IDIOMA
-   ========================================== */
+========================================== */
 
 .pm-tools {
   position: absolute;
+
   top: 30px;
   left: var(--pm-gutter);
+
   display: flex;
   align-items: center;
   gap: 20px;
+
   z-index: 2;
 }
 
 /* ==========================================
    IDIOMA
-   ========================================== */
+========================================== */
 
 .lingua {
   display: flex;
@@ -280,19 +338,24 @@
   min-width: 48px;
   padding: 8px 14px;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1px solid var(--pm-line);
   border-radius: 999px;
+
   background: var(--pm-language-bg);
   color: var(--pm-language-text);
+
   font: inherit;
   font-weight: 600;
+
   transition:
-    background 0.2s,
-    color 0.2s;
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .lingua__button[aria-pressed="true"] {
   color: var(--pm-language-active-text);
+  border-color: var(--pm-language-active-bg);
 }
 
 .lingua__button:focus-visible {
@@ -302,9 +365,10 @@
 
 /* ==========================================
    RESPONSIVIDADE - TABLET
-   ========================================== */
+========================================== */
 
 @media (max-width: 768px) {
+
   .pm-btn {
     top: 12px;
     right: 16px;
@@ -315,16 +379,24 @@
   }
 
   .pm-link {
-    font-size: clamp(2.5rem, 9vw, 5rem);
+    min-height: 72px;
+  }
+
+  .pm-label {
+    font-size: clamp(2rem, 6vw, 3rem);
   }
 }
 
 /* ==========================================
    RESPONSIVIDADE - CELULAR
-   ========================================== */
+========================================== */
 
 @media (max-width: 480px) {
+
   .pm-btn {
+    top: 12px;
+    right: 16px;
+
     width: 46px;
     height: 46px;
   }
@@ -347,17 +419,33 @@
   }
 
   .Nav_animetion {
-    padding-top: 100px;
+    padding: 90px 20px 30px;
   }
 
   .pm-tools {
     top: 25px;
+    left: 20px;
     gap: 12px;
   }
 
   .pm-link {
-    font-size: clamp(4rem, 10vw, 4rem);
+    min-height: 57px;
 
+    grid-template-columns: 20px minmax(0, 1fr) 20px;
+  }
+
+  .pm-number {
+    font-size: 0.48rem;
+  }
+
+  .pm-label {
+    font-size: clamp(3rem, 7vw, 2rem);
+    letter-spacing: -1px;
+  }
+
+  .pm-icon {
+    width: 14px;
+    height: 14px;
   }
 
   .lingua__button {
@@ -368,12 +456,15 @@
 
 /* ==========================================
    MOVIMENTO REDUZIDO
-   ========================================== */
+========================================== */
 
 @media (prefers-reduced-motion: reduce) {
+
   .pm-btn,
   .pm-line,
   .pm-link,
+  .pm-label,
+  .pm-icon,
   .lingua__button {
     transition-duration: 0.01s !important;
     transition-delay: 0s !important;

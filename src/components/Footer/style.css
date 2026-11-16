@@ -47,7 +47,7 @@
 
 .footer-conteiner-text h2 {
   font-family: var(--font-playfair-display);
-  font-size: clamp(2rem, 4.5vw, 5rem);
+  font-size: clamp(3rem, 4.5vw, 5rem);
   font-weight: 700;
   line-height: 0.94;
   letter-spacing: -1.5px;
@@ -143,9 +143,7 @@
     column-gap: 35px;
   }
 
-  .footer-conteiner-text h2 {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-  }
+
 
 }
 
@@ -170,11 +168,6 @@
     gap: 30px;
   }
 
-  .footer-conteiner-text h2 {
-    font-size: clamp(2rem, 9vw, 3rem);
-    line-height: 0.98;
-    letter-spacing: -1px;
-  }
 
   .footer-faq-content {
     width: 100%;
@@ -209,9 +202,7 @@
     width: calc(100% - 36px);
   }
 
-  .footer-conteiner-text h2 {
-    font-size: 2rem;
-  }
+
 
   .footer-faq-item h3 {
     font-size: 0.85rem;
