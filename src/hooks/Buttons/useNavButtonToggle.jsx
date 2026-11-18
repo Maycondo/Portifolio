@@ -1,4 +1,5 @@
 
+
 /* eslint-disable react/prop-types */
 
 import { useState, useEffect, useRef } from "react";
@@ -29,23 +30,18 @@ const NAV_ICONS = [
   FiMail,
 ];
 
-export default function PyramidMenu({
-  language,
-  navtexts = [],
-  CorStyle = () => ({}),
-  handleLanguageChange = () => {},
-  handleThemeChange = () => {},
-}) {
+export default function PyramidMenu({ language, navtexts = [], CorStyle = () => ({}), handleLanguageChange = () => {},
+ handleThemeChange = () => {}, }) {
+
+
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   const btn = useRef(null);
   const firstLink = useRef(null);
-
   const reduce = useReducedMotion();
-
+  const getyear = new Date().getFullYear();
   const lang = String(language || "PT").trim().toUpperCase();
-
   const ids = SECTION_IDS[lang] || SECTION_IDS.PT;
 
   // Itens da navegação
@@ -71,6 +67,7 @@ export default function PyramidMenu({
         btn.current?.focus();
       }
     };
+
 
     document.addEventListener("keydown", onKey);
 
@@ -140,15 +137,7 @@ export default function PyramidMenu({
     <div className={`pm-root ${open ? "pm-open" : ""}`}>
 
       {/* BOTÃO HAMBÚRGUER */}
-      <button
-        ref={btn}
-        type="button"
-        className="pm-btn"
-        aria-label={open ? "Fechar menu" : "Abrir menu"}
-        aria-expanded={open}
-        aria-controls="pm-nav"
-        onClick={() => setOpen((previous) => !previous)}
-      >
+      <button ref={btn} type="button" className="pm-btn" aria-label={open ? "Fechar menu" : "Abrir menu"} aria-expanded={open} aria-controls="pm-nav" onClick={() => setOpen((previous) => !previous)} >
         <span className="pm-line" />
         <span className="pm-line" />
         <span className="pm-line" />
@@ -157,28 +146,12 @@ export default function PyramidMenu({
       {/* PAINEL DE NAVEGAÇÃO */}
       <AnimatePresence>
         {open && (
-          <motion.div
-            key="pm-overlay"
-            id="pm-nav"
-            className="Nav_animation-wrapper"
-            variants={panel}
-            initial={{
-              clipPath: "circle(0px at calc(100% - 61px) 36px)",
-            }}
-            animate={{
-              clipPath: "circle(150vmax at calc(100% - 61px) 36px)",
-            }}
-            exit={{
-              clipPath: "circle(0px at calc(100% - 61px) 36px)",
-            }}
-            transition={{
-              duration: 0.8,
-              ease: [0.76, 0, 0.24, 1],
-            }}
-            aria-label="Navegação principal"
-          >
+          <motion.div key="pm-overlay" id="pm-nav" className="Nav_animation-wrapper" variants={panel}
+            initial={{ clipPath: "circle(0px at calc(100% - 61px) 36px)", }}
+            animate={{ clipPath: "circle(150vmax at calc(100% - 61px) 36px)", }}
+            exit={{ clipPath: "circle(0px at calc(100% - 61px) 36px)", }}
+            transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], }} aria-label="Navegação principal" >
             <div className="Nav_animetion">
-
               {/* NAVEGAÇÃO PRINCIPAL */}
               <nav aria-label="Navegação principal">
                 <ul className="pm-list">
@@ -187,25 +160,14 @@ export default function PyramidMenu({
                     const Icon = NAV_ICONS[i];
 
                     return (
-                      <motion.li
-                        className="pm-item"
-                        key={item.id}
-                        variants={rise}
-                      >
-                        <a
-                          ref={i === 0 ? firstLink : null}
-                          className="pm-link"
-                          href={`#${item.id}`}
-                          onClick={close}
-                        >
+                      <motion.li className="pm-item" key={item.id} variants={rise} >
+                        <a ref={i === 0 ? firstLink : null} className="pm-link" href={`#${item.id}`} onClick={close} >
                           <span className="pm-number">
                             0{i + 1}
                           </span>
-
                           <span className="pm-label">
                             {item.label}
                           </span>
-
                           {Icon && (
                             <Icon className="pm-icon" />
                           )}
@@ -215,40 +177,26 @@ export default function PyramidMenu({
                   })}
 
                 </ul>
-                
+                  <section className="bottom-navation" id="bottom-navation">
+                    <p>© {getyear} {language === 'PT' ? 'Todo direito reservado para Maycon Douglas.' : 'All rights reserved to Maycon Douglas.'}</p>
+                </section>
               </nav>
 
               {/* TEMA E IDIOMA */}
-              <motion.div
-                className="pm-tools"
-                variants={rise}
-              >
-                <ThemeToggle
-                  theme={undefined}
-                  onThemeChange={handleThemeChange}
-                />
-
+              <motion.div className="pm-tools" variants={rise} >
+                <ThemeToggle theme={undefined} onThemeChange={handleThemeChange} />
                 <div className="lingua">
                   {["PT", "EN"].map((code) => (
-                    <button
-                      key={code}
-                      type="button"
-                      className="lingua__button"
-                      style={CorStyle(code)}
-                      aria-pressed={lang === code}
-                      onClick={() => handleLanguageChange(code)}
-                    >
+                    <button key={code} type="button" className="lingua__button" style={CorStyle(code)} aria-pressed={lang === code} onClick={() => handleLanguageChange(code)}>
                       {code}
                     </button>
                   ))}
                 </div>
               </motion.div>
-
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-
     </div>,
     document.body
   );

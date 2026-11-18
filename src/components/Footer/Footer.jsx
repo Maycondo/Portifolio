@@ -2,6 +2,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import SchoolReveal from '../../hooks/ScrollReveal/ScrollReveal'
+import ButtonTop from '../../hooks/Top/index'
 
 import './style.css';
 
@@ -47,6 +48,9 @@ export default function Footer({ language = 'PT' }) {
     return (
         <footer className="footer" id={sectionId}>
             <SchoolReveal>
+            <div className="container-button-top">
+               <ButtonTop></ButtonTop>
+            </div>
             <section className="conteiner-man-footer">
                 <div className='conteiner-main-text'>
                 <div className="footer-faq">

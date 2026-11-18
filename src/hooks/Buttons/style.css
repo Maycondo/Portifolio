@@ -340,13 +340,10 @@
   cursor: pointer;
   border: 1px solid var(--pm-line);
   border-radius: 999px;
-
   background: var(--pm-language-bg);
   color: var(--pm-language-text);
-
   font: inherit;
   font-weight: 600;
-
   transition:
     background 0.3s ease,
     color 0.3s ease,
@@ -361,6 +358,42 @@
 .lingua__button:focus-visible {
   outline: 2px solid var(--pm-text);
   outline-offset: 2px;
+}
+
+/* =========================================
+   BOTTOM NAVIGATION
+========================================= */
+
+.bottom-navation {
+  width: 100%;
+  margin-top: auto;
+  padding: 5px 0 0;
+  border-top: 1px solid var(--Border-Color, #bdbdbd);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bottom-navation p {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--Text-Color, #292929);
+}
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 600px) {
+  .bottom-navation {
+    margin-top: 25px;
+    padding-top: 8px;
+  }
+
+  .bottom-navation p {
+    font-size: 11px;
+    letter-spacing: 0.2px;
+  }
 }
 
 /* ==========================================
