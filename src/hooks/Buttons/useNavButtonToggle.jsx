@@ -178,7 +178,7 @@ export default function PyramidMenu({ language, navtexts = [], CorStyle = () => 
 
                 </ul>
                   <section className="bottom-navation" id="bottom-navation">
-                    <p>© {getyear} {language === 'PT' ? 'Todo direito reservado para Maycon Douglas.' : 'All rights reserved to Maycon Douglas.'}</p>
+                    <p>© {getyear} {language === 'PT' ? 'Maycon Douglas.' : 'Maycon Douglas.'}</p>
                 </section>
               </nav>
 

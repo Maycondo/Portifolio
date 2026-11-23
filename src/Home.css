@@ -626,9 +626,7 @@ svg {
 
   .Container-Title {
     width: 90%;
-
     grid-template-columns: 1fr;
-
     gap: 55px;
     padding: 45px 0;
   }

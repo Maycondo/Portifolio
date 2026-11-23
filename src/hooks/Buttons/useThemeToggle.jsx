@@ -21,20 +21,9 @@ export default function ThemeToggle({ theme, onThemeChange }) {
 
     return (
         <div className="Botao_Modo">
-            <button
-                type="button"
-                onClick={alternarModo}
-                aria-label="Alternar tema"
-                title="Alternar tema"
-            >
+            <button type="button" onClick={alternarModo} aria-label="Alternar tema" title="Alternar tema" >
                 <AnimatePresence mode="wait">
-                    <motion.i
-                        key={tema}
-                        className={`bi ${
-                            tema === 'ModeDark'
-                                ? 'bi-sun-fill'
-                                : 'bi-moon-fill'
-                        }`}
+                    <motion.i key={tema} className={`bi ${tema === 'ModeDark' ? 'bi-sun-fill' : 'bi-moon-fill' }`}
                         initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
                         animate={{ opacity: 1, rotate: 0, scale: 1 }}
                         exit={{ opacity: 0, rotate: 90, scale: 0.5 }}

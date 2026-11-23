@@ -56,7 +56,7 @@ const ProjectWorked = ({ language = "PT" }) => {
           category: "Web",
           year: "2025",
           name: "Advocacia Ana Beatriz",
-          description: "Site institucional editorial.",
+          description:"Site institucional desenvolvido para o escritório de advocacia Ana Beatriz, com design editorial moderno, elegante e totalmente responsivo. Construído com Next.js e TypeScript, o projeto oferece navegação intuitiva, animações fluidas, formulário de contato e mapa interativo com a localização do escritório, proporcionando uma experiência acessível e profissional em diferentes dispositivos.",
           icon: FaBalanceScale,
           color: "dark-blue",
           link: "https://advocacia-website.vercel.app/",

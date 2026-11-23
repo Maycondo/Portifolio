@@ -91,7 +91,7 @@
   height: 52px;
   border: 2px solid var(--pm-button-border);
   border-radius: 50%;
-  background: transparent;
+  background-color: var(--Backgtound-color-nav-animetion);
   cursor: pointer;
   pointer-events: auto;
   transition:
@@ -378,7 +378,8 @@
   margin: 0;
   font-size: 19px;
   line-height: 1.5;
-  color: var(--Text-Color, #292929);
+  font-weight: 800;
+  color: var(--Text-Color);
 }
 /* =========================================
    RESPONSIVIDADE
@@ -429,7 +430,6 @@
   .pm-btn {
     top: 12px;
     right: 16px;
-
     width: 46px;
     height: 46px;
   }
@@ -462,8 +462,7 @@
   }
 
   .pm-link {
-    min-height: 57px;
-
+    min-height: 110px;
     grid-template-columns: 20px minmax(0, 1fr) 20px;
   }
 
@@ -486,6 +485,7 @@
     padding: 7px 11px;
   }
 }
+
 
 /* ==========================================
    MOVIMENTO REDUZIDO
