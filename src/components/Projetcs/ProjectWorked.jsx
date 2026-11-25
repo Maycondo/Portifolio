@@ -77,6 +77,19 @@ const ProjectWorked = ({ language = "PT" }) => {
 
         {
           id: 4,
+          category: "Web",
+          year: "2025",
+          name: "Isabela Cavalcanti",
+          description:"Site institucional desenvolvido para o escritório de advocacia Isabela Cavalcanti, com design editorial moderno, elegante e totalmente responsivo. Construído com Next.js e TypeScript, o projeto oferece navegação intuitiva, animações fluidas, formulário de contato e mapa interativo com a localização do escritório, proporcionando uma experiência acessível e profissional em diferentes dispositivos.",
+          icon: FaBalanceScale,
+          color: "dark-blue",
+          link: "https://advocacia-website-2.vercel.app/",
+          technologies: ["Next.js", "TypeScript", "Framer Motion", "CSS"],
+        },
+
+
+        {
+          id: 5,
           category: "API",
           year: "2023",
           name: "Book API",
@@ -88,7 +101,7 @@ const ProjectWorked = ({ language = "PT" }) => {
         },
 
         {
-          id: 5,
+          id: 6,
           category: "Bots",
           name: "Discord-Bot",
           year: "2023",
