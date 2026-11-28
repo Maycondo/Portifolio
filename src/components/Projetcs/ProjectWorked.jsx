@@ -66,6 +66,18 @@ const ProjectWorked = ({ language = "PT" }) => {
         {
           id: 3,
           category: "Web",
+          year: "2025",
+          name: "Isabela Cavalcanti",
+          description:"Projeto de desenvolvimento de um site institucional para o escritório de advocacia Isabela Cavalcanti, unindo sofisticação, funcionalidade e identidade visual. Desenvolvido com Next.js e TypeScript, o site conta com layout moderno e responsivo, navegação intuitiva, animações suaves, formulário de contato e mapa interativo, garantindo uma experiência digital elegante, acessível e profissional.",
+          icon: FaBalanceScale,
+          color: "aged-gold",
+          link: "https://advocacia-website-2.vercel.app/",
+          technologies: ["Next.js", "TypeScript", "Framer Motion", "CSS"],
+        },
+
+        {
+          id: 4,
+          category: "Web",
           year: "2023",
           name: "My-Books",
           description: "My-Books é um site onde vou cadastrar todos os livros que estou lendo. Em cada cadastro, haverá uma breve descrição do livro e algumas opiniões pessoais sobre aspectos abordados na leitura. Também haverá uma seção de favoritos, onde serão exibidos todos os livros que marquei como favoritos.",
@@ -74,19 +86,6 @@ const ProjectWorked = ({ language = "PT" }) => {
           link: "https://my-books-maycon-douglas.vercel.app/",
           technologies: ["React", "Tailwind CSS", "Typescript", "Axios", "Framer-motion"],
         },
-
-        {
-          id: 4,
-          category: "Web",
-          year: "2025",
-          name: "Isabela Cavalcanti",
-          description:"Site institucional desenvolvido para o escritório de advocacia Isabela Cavalcanti, com design editorial moderno, elegante e totalmente responsivo. Construído com Next.js e TypeScript, o projeto oferece navegação intuitiva, animações fluidas, formulário de contato e mapa interativo com a localização do escritório, proporcionando uma experiência acessível e profissional em diferentes dispositivos.",
-          icon: FaBalanceScale,
-          color: "dark-blue",
-          link: "https://advocacia-website-2.vercel.app/",
-          technologies: ["Next.js", "TypeScript", "Framer Motion", "CSS"],
-        },
-
 
         {
           id: 5,

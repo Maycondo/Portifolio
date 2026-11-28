@@ -310,8 +310,8 @@
     background: linear-gradient(135deg, #31d49c, #078575);
 }
 
-.project-card-visual.orange {
-    background: linear-gradient(135deg, #ffc94c, #f47717);
+.project-card-visual.aged-gold   {
+    background: linear-gradient(135deg, #b08d3c, #b19a66);
 }
 
 .project-card-visual.black {
@@ -322,9 +322,6 @@
     background: linear-gradient(135deg, #0327ca, #03207c);
 }
 
-.project-card-visual.purple {
-    background: linear-gradient(135deg, #e75bb5, #9025ce);
-}
 
 .project-card-visual.blue {
     background: linear-gradient(135deg, #32b9e9, #087e9f);
