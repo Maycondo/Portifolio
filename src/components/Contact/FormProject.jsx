@@ -45,14 +45,6 @@ const FormProject = ({ isPT = true }) => {
       message: formData.get("message"),
     };
 
-    console.log("EmailJS Config:", {
-      service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      publicKeyConfigured: Boolean(
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-    });
-
     try {
       await emailjs.send(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
