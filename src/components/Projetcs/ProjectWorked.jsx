@@ -159,7 +159,7 @@ const ProjectWorked = ({ language = "PT" }) => {
           category: "Web",
           year: "2025",
           name: "Ana Beatriz Law",
-          description: "Editorial institutional website.",
+          description: "Institutional website developed for the Ana Beatriz law firm, featuring a modern, elegant, and fully responsive editorial-style design. Built using Next.js and TypeScript, the project offers intuitive navigation, fluid animations, a contact form, and an interactive map showing the firm’s location—delivering an accessible and professional experience across various devices.",
           icon: FaBalanceScale,
           color: "dark-blue",
           link: "https://advocacia-website.vercel.app/",
@@ -168,6 +168,18 @@ const ProjectWorked = ({ language = "PT" }) => {
 
         {
           id: 3,
+          category: "Web",
+          year: "2025",
+          name: "Isabela Cavalcanti",
+          description: "Development project for an institutional website for the law firm Isabela Cavalcanti, combining sophistication, functionality, and visual identity. Built using Next.js and TypeScript, the site features a modern, responsive layout, intuitive navigation, smooth animations, a contact form, and an interactive map—ensuring an elegant, accessible, and professional digital experience.",
+          icon: FaBalanceScale,
+          color: "aged-gold",
+          link: "https://advocacia-website-2.vercel.app/",
+          technologies: ["Next.js", "TypeScript", "Framer Motion", "CSS"],
+        },
+
+        {
+          id: 4,
           category: "Web",
           year: "2023",
           name: "My-Books",
@@ -179,7 +191,7 @@ const ProjectWorked = ({ language = "PT" }) => {
         },
 
         {
-          id: 4,
+          id: 5,
           category: "API",
           name: "Book API",
           year: "2023",
@@ -191,7 +203,7 @@ const ProjectWorked = ({ language = "PT" }) => {
         },
 
         {
-          id: 5,
+          id: 6,
           category: "Bots",
           name: "Discord-Bot",
           year: "2023",
