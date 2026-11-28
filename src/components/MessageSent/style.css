@@ -1,0 +1,93 @@
+/* MessageSent: toast fixo no topo, centralizado e responsivo.
+   O framer-motion controla o transform (x: -50%), então aqui só usamos left: 50%. */
+
+.Message-Sent {
+  --ms-ink: #222222;
+  --ms-surface: #ffffff;
+  --ms-line: #e4e4e4;
+  --ms-success: #22c55e;
+  --ms-error: #ef4444;
+  --ms-icon-pad: 10px;
+
+  /* Fixo na janela: não rola com a página */
+  position: fixed !important;
+  top: calc(clamp(12px, 3vw, 24px) + env(safe-area-inset-top, 0px)) !important;
+  left: 50% !important;
+  right: auto;
+  bottom: auto;
+  margin: 0;
+  z-index: 2147483647;
+  pointer-events: none;
+
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 2.5vw, 14px);
+
+  box-sizing: border-box;
+  width: max-content;
+  max-width: min(480px, calc(100vw - 32px));
+  padding: 10px clamp(14px, 3vw, 22px) 10px 10px;
+
+  background: var(--ms-surface);
+  color: var(--ms-ink);
+  border: 1px solid var(--ms-line);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.04);
+
+  font-size: clamp(0.8125rem, 2.4vw, 0.875rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+
+/* Ícone dentro de um quadrado escuro, igual aos cards de contato */
+.Message-Sent svg {
+  box-sizing: content-box;
+  flex-shrink: 0;
+  padding: var(--ms-icon-pad);
+  background: var(--ms-ink);
+  border-radius: 10px;
+}
+
+.Message-Sent.success svg {
+  color: var(--ms-success);
+}
+
+.Message-Sent.error {
+  border-color: rgba(239, 68, 68, 0.45);
+}
+
+.Message-Sent.error svg {
+  color: var(--ms-error);
+}
+
+.Message-Sent span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Celulares: ocupa quase toda a largura, com margem de 16px de cada lado */
+@media (max-width: 600px) {
+  .Message-Sent {
+    width: calc(100vw - 32px);
+    max-width: none;
+    border-radius: 12px;
+  }
+}
+
+/* Celulares pequenos: ícone um pouco menor */
+@media (max-width: 360px) {
+  .Message-Sent {
+    --ms-icon-pad: 8px;
+    gap: 10px;
+    padding-right: 12px;
+  }
+}
+
+/* Telas largas: um pouco mais espaçado */
+@media (min-width: 1200px) {
+  .Message-Sent {
+    top: calc(28px + env(safe-area-inset-top, 0px));
+    max-width: 520px;
+  }
+}
